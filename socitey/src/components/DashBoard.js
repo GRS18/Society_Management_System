@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import photo from '../assets/photo1.jpg';
 
 export default function DashBoard() {
   return (
    <>
    <section className="hero">
         <div className="container">
-            <h1>Welcome to Our Society Management System</h1>
+            <h1>Welcome to Society Management System</h1>
             <p>Efficient and Transparent Management for Link Better Living</p>
-            <Link to="login" className="btn btn-primary">Login</Link>
-            <Link to="register" className="btn btn-secondary">Register</Link>
+            {/* <Link to="login" className="btn btn-primary">Login</Link>
+            <Link to="register" className="btn btn-secondary">Register</Link> */}
+            <img src={photo} alt="Logo"  height="500" className="d-inline-block align-text-top"/>
         </div>
     </section>
 
