@@ -20,14 +20,14 @@ const Header = () => {
                         <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                     </li>
                     <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Features
+                        <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Login
                         </Link>
                         <ul className="dropdown-menu">
-                            <li><Link className="dropdown-item" to="/admin">Admin</Link></li>
-                            <li><Link className="dropdown-item" to="/staff">Staff</Link></li>
+                            <li><Link className="dropdown-item" to="/admin">Admin Login</Link></li>
+                            <li><Link className="dropdown-item" to="/staff">Staff Login</Link></li>
                             <li>
-                                <Link className="dropdown-item" to="/resident">Residents</Link>
+                                <Link className="dropdown-item" to="/resident">Residents Login</Link>
                             </li>
                         </ul>
                     </li>
@@ -36,9 +36,6 @@ const Header = () => {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/contact">Contact us</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/register">Register</Link>
