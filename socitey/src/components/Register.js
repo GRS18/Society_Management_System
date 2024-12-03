@@ -52,7 +52,7 @@ export default function Register() {
             <button type="submit" className="btn btn-primary btn-block">Register</button>
 
             
-            <p className="login-link">Already have an account? <Link href="login.js">Login Here</Link></p>
+            <p className="login-link">Already have an account? <Link to="/login">Login Here</Link></p>
         </form>
     </div>
 

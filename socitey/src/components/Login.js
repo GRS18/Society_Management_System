@@ -10,6 +10,15 @@ export default function Login() {
         <form>
            
             <div className="form-group">
+                <label for="role">User Role</label>
+                <select className="form-control" id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="resident">Resident</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <div className="form-group">
                 <label for="email">Email/Username</label>
                 <input type="text" className="form-control" id="email" placeholder="Enter email or username" required/>
             </div>
