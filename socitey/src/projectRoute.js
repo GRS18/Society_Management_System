@@ -44,7 +44,7 @@ const projectRoute = createBrowserRouter([
         element: <DashBoard />,
       },
       {
-        path: "home",
+        path: "",
         element: <Home />,
       },
       {
