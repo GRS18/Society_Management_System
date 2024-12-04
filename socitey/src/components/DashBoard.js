@@ -5,6 +5,7 @@ import photo2 from "../assets/photo2.jpg";
 import photo3 from "../assets/photo3.jpg";
 import photo4 from "../assets/photo4.jpg";
 import '../css/index.css';
+import '../css/dashboard.css';
 
 export default function DashBoard() {
   return (
@@ -45,24 +46,24 @@ export default function DashBoard() {
         </div>
       </section>
 
-      <section className="features py-5">
+      {/* <section className="features py-5">
         <div className="container">
           <div className="row text-center">
-            <div className="col-md-4">
+            <div className="col-xl-4">
               <div className="icon">
                 <i className="fas fa-money-check-alt"></i>
               </div>
               <h4>Online Payments</h4>
               <p>Pay your maintenance bills online easily and securely.</p>
             </div>
-            <div className="col-md-4">
+            <div className="col-xl-4">
               <div className="icon">
                 <i className="fas fa-calendar-alt"></i>
               </div>
               <h4>Event Management</h4>
               <p>Stay updated with the latest events and activities.</p>
             </div>
-            <div className="col-md-4">
+            <div className="col-xl-4">
               <div className="icon">
                 <i className="fas fa-tools"></i>
               </div>
@@ -71,7 +72,7 @@ export default function DashBoard() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
 
@@ -123,8 +124,8 @@ export default function DashBoard() {
         <div className="container">
           <h2 className="text-center">Latest Announcements</h2>
           <div className="row">
-            <div className="col-md-4">
-              <div className="card mb-3">
+            <div className="col-xl-4">
+              <div className="card xl-3">
                 <div className="card-body">
                   <h5 className="card-title">Water Supply Disruption</h5>
                   <p className="card-text">
@@ -137,8 +138,8 @@ export default function DashBoard() {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card mb-3">
+            <div className="col-xl-4">
+              <div className="card xl-3">
                 <div className="card-body">
                   <h5 className="card-title">Annual General Meeting</h5>
                   <p className="card-text">
@@ -151,8 +152,8 @@ export default function DashBoard() {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="card mb-3">
+            <div className="col-xl-4">
+              <div className="card xl-3">
                 <div className="card-body">
                   <h5 className="card-title">Diwali Celebrations</h5>
                   <p className="card-text">
