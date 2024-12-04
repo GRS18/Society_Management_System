@@ -50,17 +50,17 @@ const Header = () => {
                 <ul className="dropdown-menu">
                   <li>
                     <Link className="dropdown-item" to="/admin">
-                      Admin Login
+                      Admin 
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/staff">
-                      Staff Login
+                      Staff 
                     </Link>
                   </li>
                   <li>
                     <Link className="dropdown-item" to="/resident">
-                      Residents Login
+                      Residents 
                     </Link>
                   </li>
                 </ul>
