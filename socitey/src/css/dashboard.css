@@ -1,3 +1,16 @@
+.hero {
+    /* background: url('banner.jpg') no-repeat center center/cover; */
+    color: rgb(177, 21, 21);
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 10px;
+} 
+
+
+.slider{
+    margin-bottom: 40px;
+}
+
 .modules {
     display: flex;
     flex-wrap: wrap;
