@@ -1,52 +1,151 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+// import React from "react";
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  return (
-    <>
-   
-    <div className="login-card">
+  //   return (
+  //     <>
+  //     <div className="login-card">
+  //         <h3 className="text-center">Login</h3>
+  //         <form>
+
+  //             <div className="form-group">
+  //                 <label for="role">User Role</label>
+  //                 <select className="form-control" id="role" required>
+  //                     <option value="">Select Role</option>
+  //                     <option value="resident">Resident</option>
+  //                     <option value="admin">Admin</option>
+  //                 </select>
+  //             </div>
+
+  //             <div className="form-group">
+  //                 <label for="email">Email/Username</label>
+  //                 <input type="text" className="form-control" id="email" placeholder="Enter email or username" required/>
+  //             </div>
+
+  //             <div className="form-group">
+  //                 <label for="password">Password</label>
+  //                 <input type="password" className="form-control" id="password" placeholder="Enter password" required/>
+  //             </div>
+
+  //             <div className="form-check">
+  //                 <input type="checkbox" className="form-check-input" id="rememberMe"/>
+  //                 <label className="form-check-label" for="rememberMe">Remember Me</label>
+  //             </div>
+
+  //             <button type="submit" className="btn btn-primary btn-block mt-3">Login</button>
+
+  //             <a href="#" className="forgot-link text-muted text-center d-block">Forgot Password?</a>
+
+  //             <p className="text-center mt-3">
+  //                 Don't have an account? <Link to="register.js" className="register-link">Register Here</Link>
+  //             </p>
+  //         </form>
+  //     </div>
+  //    </>
+  //   );
+
+//   const Login = () => {
+    const [role, setRole] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+      e.preventDefault();
+
+      // Example validation
+      if (!role || !email || !password) {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      // Navigate to specific dashboard based on role
+      if (role === "admin") {
+        navigate("/admin");
+      } else if (role === "staff") {
+        navigate("/staff");
+      } else if (role === "resident") {
+        navigate("/resident");
+      } else {
+        alert("Invalid role selected!");
+      }
+    };
+
+    return (
+      <div className="login-card">
         <h3 className="text-center">Login</h3>
-        <form>
-           
-            <div className="form-group">
-                <label for="role">User Role</label>
-                <select className="form-control" id="role" required>
-                    <option value="">Select Role</option>
-                    <option value="resident">Resident</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
+        <form onSubmit={handleLogin}>
+          <div className="form-group">
+            <label htmlFor="role">User Role</label>
+            <select
+              className="form-control"
+              id="role"
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              required
+            >
+              <option value="">Select Role</option>
+              <option value="admin">Admin</option>
+              <option value="staff">Staff</option>
+              <option value="resident">Resident</option>
+            </select>
+          </div>
 
-            <div className="form-group">
-                <label for="email">Email/Username</label>
-                <input type="text" className="form-control" id="email" placeholder="Enter email or username" required/>
-            </div>
-            
-            
-            <div className="form-group">
-                <label for="password">Password</label>
-                <input type="password" className="form-control" id="password" placeholder="Enter password" required/>
-            </div>
-            
-            
-            <div className="form-check">
-                <input type="checkbox" className="form-check-input" id="rememberMe"/>
-                <label className="form-check-label" for="rememberMe">Remember Me</label>
-            </div>
-            
-          
-            <button type="submit" className="btn btn-primary btn-block mt-3">Login</button>
+          <div className="form-group">
+            <label htmlFor="email">Email/Username</label>
+            <input
+              type="text"
+              className="form-control"
+              id="email"
+              placeholder="Enter email or username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-           
-            <a href="#" className="forgot-link text-muted text-center d-block">Forgot Password?</a>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
 
-           
-            <p className="text-center mt-3">
-                Don't have an account? <Link to="register.js" className="register-link">Register Here</Link>
-            </p>
+          <div className="form-check">
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="rememberMe"
+            />
+            <label className="form-check-label" htmlFor="rememberMe">
+              Remember Me
+            </label>
+          </div>
+
+          <button type="submit" className="btn btn-primary btn-block mt-3">
+            Login
+          </button>
+
+          <a href="#" className="forgot-link text-muted text-center d-block">
+            Forgot Password?
+          </a>
+
+          <p className="text-center mt-3">
+            Don't have an account?{" "}
+            <a href="/register" className="register-link">
+              Register Here
+            </a>
+          </p>
         </form>
-    </div>
-   </>
-  );
-}
+      </div>
+    );
+  };
+
