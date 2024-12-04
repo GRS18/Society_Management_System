@@ -1,124 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "../css/register.css";
 
 export default function Register() {
-  // const register = () => {
-  //   const [role, setRole] = useState("");
-  //   const [email, setEmail] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const navigate = useNavigate();
 
-  //   const handleLogin = (e) => {
-  //     e.preventDefault();
-
-  //     // Example validation
-  //     if (!role || !email || !password) {
-  //       alert("Please fill all fields!");
-  //       return;
-  //     }
-
-  //     // Navigate to specific dashboard based on role
-  //     if (role === "admin") {
-  //       navigate("/login");
-  //     } else if (role === "staff") {
-  //       navigate("/login");
-  //     } else if (role === "resident") {
-  //       navigate("/login");
-  //     } else {
-  //       alert("Invalid role selected!");
-  //     }
-  //   };
-  // }
-  // return (
-  //   <>
-  //     <div className="register-card">
-  //       <h3 className="text-center">Create an Account</h3>
-  //       <form>
-  //         <div className="form-group">
-  //           <label for="name">Full Name</label>
-  //           <input
-  //             type="text"
-  //             className="form-control"
-  //             id="name"
-  //             placeholder="Enter your full name"
-  //             required
-  //           />
-  //         </div>
-
-  //         <div className="form-group">
-  //           <label for="email">Email Address</label>
-  //           <input
-  //             type="email"
-  //             className="form-control"
-  //             id="email"
-  //             placeholder="Enter your email"
-  //             required
-  //           />
-  //         </div>
-
-  //         <div className="form-group">
-  //           <label for="phone">Phone Number</label>
-  //           <input
-  //             type="tel"
-  //             className="form-control"
-  //             id="phone"
-  //             placeholder="Enter your phone number"
-  //             required
-  //           />
-  //         </div>
-
-  //         <div className="form-group">
-  //           <label for="role">User Role</label>
-  //           <select className="form-control" id="role" required>
-  //             <option value="">Select Role</option>
-  //             <option value="admin">Admin</option>
-  //             <option value="admin">Staff</option>
-  //             <option value="resident">Resident</option>
-  //           </select>
-  //         </div>
-
-  //         <div className="form-group">
-  //           <label for="password">Password</label>
-  //           <input
-  //             type="password"
-  //             className="form-control"
-  //             id="password"
-  //             placeholder="Create Link password"
-  //             required
-  //           />
-  //         </div>
-
-  //         <div className="form-group">
-  //           <label for="confirm-password">Confirm Password</label>
-  //           <input
-  //             type="password"
-  //             className="form-control"
-  //             id="confirm-password"
-  //             placeholder="Confirm your password"
-  //             required
-  //           />
-  //         </div>
-
-  //         <button
-  //           type="submit"
-  //           className="btn btn-primary btn-block"
-  //           onClick={Register}
-  //         >
-  //           Register
-  //         </button>
-
-  //         <p className="login-link">
-  //           Already have an account? <Link to="/login">Login Here</Link>
-  //         </p>
-  //       </form>
-  //     </div>
-  //   </>
-
-   // Hooks must be at the top level
+   // Hooks for form data
    const [role, setRole] = useState("");
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
+   const [showPopup, setShowPopup] = useState(false); // Hook to control popup visibility
    const navigate = useNavigate();
  
    const handleRegister = (e) => {
@@ -130,16 +21,14 @@ export default function Register() {
        return;
      }
  
-     // Navigate to specific dashboard based on role
-     if (role === "admin") {
-       navigate("/login");
-     } else if (role === "staff") {
-       navigate("/login");
-     } else if (role === "resident") {
-       navigate("/login");
-     } else {
-       alert("Invalid role selected!");
-     }
+     // Show the popup on successful registration
+     setShowPopup(true);
+ 
+     // Automatically redirect after 2 seconds
+     setTimeout(() => {
+       setShowPopup(false); // Hide the popup
+       navigate("/login"); // Redirect to login page
+     }, 4000);
    };
  
    return (
@@ -232,6 +121,16 @@ export default function Register() {
            </p>
          </form>
        </div>
+ 
+       {/* Popup Message */}
+       {showPopup && (
+         <div className="popup-overlay">
+           <div className="popup-card">
+             <h4>Registration Successful!</h4>
+             <p>Redirecting to the login page...</p>
+           </div>
+         </div>
+       )}
      </>
   );
 }
