@@ -32,7 +32,7 @@ const Header = () => {
                 <Link
                   className="nav-link active"
                   aria-current="page"
-                  to="/home"
+                  to=""
                 >
                   Home
                 </Link>
@@ -49,17 +49,17 @@ const Header = () => {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/admin">
+                    <Link className="dropdown-item" to="/login">
                       Admin 
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/staff">
+                    <Link className="dropdown-item" to="/login">
                       Staff 
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/resident">
+                    <Link className="dropdown-item" to="/login">
                       Residents 
                     </Link>
                   </li>
