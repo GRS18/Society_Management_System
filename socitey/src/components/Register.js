@@ -197,33 +197,10 @@ export default function Register() {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <Link
-                    className="nav-link dropdown-toggle"
-                    to="/"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="/login">
                     Login
                   </Link>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" to="/login">
-                        Admin
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/login">
-                        Staff
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/login">
-                        Residents
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/aboutus">
@@ -324,7 +301,7 @@ export default function Register() {
 
             <button
               type="submit"
-              className="btn btn-primary btn-block"
+              className="btn btn-primary btn-block rbtn"
               onClick={handleRegister}
             >
               Register

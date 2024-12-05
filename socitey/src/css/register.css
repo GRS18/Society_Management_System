@@ -87,7 +87,7 @@
 }
 .register-card {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   padding: 20px;
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -99,7 +99,10 @@
 .form-control {
   border-radius: 25px;
 }
-.btn-primary {
+.rbtn{
+  width: 100%; /* Makes the button take full width of the card */
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 25px;
 }
 
