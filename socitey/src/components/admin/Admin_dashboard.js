@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "./assets/logo.png";
 export default function Admin_dashboard() {
   return (
     <>
@@ -7,9 +8,9 @@ export default function Admin_dashboard() {
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="#">
+            <Link className="navbar-brand" to="/admin">
               <img
-                src={""}
+                src={logo}
                 alt="Logo"
                 height="120"
                 className="d-inline-block align-text-top"
@@ -120,37 +121,6 @@ export default function Admin_dashboard() {
         </nav>
       </div>
       {/* Header end */}
-
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/admin">
-          Admin Dashboard
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/home">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item active">
-              <Link className="nav-link" to="/admin">
-                Admin Dashboard
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
 
       <div className="jumbotron text-center">
         <h1 className="display-4">Admin Dashboard</h1>

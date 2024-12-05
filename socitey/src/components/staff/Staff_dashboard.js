@@ -1,39 +1,127 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo from "./assets/logo.png";
 export default function Staff_dashboard() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="navbar-brand" to="/staff">
-          Staff Dashboard
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/home">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item active">
-              <Link className="nav-link" to="/staff">
-                Staff Dashboard
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      {/* Header start */}
+      <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="/staff">
+              <img
+                src={logo}
+                alt="Logo"
+                height="120"
+                className="d-inline-block align-text-top"
+              />
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    to="/"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Features
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/staff">
+                        Daily Tasks
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/staff_resident_assistance"
+                      >
+                        Resident Assistance
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/staff_maintenance_assistance"
+                      >
+                        Maintenance Requests
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/staff_management">
+                        Staff Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/maintenance">
+                        Maintenance Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/staff_Visitor_Management"
+                      >
+                        Visitor Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/staff_billing_assistance"
+                      >
+                        Billing Assistance
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/aboutus">
+                    About us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">
+                    Contact us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/register">
+                    Register
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      {/* Header End */}
 
       <div className="jumbotron text-center">
         <h1 className="display-4">Welcome to the Staff Dashboard</h1>
