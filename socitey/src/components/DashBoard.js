@@ -1,15 +1,99 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 import photo1 from "../assets/photo1.jpg";
 import photo2 from "../assets/photo2.jpg";
 import photo3 from "../assets/photo3.jpg";
 import photo4 from "../assets/photo4.jpg";
-import '../css/index.css';
-import '../css/dashboard.css';
+import "../css/index.css";
+import "../css/dashboard.css";
 
 export default function DashBoard() {
   return (
     <>
+      {/* Header start */}
+      <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="#">
+              <img
+                src={logo}
+                alt="Logo"
+                height="120"
+                className="d-inline-block align-text-top"
+              />
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    to="/"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Login
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/login">
+                        Admin
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/login">
+                        Staff
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/login">
+                        Residents
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/aboutus">
+                    About us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">
+                    Contact us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/register">
+                    Register
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      {/* Header end */}
+
       <section className="hero">
         <div className="container text-center">
           <div className="row">
@@ -22,7 +106,11 @@ export default function DashBoard() {
       </section>
       <section className="slider">
         <div className="container">
-          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src={photo1} class="d-block w-100" alt="slider1" />
@@ -37,17 +125,32 @@ export default function DashBoard() {
                 <img src={photo4} class="d-block w-100" alt="slider3" />
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
-
       </section>
 
       {/* <section className="features py-5">
@@ -78,12 +181,13 @@ export default function DashBoard() {
         </div>
       </section> */}
 
-
-
       <div className="container text-center">
         <h1>All Exhaustive List of Amazing Features</h1>
         <h2>All you need in one super App</h2>
-        <h4>Numerous features of Rohan Seher Society makes the system in accordance with all your needs.</h4>
+        <h4>
+          Numerous features of Rohan Seher Society makes the system in
+          accordance with all your needs.
+        </h4>
         <div className="modules">
           <Link to="admin_dashboard.html" className="module-card">
             <h3>Admin Dashboard</h3>
@@ -173,14 +277,6 @@ export default function DashBoard() {
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-
     </>
   );
 }
