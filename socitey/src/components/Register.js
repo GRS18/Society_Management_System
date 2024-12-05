@@ -152,7 +152,7 @@ export default function Register() {
     }
 
     // Show success popup on successful registration
-    setPopupMessage("Registration Successful! Redirecting to Login...");
+    setPopupMessage("Registration Successful! Redirecting to Login.....");
     setShowPopup(true);
 
     // Automatically redirect after 4 seconds
