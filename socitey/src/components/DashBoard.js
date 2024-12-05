@@ -97,7 +97,9 @@ export default function DashBoard() {
       <section className="hero">
         <div className="container text-center">
           <div className="row">
+            {/* <marquee behavior="slide" direction="left"> */}
             <h1>Welcome to Society Management System</h1>
+            {/* </marquee> */}
             <p>Efficient and Transparent Management for Link Better Living</p>
             {/* <Link to="login" className="btn btn-primary">Login</Link>
             <Link to="register" className="btn btn-secondary">Register</Link> */}
