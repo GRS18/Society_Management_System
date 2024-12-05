@@ -254,7 +254,7 @@ export default function Login() {
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
