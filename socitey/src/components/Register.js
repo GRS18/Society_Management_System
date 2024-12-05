@@ -2,35 +2,35 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/register.css";
+import logo from "../assets/logo.png";
 
 export default function Register() {
-
   //  // Hooks for form data
   //  const [role, setRole] = useState("");
   //  const [email, setEmail] = useState("");
   //  const [password, setPassword] = useState("");
   //  const [showPopup, setShowPopup] = useState(false); // Hook to control popup visibility
   //  const navigate = useNavigate();
- 
+
   //  const handleRegister = (e) => {
   //    e.preventDefault();
- 
+
   //    // Example validation
   //    if (!role || !email || !password) {
   //      alert("Please fill all fields!");
   //      return;
   //    }
- 
+
   //    // Show the popup on successful registration
   //    setShowPopup(true);
- 
+
   //    // Automatically redirect after 2 seconds
   //    setTimeout(() => {
   //      setShowPopup(false); // Hide the popup
   //      navigate("/login"); // Redirect to login page
   //    }, 4000);
   //  };
- 
+
   //  return (
   //    <>
   //      <div className="register-card">
@@ -46,7 +46,7 @@ export default function Register() {
   //              required
   //            />
   //          </div>
- 
+
   //          <div className="form-group">
   //            <label htmlFor="email">Email Address</label>
   //            <input
@@ -58,7 +58,7 @@ export default function Register() {
   //              onChange={(e) => setEmail(e.target.value)}
   //            />
   //          </div>
- 
+
   //          <div className="form-group">
   //            <label htmlFor="phone">Phone Number</label>
   //            <input
@@ -69,7 +69,7 @@ export default function Register() {
   //              required
   //            />
   //          </div>
- 
+
   //          <div className="form-group">
   //            <label htmlFor="role">User Role</label>
   //            <select
@@ -84,7 +84,7 @@ export default function Register() {
   //              <option value="resident">Resident</option>
   //            </select>
   //          </div>
- 
+
   //          <div className="form-group">
   //            <label htmlFor="password">Password</label>
   //            <input
@@ -96,7 +96,7 @@ export default function Register() {
   //              onChange={(e) => setPassword(e.target.value)}
   //            />
   //          </div>
- 
+
   //          <div className="form-group">
   //            <label htmlFor="confirm-password">Confirm Password</label>
   //            <input
@@ -107,7 +107,7 @@ export default function Register() {
   //              required
   //            />
   //          </div>
- 
+
   //          <button
   //            type="submit"
   //            className="btn btn-primary btn-block"
@@ -115,13 +115,13 @@ export default function Register() {
   //          >
   //            Register
   //          </button>
- 
+
   //          <p className="login-link">
   //            Already have an account? <Link to="/login">Login Here</Link>
   //          </p>
   //        </form>
   //      </div>
- 
+
   //      {/* Popup Message */}
   //      {showPopup && (
   //        <div className="popup-overlay">
@@ -132,14 +132,6 @@ export default function Register() {
   //        </div>
   //      )}
   //    </>
-
-
-
-
-
-
-
-
 
   const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
@@ -172,6 +164,89 @@ export default function Register() {
 
   return (
     <>
+      {/* Header start */}
+      <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+          <div className="container-fluid">
+            <Link className="navbar-brand" to="#">
+              <img
+                src={logo}
+                alt="Logo"
+                height="120"
+                className="d-inline-block align-text-top"
+              />
+            </Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    to="/"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Login
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item" to="/login">
+                        Admin
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/login">
+                        Staff
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/login">
+                        Residents
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/aboutus">
+                    About us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">
+                    Contact us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/register">
+                    Register
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      {/* Header end */}
+
       <div className="register-card">
         <h3 className="text-center">Create an Account</h3>
         <form>
