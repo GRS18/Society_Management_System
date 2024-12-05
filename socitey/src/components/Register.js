@@ -145,14 +145,14 @@ export default function Register() {
 
     // Example validation
     if (!role || !email || !password) {
-      setPopupMessage("Please fill all fields!");
+      setPopupMessage("❗Please fill all fields!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000); // Hide after 3 seconds
       return;
     }
 
     // Show success popup on successful registration
-    setPopupMessage("Registration Successful! Redirecting to Login.....");
+    setPopupMessage("✅Registration Successful! Redirecting to Login.....");
     setShowPopup(true);
 
     // Automatically redirect after 4 seconds

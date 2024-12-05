@@ -15,7 +15,7 @@ export default function Login() {
 
     // Example validation
     if (!role || !email || !password) {
-      setPopupMessage("Please fill all fields!");
+      setPopupMessage("❗Please fill all fields!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000); // Hide after 3 seconds
       return;
@@ -44,7 +44,7 @@ export default function Login() {
         navigate("/resident");
       }, 3000);
     } else {
-      setPopupMessage("Invalid role selected!");
+      setPopupMessage("❌Invalid role selected!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
     }
