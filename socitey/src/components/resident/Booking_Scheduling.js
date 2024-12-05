@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./css/booking_scheduling.css";
 export default function Booking_Scheduling() {
   return (
     <>
