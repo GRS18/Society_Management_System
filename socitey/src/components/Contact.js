@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import "../css/contact.css";
 
 export default function Contact() {
   return (
@@ -39,7 +40,11 @@ export default function Contact() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/login">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/login"
+                  >
                     Login
                   </Link>
                 </li>
@@ -78,47 +83,47 @@ export default function Contact() {
           <div className="col-md-6">
             <h2>Send Us Link Message</h2>
             <form>
-              <div className="form-group">
+              <div className="form-group key">
                 <label for="name">Full Name</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control cont"
                   id="name"
                   placeholder="Enter your full name"
                   required
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group key">
                 <label for="email">Email Address</label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control cont"
                   id="email"
                   placeholder="Enter your email"
                   required
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group key">
                 <label for="subject">Subject</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control cont"
                   id="subject"
                   placeholder="Enter subject"
                   required
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group key">
                 <label for="message">Message</label>
                 <textarea
-                  className="form-control"
+                  className="form-control cont"
                   id="message"
                   rows="5"
                   placeholder="Type your message here..."
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-primary sbtn">
                 Submit
               </button>
             </form>
