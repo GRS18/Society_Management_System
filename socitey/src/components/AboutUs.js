@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import Socitey from "../assets/Socitey.jpg";
+import profile from "../assets/profile.jpg";
+import "../css/aboutus.css";
+
 export default function AboutUs() {
   return (
     <>
@@ -38,7 +42,11 @@ export default function AboutUs() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/login">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/login"
+                  >
                     Login
                   </Link>
                 </li>
@@ -87,7 +95,7 @@ export default function AboutUs() {
             </div>
             <div className="col-md-6">
               <img
-                src="society.jpg"
+                src={Socitey}
                 alt="About Society"
                 className="img-fluid rounded"
               />
@@ -122,29 +130,17 @@ export default function AboutUs() {
           <h2 className="text-center">Meet Our Team</h2>
           <div className="row text-center mt-4">
             <div className="col-md-4 team-member">
-              <img
-                src="member1.jpg"
-                alt="Team Member"
-                className="img-fluid mb-3"
-              />
+              <img src={profile} alt="Team Member" className="img-fluid mb-3" />
               <h5>John Doe</h5>
               <p>Society President</p>
             </div>
             <div className="col-md-4 team-member">
-              <img
-                src="member2.jpg"
-                alt="Team Member"
-                className="img-fluid mb-3"
-              />
+              <img src={profile} alt="Team Member" className="img-fluid mb-3" />
               <h5>Jane Smith</h5>
               <p>Secretary</p>
             </div>
             <div className="col-md-4 team-member">
-              <img
-                src="member3.jpg"
-                alt="Team Member"
-                className="img-fluid mb-3"
-              />
+              <img src={profile} alt="Team Member" className="img-fluid mb-3" />
               <h5>Michael Brown</h5>
               <p>Treasurer</p>
             </div>

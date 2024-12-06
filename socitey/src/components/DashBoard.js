@@ -19,7 +19,7 @@ export default function DashBoard() {
               <img
                 src={logo}
                 alt="Logo"
-                height="120"
+                height="120px"
                 className="d-inline-block align-text-top"
               />
             </Link>
@@ -45,7 +45,11 @@ export default function DashBoard() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/login">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/login"
+                  >
                     Login
                   </Link>
                 </li>
@@ -168,39 +172,39 @@ export default function DashBoard() {
           accordance with all your needs.
         </h4>
         <div className="modules">
-          <Link to="admin_dashboard.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Admin Dashboard</h3>
             <p>Overview of key metrics and system stats.</p>
           </Link>
-          <Link to="resident_management.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Resident Management</h3>
             <p>Manage resident profiles, add or update information.</p>
           </Link>
-          <Link to="visitor_management.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Visitor and Attendance</h3>
             <p>Log visitor entries and schedule visits.</p>
           </Link>
-          <Link to="billing_payments.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Billing and Payments</h3>
             <p>Track billing and payment history.</p>
           </Link>
-          <Link to="staff_management.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Staff Management</h3>
             <p>Manage staff roles, responsibilities, and performance.</p>
           </Link>
-          <Link to="maintenance_management.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Maintenance Management</h3>
             <p>Track maintenance requests and assign tasks.</p>
           </Link>
-          <Link to="reports_analytics.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Reports and Analytics</h3>
             <p>Generate reports and analyze data.</p>
           </Link>
-          <Link to="communication.html" className="module-card">
+          <Link to="/" className="module-card">
             <h3>Communication</h3>
             <p>Send announcements and alerts to residents.</p>
           </Link>
-          <Link to="settings.html" className="module-card">
+          <Link to="/ " className="module-card">
             <h3>Settings</h3>
             <p>Manage system configurations and preferences.</p>
           </Link>

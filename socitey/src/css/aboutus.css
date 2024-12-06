@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* About Section Styling */
+.about-header {
+  background-color: #ccd0d5;
+  color: rgb(0, 0, 0);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-header p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* About Us Content Section */
+.about {
+  padding: 60px 0;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.about img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Mission and Vision Section Styling */
+.mission-vision {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.mission-vision h3 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.mission-vision p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.mission-vision .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-vision .col-md-6 {
+  padding: 20px;
+}
+
+/* Team Section Styling */
+.team {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #343a40;
+}
+
+.team-member {
+  margin-bottom: 30px;
+}
+
+.team-member img {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+
+.team-member h5 {
+  font-size: 1.25rem;
+  color: #343a40;
+}
+
+.team-member p {
+  color: #666;
+  font-size: 1rem;
+}
