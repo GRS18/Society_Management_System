@@ -33,6 +33,7 @@ import Staff_Maintenance_Assistance from "./components/staff/Staff_Maintenance_A
 import Staff_Resident_Assistance from "./components/staff/Staff_Resident_Assistance";
 import Staff_Schedule from "./components/staff/Staff_Schedule";
 import Staff_Visitor_Management from "./components/staff/Staff_Visitor_Management";
+import Vendor_Request_Form from "./components/resident/Vendor_Request_Form";
 
 const projectRoute = createBrowserRouter([
   {
@@ -146,6 +147,10 @@ const projectRoute = createBrowserRouter([
       {
         path: "resident_communication",
         element: <Resident_Communication />,
+      },
+      {
+        path: "vendor_request_form",
+        element: <Vendor_Request_Form />,
       },
 
       //Staff Routers

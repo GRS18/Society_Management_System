@@ -84,6 +84,14 @@ export default function Resident_dashboard() {
                         Feedback & Surveys
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/vendor_request_form"
+                      >
+                        Vendor Request Form
+                      </Link>
+                    </li>
                   </ul>
                 </li>
                 <li className="nav-item">
@@ -167,6 +175,15 @@ export default function Resident_dashboard() {
               <div className="card dashboard-card text-center p-4">
                 <i className="fas fa-poll"></i>
                 <h5 className="mt-3">Feedback & Surveys</h5>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <Link to="/vendor_request_form" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4">
+                <i className="fas fa-poll"></i>
+                <h5 className="mt-3">Vendor Request Form</h5>
               </div>
             </Link>
           </div>
