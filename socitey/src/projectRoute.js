@@ -34,6 +34,8 @@ import Staff_Resident_Assistance from "./components/staff/Staff_Resident_Assista
 import Staff_Schedule from "./components/staff/Staff_Schedule";
 import Staff_Visitor_Management from "./components/staff/Staff_Visitor_Management";
 import Vendor_Request_Form from "./components/resident/Vendor_Request_Form";
+import Manage_Vendor from "./components/admin/Manage_Vendor";
+import Vendor_List from "./components/admin/Vendor_List";
 
 const projectRoute = createBrowserRouter([
   {
@@ -122,6 +124,14 @@ const projectRoute = createBrowserRouter([
         path: "visitor_management2",
         element: <Visitor_Management2 />,
       },
+      {
+        path: "manage_vendor",
+        element: <Manage_Vendor />,
+      },
+      {
+        path: "vendor_list",
+        element: <Vendor_List />,
+      },
 
       //Resident Routes
       {
@@ -152,6 +162,7 @@ const projectRoute = createBrowserRouter([
         path: "vendor_request_form",
         element: <Vendor_Request_Form />,
       },
+     
 
       //Staff Routers
       {

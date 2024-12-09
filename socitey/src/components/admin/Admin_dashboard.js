@@ -94,6 +94,16 @@ export default function Admin_dashboard() {
                       </Link>
                     </li>
                     <li>
+                      <Link className="dropdown-item" to="/manage_vendor">
+                        Manage Vendor For Resident
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/vendor_list">
+                        Vendor List
+                      </Link>
+                    </li>
+                    <li>
                       <Link className="dropdown-item" to="/setting">
                         Settings
                       </Link>
@@ -208,6 +218,24 @@ export default function Admin_dashboard() {
               <div className="card dashboard-card text-center p-4">
                 <i className="fas fa-shield-alt"></i>
                 <h5 className="mt-3">Security & Audit</h5>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <Link to="/manage_vendor" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4">
+                <i className="fas fa-shield-alt"></i>
+                <h5 className="mt-3">Manage Vendor for Resident</h5>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <Link to="/vendor_list" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4">
+                <i className="fas fa-shield-alt"></i>
+                <h5 className="mt-3">Vendor List</h5>
               </div>
             </Link>
           </div>
