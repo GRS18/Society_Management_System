@@ -33,10 +33,13 @@
 .module-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(40, 207, 40);
+    color: white;
 }
-.module-card h3 {
+.module-card h3:hover {
     margin-bottom: 10px;
     color: #333;
+    
 }
 .module-card p {
     font-size: 14px;
