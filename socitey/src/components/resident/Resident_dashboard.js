@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./assets/logo.png";
+import './css/dashboard.css';
 export default function Resident_dashboard() {
   return (
     <>
@@ -127,7 +128,7 @@ export default function Resident_dashboard() {
         <div className="row">
           <div className="col-md-4 mb-4">
             <Link to="/profile_management" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-user"></i>
                 <h5 className="mt-3">Profile</h5>
               </div>
@@ -136,7 +137,7 @@ export default function Resident_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/booking_scheduling" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-calendar-check"></i>
                 <h5 className="mt-3">Booking & Scheduling</h5>
               </div>
@@ -145,7 +146,7 @@ export default function Resident_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/resident_billing" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-file-invoice"></i>
                 <h5 className="mt-3">Billing & Payments</h5>
               </div>
@@ -154,7 +155,7 @@ export default function Resident_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/maintenance_requests" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-tools"></i>
                 <h5 className="mt-3">Maintenance Requests</h5>
               </div>
@@ -163,7 +164,7 @@ export default function Resident_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/resident_communication" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-comments"></i>
                 <h5 className="mt-3">Communication</h5>
               </div>
@@ -172,7 +173,7 @@ export default function Resident_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/feedback_surveys" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-poll"></i>
                 <h5 className="mt-3">Feedback & Surveys</h5>
               </div>
@@ -181,7 +182,7 @@ export default function Resident_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/vendor_request_form" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-poll"></i>
                 <h5 className="mt-3">Vendor Request Form</h5>
               </div>
