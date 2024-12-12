@@ -36,7 +36,7 @@
   padding: 20px;
   margin: 25px auto;
   background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(59, 220, 107, 0.795);
   border-radius: 8px;
 }
 .register-card h3 {
@@ -49,8 +49,8 @@
   border-radius: 25px;
 }
 .rbtn {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #59c04b;
+  border-color: #63e551;
   width: 100%; /* Makes the button take full width of the card */
   padding: 10px 20px;
   margin-top: 10px;
@@ -59,6 +59,7 @@
 
 .login-link {
   display: block;
+  color: #59c04b;
   margin-top: 10px;
   text-align: center;
 }
@@ -67,5 +68,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
