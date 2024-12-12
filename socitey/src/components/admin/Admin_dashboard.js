@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./assets/logo.png";
+import './css/dashboard.css';
 export default function Admin_dashboard() {
   return (
     <>
@@ -139,11 +140,11 @@ export default function Admin_dashboard() {
         </p>
       </div>
 
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4 mb-4">
+      <div className="container ">
+        <div className="row ">
+          <div className="col-md-4 mb-4 ">
             <Link to="/resident_management" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-users"></i>
                 <h5 className="mt-3">Resident Management</h5>
               </div>
@@ -152,7 +153,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/visitor_management" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-user-check"></i>
                 <h5 className="mt-3">Visitor Management</h5>
               </div>
@@ -161,7 +162,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/Billing" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-file-invoice-dollar"></i>
                 <h5 className="mt-3">Billing & Payments</h5>
               </div>
@@ -170,7 +171,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/staff_management" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-user-tie"></i>
                 <h5 className="mt-3">Staff Management</h5>
               </div>
@@ -179,7 +180,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/maintenance" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-tools"></i>
                 <h5 className="mt-3">Maintenance Management</h5>
               </div>
@@ -188,7 +189,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/reports_analytics" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-chart-line"></i>
                 <h5 className="mt-3">Reports & Analytics</h5>
               </div>
@@ -197,7 +198,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/communication" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-comments"></i>
                 <h5 className="mt-3">Communication</h5>
               </div>
@@ -206,7 +207,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/access_control" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-key"></i>
                 <h5 className="mt-3">Access Control</h5>
               </div>
@@ -215,7 +216,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/security_audit" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-shield-alt"></i>
                 <h5 className="mt-3">Security & Audit</h5>
               </div>
@@ -224,7 +225,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/manage_vendor" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-shield-alt"></i>
                 <h5 className="mt-3">Manage Vendor for Resident</h5>
               </div>
@@ -233,7 +234,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/vendor_list" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-shield-alt"></i>
                 <h5 className="mt-3">Vendor List</h5>
               </div>
@@ -242,7 +243,7 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/setting" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-cogs"></i>
                 <h5 className="mt-3">Settings</h5>
               </div>
