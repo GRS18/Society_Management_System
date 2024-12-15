@@ -307,8 +307,15 @@ export default function Register() {
               Register
             </button>
 
-            <p className="login-link">
+            {/* <p className="login-link">
               Already have an account? <Link to="/login">Login Here</Link>
+            </p> */}
+
+            <p className="text-center mt-3">
+            Already have an account?{" "}
+            <a href="/login" className="login-link">
+              Login Here
+            </a>
             </p>
           </form>
         </div>

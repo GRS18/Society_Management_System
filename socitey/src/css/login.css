@@ -33,13 +33,17 @@
   margin-top: 5px;
 }
 
+.form-check-input:hover {
+  box-shadow: #59c04b ;
+}
+
 .form-check-label {
-  font-size: 14px;
-  color: #555;
+  font-size: 17px;
+  color: #0d0505dd;
 }
 
 .lbtn {
-  background-color: #59c04b;
+  background-color: #8ad880;
   border-color: #59c04b;
   padding: 10px 20px;
   border-radius: 25px;
@@ -48,8 +52,8 @@
 }
 
 .lbtn:hover {
-  background-color: #59c04b;
-  border-color: #59c04b;
+  background-color: #319124;
+  border-color: #319124;
 }
 
 .forgot-link {

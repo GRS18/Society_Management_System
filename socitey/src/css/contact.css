@@ -28,6 +28,15 @@ body {
   padding: 12px;
   width: 100%;
 }
+.form-group label {
+  font-weight: bold;
+  color: #4f4e4e;
+}
+
+.form-control {
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
 
 .form-control:focus {
   border-color: #007bff;
@@ -35,8 +44,8 @@ body {
 }
 
 .sbtn[type="submit"] {
-  background-color: #007bff;
-  border: none;
+  background-color: #8ad880;
+  border: #59c04b;
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
@@ -45,7 +54,7 @@ body {
 }
 
 .sbtn[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #319124;
 }
 
 /* Contact Information Styles */
@@ -59,7 +68,7 @@ ul.list-unstyled li i {
 }
 
 ul.list-unstyled li a {
-  color: #007bff;
+  color: #319124;
   text-decoration: none;
 }
 

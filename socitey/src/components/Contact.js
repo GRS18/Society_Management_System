@@ -40,15 +40,6 @@ export default function Contact() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
-                    aria-current="page"
-                    to="/login"
-                  >
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
                   <Link className="nav-link" to="/aboutus">
                     About us
                   </Link>
@@ -59,10 +50,18 @@ export default function Contact() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/register">
-                    Register
-                  </Link>
-                </li>
+                    <Link
+                      className="nav-link active header-button d-sm-inline-block"
+                      aria-current="page"
+                      to="/login">
+                      Login
+                      </Link>
+                 </li>
+                 <li className="nav-item ">
+                    <Link className="nav-link active header-button d-sm-inline-block" aria-current="page" to="/register">
+                     Register
+                    </Link>
+                  </li>
               </ul>
             </div>
           </div>

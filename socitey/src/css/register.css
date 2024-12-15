@@ -49,7 +49,7 @@
   border-radius: 25px;
 }
 .rbtn {
-  background-color: #59c04b;
+  background-color: #8ad880;
   border-color: #63e551;
   width: 100%; /* Makes the button take full width of the card */
   padding: 10px 20px;
@@ -57,12 +57,21 @@
   border-radius: 25px;
 }
 
-.login-link {
-  display: block;
-  color: #59c04b;
-  margin-top: 10px;
-  text-align: center;
+.rbtn:hover {
+  background-color: #319124;
+  border-color: #319124;
 }
+
+
+.login-link {
+  color: #59c04b;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
 .register {
   background: #f7f7f7;
   display: flex;
