@@ -24,7 +24,6 @@
   border-radius: 25px;
   border: 1px solid #ccc;
 }
-
 .form-control:focus {
   border-color: #59c04b;
   box-shadow: 0 0 5px rgba(59, 220, 107, 0.795);

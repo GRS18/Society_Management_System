@@ -131,10 +131,10 @@ export default function Login() {
               onChange={(e) => setRole(e.target.value)}
               required
             >
-              <option value="">Select Role</option>
-              <option value="admin">Admin</option>
-              <option value="staff">Staff</option>
-              <option value="resident">Resident</option>
+              <option className = "opt" value="">Select Role</option>
+              <option  className = "opt" value="admin">Admin</option>
+              <option  className = "opt" value="staff">Staff</option>
+              <option  className = "opt" value="resident">Resident</option>
             </select>
           </div>
 
