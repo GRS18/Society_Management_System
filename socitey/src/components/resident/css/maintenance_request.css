@@ -1,0 +1,62 @@
+.maintenance-section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .maintenance-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+  
+  .maintenance-card h3,
+  .maintenance-card h4 {
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  .badge-pending {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .badge-in-progress {
+    background-color: #5bc0de;
+    color: white;
+  }
+  
+  .badge-completed {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+  }
+  

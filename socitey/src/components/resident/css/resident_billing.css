@@ -1,0 +1,32 @@
+.billing-card {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.summary-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 20px;
+}
+.summary-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.summary-card p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+.badge-paid {
+    background-color: #28a745;
+    color: white;
+}
+.badge-pending {
+    background-color: #ffc107;
+    color: white;
+}

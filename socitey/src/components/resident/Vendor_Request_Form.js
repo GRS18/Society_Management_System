@@ -1,6 +1,8 @@
 
 import react from 'react';
 import { useState } from 'react';
+import '../resident/css/vendor_request_form.css';
+
 export default function Vendor_Request_Form() 
 {
     const [requestType, setRequestType] = useState("");
@@ -35,7 +37,7 @@ export default function Vendor_Request_Form()
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 form">
       <h1>Submit a Service Request</h1>
       <p>Use the form below to request a service or report an issue.</p>
 

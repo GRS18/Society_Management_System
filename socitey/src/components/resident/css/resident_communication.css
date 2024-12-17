@@ -1,0 +1,72 @@
+.communication-section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .communication-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+  }
+  
+  .communication-card h3,
+  .communication-card h4 {
+    margin-bottom: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .message-board {
+    margin-top: 20px;
+  }
+  
+  .message {
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .message h6 {
+    font-weight: bold;
+  }
+  
+  .message .sender {
+    background-color: #f8f9fa;
+  }
+  
+  .message small {
+    font-size: 0.8em;
+    color: gray;
+  }
+  
+  .btn-primary {
+    background-color: #59c04b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .form-control {
+    margin-bottom: 10px;
+  }
+  
+  .form-control-file {
+    margin-top: 5px;
+  }
+  

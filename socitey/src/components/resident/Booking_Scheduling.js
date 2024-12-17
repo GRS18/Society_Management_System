@@ -112,7 +112,7 @@ const [facility, setFacility] = useState('');
   };
 
   return (
-    <div className="container">
+    <div className="container booking">
       {/* Booking Form */}
       <div className="booking-card">
         <div className="booking-header">

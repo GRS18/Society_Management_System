@@ -6,6 +6,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
+
+.bookint{
+  max-width: 800px;
+}
 .booking-header {
   text-align: center;
   margin-bottom: 20px;
