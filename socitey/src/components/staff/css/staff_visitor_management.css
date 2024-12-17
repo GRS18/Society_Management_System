@@ -1,0 +1,72 @@
+.visitor-management {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .card-custom {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-custom h3,
+  .card-custom h4 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+  }
+  
+  .badge-warning {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .badge-success {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-custom {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-custom:hover {
+    background-color: #0056b3;
+  }
+  

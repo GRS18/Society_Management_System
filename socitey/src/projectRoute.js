@@ -36,6 +36,7 @@ import Staff_Visitor_Management from "./components/staff/Staff_Visitor_Managemen
 import Vendor_Request_Form from "./components/resident/Vendor_Request_Form";
 import Manage_Vendor from "./components/admin/Manage_Vendor";
 import Vendor_List from "./components/admin/Vendor_List";
+import Daily_Tasks from "./components/staff/Daily_Tasks";
 
 const projectRoute = createBrowserRouter([
   {
@@ -165,6 +166,10 @@ const projectRoute = createBrowserRouter([
      
 
       //Staff Routers
+      {
+        path: "daily_tasks",
+        element: <Daily_Tasks />,
+      },
       {
         path: "community_engagement",
         element: <Community_Engagement />,

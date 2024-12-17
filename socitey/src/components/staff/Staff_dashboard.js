@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "./assets/logo.png";
+import '../staff/css/dashboard.css';
+
 export default function Staff_dashboard() {
   return (
     <>
@@ -53,7 +55,7 @@ export default function Staff_dashboard() {
                   </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link className="dropdown-item" to="/staff">
+                      <Link className="dropdown-item" to="/daily_tasks">
                         Daily Tasks
                       </Link>
                     </li>
@@ -99,6 +101,22 @@ export default function Staff_dashboard() {
                         Billing Assistance
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/staff_communication"
+                      >
+                        Communication
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/staff_schedule"
+                      >
+                        Staff Schedule
+                      </Link>
+                    </li>
                   </ul>
                 </li>
                 <li className="nav-item">
@@ -133,8 +151,8 @@ export default function Staff_dashboard() {
       <div className="container">
         <div className="row">
           <div className="col-md-4 mb-4">
-            <Link to="/" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+            <Link to="/daily_tasks" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-tasks"></i>
                 <h5 className="mt-3">Daily Tasks</h5>
               </div>
@@ -146,7 +164,7 @@ export default function Staff_dashboard() {
               to="/staff_resident_assistance"
               className="text-decoration-none"
             >
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-user-cog"></i>
                 <h5 className="mt-3">Resident Assistance</h5>
               </div>
@@ -158,9 +176,9 @@ export default function Staff_dashboard() {
               to="/staff_maintenance_assistance"
               className="text-decoration-none"
             >
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-tools"></i>
-                <h5 className="mt-3">Maintenance Requests</h5>
+                <h5 className="mt-3">Maintenance Assistance</h5>
               </div>
             </Link>
           </div>
@@ -170,7 +188,7 @@ export default function Staff_dashboard() {
               to="/staff_visitor_management"
               className="text-decoration-none"
             >
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-user-check"></i>
                 <h5 className="mt-3">Visitor Management</h5>
               </div>
@@ -182,7 +200,7 @@ export default function Staff_dashboard() {
               to="/staff_billing_assistance"
               className="text-decoration-none"
             >
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-file-invoice-dollar"></i>
                 <h5 className="mt-3">Billing Assistance</h5>
               </div>
@@ -224,9 +242,25 @@ export default function Staff_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/community_engagement" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4">
+              <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-handshake"></i>
                 <h5 className="mt-3">Community Engagement</h5>
+              </div>
+            </Link>
+          </div>
+          <div className="col-md-4 mb-4">
+            <Link to="/staff_communication" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4 block">
+                <i className="fas fa-handshake"></i>
+                <h5 className="mt-3">Communication</h5>
+              </div>
+            </Link>
+          </div>
+          <div className="col-md-4 mb-4">
+            <Link to="/staff_schedule" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4 block">
+                <i className="fas fa-handshake"></i>
+                <h5 className="mt-3">Staff Schedule</h5>
               </div>
             </Link>
           </div>
