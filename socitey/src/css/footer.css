@@ -1,0 +1,40 @@
+footer {
+    background-color: #f0edede6; /* Dark background */
+    color: white; /* White text */
+  }
+  
+  footer .container {
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0 0 10px; /* Add space between text and links */
+    font-size: 14px; /* Adjust font size */
+  }
+  
+  footer ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer ul.list-inline {
+    display: inline-flex; /* Display items inline */
+    gap: 15px; /* Space between items */
+  }
+  
+  footer ul.list-inline li {
+    display: inline; /* Ensure items are inline */
+  }
+  
+  footer ul.list-inline a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Adjust font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  footer ul.list-inline a:hover {
+    color: #00bcd4; /* Change color on hover */
+  }
+  

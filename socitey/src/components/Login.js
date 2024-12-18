@@ -119,6 +119,7 @@ export default function Login() {
       </div>
       {/* Header end */}
 
+   <div className="login">
       <div className="login-card">
         <h3 className="text-center">Login</h3>
         <form onSubmit={handleLogin}>
@@ -191,6 +192,7 @@ export default function Login() {
           </p>
         </form>
       </div>
+   </div>
       {/* Popup Message */}
       {showPopup && (
         <div className="popup-overlay">

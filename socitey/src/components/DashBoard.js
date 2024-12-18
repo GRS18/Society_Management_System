@@ -20,7 +20,7 @@ export default function DashBoard() {
                 src={logo}
                 alt="Logo"
                 height="120px"
-                className="d-inline-block align-text-top"
+                className="d-inline-block align-text-top logo"
               />
             </Link>
             <button
@@ -78,7 +78,7 @@ export default function DashBoard() {
         <div className="container text-center">
           <div className="row">
             {/* <marquee behavior="slide" direction="left"> */}
-            <h1>Welcome to Society Management System</h1>
+            <h1>Welcome to NestOp's: The Community Hub</h1>
             {/* </marquee> */}
             <p>Efficient and Transparent Management for Link Better Living</p>
             {/* <Link to="login" className="btn btn-primary">Login</Link>

@@ -223,6 +223,7 @@ export default function Register() {
         </nav>
       </div>
       {/* Header end */}
+      
       <div className="register">
         <div className="register-card">
           <h3 className="text-center">Create an Account</h3>
