@@ -64,7 +64,7 @@ export default function Login() {
                 src={logo}
                 alt="Logo"
                 height="120"
-                className="d-inline-block align-text-top"
+                className="d-inline-block align-text-top logo"
               />
             </Link>
             <button
@@ -88,15 +88,7 @@ export default function Login() {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link active"
-                    aria-current="page"
-                    to="/login"
-                  >
-                    Login
-                  </Link>
-                </li>
+
                 <li className="nav-item">
                   <Link className="nav-link" to="/aboutus">
                     About us
@@ -108,7 +100,7 @@ export default function Login() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/register">
+                  <Link className="nav-link active header-button d-sm-inline-block" to="/register">
                     Register
                   </Link>
                 </li>
