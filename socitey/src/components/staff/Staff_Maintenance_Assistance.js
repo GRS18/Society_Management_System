@@ -230,13 +230,13 @@ const [requests, setRequests] = useState([
       </select>
     </form>
   </div>
-  <div className="search-filter-right">
+  {/* <div className="search-filter-right">
     <img
       src="https://via.placeholder.com/300x200"
       alt="Search Illustration"
       className="search-filter-image"
     />
-  </div>
+  </div> */}
 </div>
 
       {/* Maintenance Request Table */}
