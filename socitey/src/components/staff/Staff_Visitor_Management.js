@@ -239,7 +239,7 @@ const [visitors, setVisitors] = useState([
         </table>
       </div>
 
-      {/* Add New Visitor */}
+      {/* Add New Visitor
       <div className="card-custom mt-4">
         <h4>Add New Visitor</h4>
         <form onSubmit={addVisitor}>
@@ -248,7 +248,7 @@ const [visitors, setVisitors] = useState([
               <label htmlFor="name">Visitor Name</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control visit"
                 id="name"
                 placeholder="Enter visitor's name"
                 value={newVisitor.name}
@@ -261,7 +261,7 @@ const [visitors, setVisitors] = useState([
               <label htmlFor="flatNumber">Flat Number</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control visit"
                 id="flatNumber"
                 placeholder="e.g., A-101"
                 value={newVisitor.flatNumber}
@@ -273,7 +273,7 @@ const [visitors, setVisitors] = useState([
             <div className="form-group col-md-3">
               <label htmlFor="purpose">Purpose</label>
               <select
-                className="form-control"
+                className="form-control visit"
                 id="purpose"
                 value={newVisitor.purpose}
                 onChange={handleInputChange}
@@ -292,7 +292,7 @@ const [visitors, setVisitors] = useState([
             <label htmlFor="timeIn">Time In</label>
             <input
               type="time"
-              className="form-control"
+              className="form-control visit"
               id="timeIn"
               value={newVisitor.timeIn}
               onChange={handleInputChange}
@@ -300,11 +300,91 @@ const [visitors, setVisitors] = useState([
             />
           </div>
 
-          <button type="submit" className="btn btn-custom btn-block">
+          <button type="submit" className="btn btn-custom btn-block but">
             Add Visitor
           </button>
         </form>
+      </div> */}
+
+
+      {/* Add New Visitor */}
+<div className="card-custom mt-4 add-visitor-section">
+  <div className="add-visitor-left">
+    <h4>Add New Visitor</h4>
+    <form onSubmit={addVisitor}>
+      <div className="form-row">
+        <div className="form-group col-md-6">
+          <label htmlFor="name">Visitor Name</label>
+          <input
+            type="text"
+            className="form-control visit"
+            id="name"
+            placeholder="Enter visitor's name"
+            value={newVisitor.name}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <div className="form-group col-md-3">
+          <label htmlFor="flatNumber">Flat Number</label>
+          <input
+            type="text"
+            className="form-control visit"
+            id="flatNumber"
+            placeholder="e.g., A-101"
+            value={newVisitor.flatNumber}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <div className="form-group col-md-3">
+          <label htmlFor="purpose">Purpose</label>
+          <select
+            className="form-control visit"
+            id="purpose"
+            value={newVisitor.purpose}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Select...</option>
+            <option value="Guest">Guest</option>
+            <option value="Delivery">Delivery</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
       </div>
+
+      <div className="form-group">
+        <label htmlFor="timeIn">Time In</label>
+        <input
+          type="time"
+          className="form-control visit"
+          id="timeIn"
+          value={newVisitor.timeIn}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      
+      <button type="submit" className="btn btn-custom btn-block but">
+        Add Visitor
+      </button>
+    </form>
+  </div>
+  
+  <div className="add-visitor-right">
+    <img
+      src="https://via.placeholder.com/300x200"
+      alt="Add Visitor Illustration"
+      className="add-visitor-image"
+    />
+  </div>
+</div>
+
+
     </div>
   );
 }

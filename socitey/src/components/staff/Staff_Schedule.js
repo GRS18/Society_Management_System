@@ -3,40 +3,7 @@ import { useState,useEffect } from 'react';
 import '../staff/css/staff_schedule.css';
 
 export default function Staff_Schedule() {
-//   return (
-//     <>
-//     <div className="card-custom">
-//         <h3 className="text-center">Staff Schedule</h3>
-//         <p className="text-center">Manage and view the schedules for staff members in the society.</p>
-//     </div>
 
-//     <div className="card-custom mt-4">
-//         <h4>Filter Schedule</h4>
-//         <form className="form-inline justify-content-between">
-//             <select className="form-control mb-2 mr-sm-2 filter-dropdown" id="staffSelect">
-//                 <option value="">Select Staff</option>
-//                 <option value="john">John Doe</option>
-//                 <option value="mary">Mary Smith</option>
-//                 <option value="alex">Alex Brown</option>
-//             </select>
-//             <select className="form-control mb-2 mr-sm-2 filter-dropdown" id="departmentSelect">
-//                 <option value="">Select Department</option>
-//                 <option value="maintenance">Maintenance</option>
-//                 <option value="security">Security</option>
-//                 <option value="cleaning">Cleaning</option>
-//             </select>
-//             <button type="submit" className="btn btn-custom mb-2">Filter</button>
-//         </form>
-//     </div>
-
-//     <div className="card-custom mt-4">
-//         <h4>Staff Schedule</h4>
-//         <div className="calendar-container">
-//             <div id="calendar"></div>
-//         </div>
-//     </div>
-//     </>
-//   );
 
 const [selectedStaff, setSelectedStaff] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('');
@@ -84,12 +51,12 @@ const [selectedStaff, setSelectedStaff] = useState('');
         <p className="text-center">Manage and view the schedules for staff members in the society.</p>
       </div>
 
-      {/* Filter Section */}
+      {/* Filter Section
       <div className="card-custom mt-4">
         <h4>Filter Schedule</h4>
         <form className="form-inline justify-content-between" onSubmit={handleFilterSubmit}>
           <select
-            className="form-control mb-2 mr-sm-2 filter-dropdown"
+            className="form-control mb-2 mr-sm-2 filter-dropdown shedule"
             id="staffSelect"
             value={selectedStaff}
             onChange={handleStaffChange}
@@ -101,7 +68,7 @@ const [selectedStaff, setSelectedStaff] = useState('');
           </select>
 
           <select
-            className="form-control mb-2 mr-sm-2 filter-dropdown"
+            className="form-control mb-2 mr-sm-2 filter-dropdown shedule"
             id="departmentSelect"
             value={selectedDepartment}
             onChange={handleDepartmentChange}
@@ -112,10 +79,55 @@ const [selectedStaff, setSelectedStaff] = useState('');
             <option value="cleaning">Cleaning</option>
           </select>
 
-          <button type="submit" className="btn btn-custom mb-2">
+          <button type="submit" className="btn btn-custom mb-2 shedule">
             Filter
           </button>
         </form>
+      </div> */}
+
+
+       {/* Filter Section with Image */}
+       <div className="card-custom mt-4 filter-schedule-section">
+        <div className="filter-left">
+          <h4>Filter Schedule</h4>
+          <form className="form-inline" onSubmit={handleFilterSubmit}>
+            <select
+              className="form-control mb-2 mr-sm-2 filter-dropdown shedule"
+              id="staffSelect"
+              value={selectedStaff}
+              onChange={handleStaffChange}
+            >
+              <option value="">Select Staff</option>
+              <option value="john">John Doe</option>
+              <option value="mary">Mary Smith</option>
+              <option value="alex">Alex Brown</option>
+            </select>
+
+            <select
+              className="form-control mb-2 mr-sm-2 filter-dropdown shedule"
+              id="departmentSelect"
+              value={selectedDepartment}
+              onChange={handleDepartmentChange}
+            >
+              <option value="">Select Department</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="security">Security</option>
+              <option value="cleaning">Cleaning</option>
+            </select>
+
+            <button type="submit" className="btn btn-custom mb-2 shedule">
+              Filter
+            </button>
+          </form>
+        </div>
+
+        <div className="filter-right">
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Filter Illustration"
+            className="filter-image"
+          />
+        </div>
       </div>
 
       {/* Schedule Overview Section */}

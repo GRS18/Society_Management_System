@@ -31,7 +31,7 @@
   }
   
   .table th {
-    background-color: #007bff;
+    background-color: #31b750 !important;
     color: white;
   }
   
@@ -50,6 +50,10 @@
     color: #fff;
   }
   
+  .assist{
+    width: 600px !important;
+  }
+
   /* Buttons */
   .btn {
     padding: 0.4rem 0.8rem;
@@ -72,14 +76,17 @@
     color: white;
   }
   
-  .btn-add {
-    background-color: #28a745;
+  .btn-custom {
+    background-color: #8be37f;
+    border-color: #59c04b;
     color: white;
-    margin-top: 1rem;
+    margin: 2px;
   }
   
-  .btn-add:hover {
-    background-color: #218838;
+  .btn-custom:hover {
+    transform: scale(0.9) !important;
+    background-color: #33a824 !important;
+    border-color: #319124 !important;
   }
   
   /* Form Inputs */
@@ -100,3 +107,26 @@
     outline: none;
   }
   
+  /* Add Request Section Styling */
+.add-request-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.add-request-left {
+  flex: 1;
+}
+
+.add-request-right {
+  flex: 0.5;
+  text-align: center;
+}
+
+.add-request-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

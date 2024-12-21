@@ -154,7 +154,7 @@ const [requests, setRequests] = useState([
       </div>
 
       {/* Search and Filter */}
-      <div className="card-custom mt-4">
+      {/* <div className="card-custom mt-4">
         <h4>Search and Filter</h4>
         <form
           className="form-inline justify-content-between"
@@ -189,7 +189,55 @@ const [requests, setRequests] = useState([
             <option value="other">Other</option>
           </select>
         </form>
-      </div>
+      </div> */}
+
+
+      {/* Search and Filter */}
+<div className="card-custom mt-4 search-filter-section">
+  <div className="search-filter-left">
+    <h4>Search and Filter</h4>
+    <form
+      className="form-inline justify-content-between"
+      onSubmit={(e) => e.preventDefault()}
+    >
+      <input
+        type="text"
+        className="form-control mb-2 mr-sm-2 maintain"
+        placeholder="Search by Request ID or Resident Name"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <select
+        className="form-control mb-2 mr-sm-2 maintain"
+        value={statusFilter}
+        onChange={(e) => setStatusFilter(e.target.value)}
+      >
+        <option value="">All Status</option>
+        <option value="pending">Pending</option>
+        <option value="in progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+      <select
+        className="form-control mb-2 mr-sm-2 maintain"
+        value={typeFilter}
+        onChange={(e) => setTypeFilter(e.target.value)}
+      >
+        <option value="">All Request Types</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="electrical">Electrical</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="other">Other</option>
+      </select>
+    </form>
+  </div>
+  <div className="search-filter-right">
+    <img
+      src="https://via.placeholder.com/300x200"
+      alt="Search Illustration"
+      className="search-filter-image"
+    />
+  </div>
+</div>
 
       {/* Maintenance Request Table */}
       <div className="card-custom mt-4">

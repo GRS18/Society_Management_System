@@ -49,6 +49,10 @@
     color: #fff;
   }
   
+  .but{
+    width: 600px !important;
+  }
+
   .btn {
     padding: 0.4rem 0.8rem;
     border: none;
@@ -62,11 +66,45 @@
   }
   
   .btn-custom {
-    background-color: #007bff;
+    background-color: #8ad880;
+    border-color: #59c04b;
     color: white;
+    margin: 2px;
   }
   
   .btn-custom:hover {
-    background-color: #0056b3;
+  transform: scale(0.9);
+  background-color: #33a824 !important;
   }
+
+  .visit{
+    width: 600px !important;
+    
+  }
+
+
+  /* Add Visitor Section */
+.add-visitor-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.add-visitor-left {
+  flex: 1;
+}
+
+.add-visitor-right {
+  flex: 0.5;
+  text-align: center;
+}
+
+.add-visitor-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
   

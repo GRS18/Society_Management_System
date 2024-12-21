@@ -117,8 +117,8 @@
 
 .rbtn:hover {
   transform: scale(0.9);
-  background-color: #319124;
-  border-color: #319124;
+  background-color: #319124 !important;
+  border-color: #319124 !important;
 }
 
 

@@ -1,4 +1,4 @@
-.community-engagement {
+ .community-engagement {
     padding: 2rem;
     background-color: #f9f9f9;
   }
@@ -72,11 +72,15 @@
   }
   
   .btn-custom {
-    background-color: #007bff;
+    background-color: #59c04b !important;
     color: white;
   }
   
   .btn-custom:hover {
-    background-color: #0056b3;
+    background-color: #487a54 !important;
   }
+  
+
+
+
   

@@ -44,7 +44,7 @@ body {
 }
 
 .sbtn[type="submit"] {
-  background-color: #8ad880;
+  background-color: #59c04b;
   border: #59c04b;
   color: white;
   padding: 10px 20px;
@@ -54,6 +54,7 @@ body {
 }
 
 .sbtn[type="submit"]:hover {
+  transform: scale(0.85);
   background-color: #319124;
 }
 

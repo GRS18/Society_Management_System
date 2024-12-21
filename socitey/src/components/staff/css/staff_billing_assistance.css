@@ -74,4 +74,31 @@
     background-color: #6c757d;
     color: white;
   }
+
+  .bill{
+    width: 400px !important;
+  }
+  
+  .search-filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .search-filter-left {
+    flex: 1;
+  }
+  
+  .search-filter-right {
+    flex: 0.5;
+    text-align: center;
+  }
+  
+  .search-filter-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
   

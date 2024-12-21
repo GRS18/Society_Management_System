@@ -17,8 +17,8 @@
     margin-bottom: 1rem;
   }
   
-  .form-control {
-    width: 200px;
+   .sf-search {
+    width: 400px !important;
   }
   
   .table {
@@ -52,5 +52,35 @@
   .btn-secondary {
     background-color: #6c757d;
     color: white;
+  }
+  
+
+  
+  .filter-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filter-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .filter-content form {
+    flex: 1;
+  }
+  
+  .filter-image {
+    flex: 0.4;
+    text-align: center;
+    margin-left: 1rem;
+  }
+  
+  .filter-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   

@@ -84,7 +84,7 @@ export default function Daily_Tasks() {
               onChange={(e) => setNewTask(e.target.value)}
               placeholder="Enter a new task"
             />
-            <button className="btn-add" onClick={handleAddTask}>
+            <button className="btn-custom btn-block" onClick={handleAddTask}>
               Add Task
             </button>
           </div>

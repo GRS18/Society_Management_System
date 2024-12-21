@@ -183,20 +183,20 @@ const [messages, setMessages] = useState([]);
         </p>
       </div>
 
-      {/* Search and Filter Section */}
+      {/* Search and Filter Section
       <div className="card-custom mt-4">
         <h4>Search and Filter</h4>
         <form className="form-inline justify-content-between">
           <input
             type="text"
-            className="form-control mb-2 mr-sm-2"
+            className="form-control mb-2 mr-sm-2 sf-search"
             id="searchQuery"
             placeholder="Search by Resident Name or Message"
             value={filters.searchQuery}
             onChange={handleFilterChange}
           />
           <select
-            className="form-control mb-2 mr-sm-2"
+            className="form-control mb-2 mr-sm-2 sf-search"
             id="communicationStatus"
             value={filters.communicationStatus}
             onChange={handleFilterChange}
@@ -207,7 +207,42 @@ const [messages, setMessages] = useState([]);
             <option value="archived">Archived</option>
           </select>
         </form>
-      </div>
+      </div> */}
+
+
+<div className="card-custom mt-4 filter-section">
+  <h4>Search and Filter</h4>
+  <div className="filter-content">
+    <form className="form-inline">
+      <input
+        type="text"
+        className="form-control mb-2 mr-sm-2 sf-search"
+        id="searchQuery"
+        placeholder="Search by Resident Name or Message"
+        value={filters.searchQuery}
+        onChange={handleFilterChange}
+      />
+      <select
+        className="form-control mb-2 mr-sm-2 sf-search"
+        id="communicationStatus"
+        value={filters.communicationStatus}
+        onChange={handleFilterChange}
+      >
+        <option value="">All Status</option>
+        <option value="unread">Unread</option>
+        <option value="read">Read</option>
+        <option value="archived">Archived</option>
+      </select>
+    </form>
+    <div className="filter-image">
+      <img
+        src="https://via.placeholder.com/200" 
+        alt="Filter Illustration"
+      />
+    </div>
+  </div>
+</div>
+
 
       {/* Communication Overview Section */}
       <div className="card-custom mt-4">

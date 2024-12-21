@@ -22,6 +22,10 @@
     width: 100%;
     border-collapse: collapse;
   }
+
+  .maintain{
+    width: 400px !important;
+  }
   
   .table th,
   .table td {
@@ -64,7 +68,7 @@
   }
   
   .btn-success {
-    background-color: #28a745;
+    background-color: #8ad880;
     color: white;
   }
   
@@ -86,3 +90,27 @@
     color: white;
   }
   
+
+  /* Search and Filter Section Styling */
+.search-filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-filter-left {
+  flex: 1;
+}
+
+.search-filter-right {
+  flex: 0.5;
+  text-align: center;
+}
+
+.search-filter-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

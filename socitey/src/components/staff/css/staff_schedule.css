@@ -110,6 +110,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.shedule{
+  width: 500px !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .calendar-event {
@@ -126,4 +130,28 @@ button:disabled {
     width: 100%;
     margin-bottom: 1rem;
   }
+}
+
+/* Filter and Schedule Section */
+.filter-schedule-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.filter-left {
+  flex: 1;
+}
+
+.filter-right {
+  flex: 0.5;
+  text-align: center;
+}
+
+.filter-right .filter-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
