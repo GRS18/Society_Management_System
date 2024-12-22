@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import erp from "../assets/erp.png";
+import erp1 from "../assets/erp1.png";
+import erp2 from "../assets/erp2.png";
+import erp3 from "../assets/erp3.png";
 import photo1 from "../assets/photo1.jpg";
 import photo2 from "../assets/photo2.jpg";
 import photo3 from "../assets/photo3.jpg";
@@ -210,6 +214,61 @@ export default function DashBoard() {
         </div>
       </div>
 
+      <section class="help-section pt-5">
+      <div class="container">
+       <div class="section-header mw-100">
+           <h4 class="cate">Housing Society ERP</h4>
+           <h2 class="title">Complete Society Billing & Accounting Solution</h2>
+           <p>Comprehensive accounting solution which simplifies a treasurer's job with automation and analytical reporting</p>
+       </div>
+       <div class="row">
+           <div class="col-lg-6 d-none d-lg-block">
+               <img src={erp} alt="Accounint Solution" class="img-fluid"/>
+           </div>
+           <div class="col-lg-6 col-xl-5">
+               <div class="realtime-content">
+                   <div class="help-item d-flex align-items-start mb-4">
+                       <div class="help-thumb mr-3">
+                           <img src={erp1} alt="Auto Penalty Calculation" class="img-fluid"/>
+                       </div>
+                       <div class="help-content">
+                           <h4 class="title">Auto Penalty Calculation</h4>
+                           <p>One click alert bills to all</p>
+                       </div>
+                   </div>
+                   <div class="help-item d-flex align-items-start mb-4">
+                       <div class="help-thumb mr-3">
+                           <img src={erp2} alt="Balance Sheet" class="img-fluid"/>
+                       </div>
+                       <div class="help-content">
+                           <h4 class="title">Balance Sheet & I/E</h4>
+                           <p>All reports as per bye-laws</p>
+                       </div>
+                   </div>
+                   <div class="help-item d-flex align-items-start mb-4">
+                       <div class="help-thumb mr-3">
+                           <img src={erp3} alt="Tally" class="img-fluid"/>
+                       </div>
+                       <div class="help-content">
+                           <h4 class="title">Tally Integration</h4>
+                           <p>Export all data from SocietyRun</p>
+                       </div>
+                   </div>
+                   <ul class="bal-list pl-3">
+                       <li>One click Bill generation</li>
+                       <li>Payment gateway / BBPS</li>
+                       <li>GST Billing</li>
+                       <li>Payment Reminder</li>
+                       <li>Receipt and Payment</li>
+                       <li>Trial Balance</li>
+                   </ul>
+                  
+               </div>
+           </div>
+       </div>
+   </div>
+   </section>
+
       <section className="announcements py-5 bg-light">
         <div className="container">
           <h2 className="text-center">Latest Announcements</h2>
@@ -259,6 +318,30 @@ export default function DashBoard() {
           </div>
         </div>
       </section>
+
+
+      {/* trial section */}
+      <section class="trial-section">
+        <div class="container">
+            <div class="trial-wrapper">
+                
+                <div class="trial-content">
+                    <h3 class="title">Start Your 30-Day Free Trial Today!</h3>
+                    <p>Dive into our 30-day trial – it’s free, and you can cancel anytime.</p>
+                    <p>If you’re not thrilled with our product, no hard feelings! We’ll part ways as friends.</p>
+                    <a href="#" class="button-cta">
+                        Get Free Trial
+                        <span>➔</span>
+                    </a>
+                </div>
+                
+                <div class="trial-image">
+                    <img src="https://societyrun.com/asset/website_assets/image/home/Mobile-login-cuate.png"
+                        alt="Free Trial"/>
+                </div>
+            </div>
+        </div>
+    </section>
     </>
   );
 }
