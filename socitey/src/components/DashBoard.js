@@ -341,7 +341,41 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
+      
+
+
+
+      {/* speed rule */}
+      <section class="rulesSection">
+    <h1 class="rulesHeading">Society Rules</h1>
+    <div class="rulesWrapper">
+      <div class="rulesCard">
+        <h3>Water</h3>
+        <p>Fresh and good quality water of dharoi and society bore is available for 24 x 7.</p>
       </div>
+      <div class="rulesCard">
+        <h3>Nature</h3>
+        <p>Live with nature and do not harm the plants grown in the society premises; also water them accordingly.</p>
+      </div>
+      <div class="rulesCard">
+        <h3>Speed</h3>
+        <p>Do not drive vehicles with speed more than 10km/h in society premises.</p>
+      </div>
+      <div class="rulesCard">
+        <h3>Sticker</h3>
+        <p>Please apply society stickers to your vehicles; otherwise, entry is prohibited.</p>
+      </div>
+      <div class="rulesCard">
+        <h3>Chapman</h3>
+        <p>Do not enter without any valid identity proof. Verify your identity with the society admin.</p>
+      </div>
+      <div class="rulesCard">
+        <h3>Cleaning</h3>
+        <p>Maintain cleanliness in the society for our personal and public hygiene.</p>
+      </div>
+    </div>
+  </section>
+  </div>
     </>
   );
 }

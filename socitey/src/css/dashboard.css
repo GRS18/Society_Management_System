@@ -272,7 +272,7 @@
   margin-top: 100px;
   padding: 3rem 0; /* Adds vertical spacing */
   background-color: #f8f9fa; /* Light background color (Bootstrap's `bg-light`) */
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   border-radius: 15px;
 }
 
@@ -344,7 +344,7 @@
   border-radius: 15px; /* Rounded corners */
   padding: 2rem 1rem; /* Reduced padding */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .trial-wrapper {
@@ -430,3 +430,77 @@
     flex-direction: column;
   }
 }
+
+
+/* rules section */
+ /* Styles for the Society Rules section */
+ .rulesSection {
+  /* background-color: #f9f9f9; */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.rulesHeading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 40px;
+  position: relative;
+  color: white;
+}
+
+.rulesHeading::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #27ae60;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Wrapper for the rules */
+.rulesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card styling */
+.rulesCard {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 95%;
+}
+
+.rulesCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading inside each card */
+.rulesCard h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  border-radius: 20px;
+  padding: 5px 15px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Text inside each card */
+.rulesCard p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+
