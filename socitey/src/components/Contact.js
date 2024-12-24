@@ -77,7 +77,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="container">
+      <div className="container contact">
         <div className="row">
           <div className="col-md-6">
             <h2>Send Us Link Message</h2>

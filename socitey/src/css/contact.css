@@ -13,8 +13,9 @@ body {
 }
 
 /* Form Section Styles */
-.container {
+.container  {
   padding: 40px 0;
+  /* color: black; */
 }
 
 .key {

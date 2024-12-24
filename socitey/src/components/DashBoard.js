@@ -89,7 +89,7 @@ export default function DashBoard() {
         {/* Header end */}
 
         <section className="hero">
-          <div className="container text-center">
+          <div className="container text-center heading">
             <div className="row">
               {/* <marquee behavior="slide" direction="left"> */}
               <h1>Welcome to NestOp's: The Community Hub</h1>
@@ -100,6 +100,7 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
+        
         <section className="slider">
           <div className="container">
             <div
@@ -149,35 +150,9 @@ export default function DashBoard() {
           </div>
         </section>
 
-        {/* <section className="features py-5">
-        <div className="container">
-          <div className="row text-center">
-            <div className="col-xl-4">
-              <div className="icon">
-                <i className="fas fa-money-check-alt"></i>
-              </div>
-              <h4>Online Payments</h4>
-              <p>Pay your maintenance bills online easily and securely.</p>
-            </div>
-            <div className="col-xl-4">
-              <div className="icon">
-                <i className="fas fa-calendar-alt"></i>
-              </div>
-              <h4>Event Management</h4>
-              <p>Stay updated with the latest events and activities.</p>
-            </div>
-            <div className="col-xl-4">
-              <div className="icon">
-                <i className="fas fa-tools"></i>
-              </div>
-              <h4>Maintenance Requests</h4>
-              <p>Raise and track your service requests effortlessly.</p>
-            </div>
-          </div>
-        </div>
-      </section> */}
+        
 
-        <div className="container text-center">
+        <div className="container text-center features-heading">
           <h1>All Exhaustive List of Amazing Features</h1>
           <h2>All you need in one super App</h2>
           <h4>
