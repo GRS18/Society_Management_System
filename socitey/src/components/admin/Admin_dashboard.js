@@ -122,7 +122,7 @@ export default function Admin_dashboard() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/register">
+                  <Link className="nav-link" to="/register">`1`
                     Register
                   </Link>
                 </li>

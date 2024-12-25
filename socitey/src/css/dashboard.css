@@ -8,6 +8,7 @@
   flex-direction: column; /* Adjust as per layout needs */
   align-items: center; /* Centers items horizontally */
   justify-content: center; /* Centers items vertically */
+  width:100%;
 }
 
 .hero {
@@ -103,7 +104,8 @@
   justify-content: space-between; /* Align logo on the left and buttons on the right */
   align-items: center; /* Vertically align items */
   padding: 10px 20px; /* Add padding for spacing */
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  width: 100%;
 }
 
 .navbar-nav {
