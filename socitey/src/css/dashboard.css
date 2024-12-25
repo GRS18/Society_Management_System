@@ -100,6 +100,7 @@
 }
 
 .navbar {
+  /* background-color:#eaf7ed !important; */
   display: flex;
   justify-content: space-between; /* Align logo on the left and buttons on the right */
   align-items: center; /* Vertically align items */
@@ -272,7 +273,7 @@
 /* announcement section */
 .announcements {
   margin-top: 100px;
-  padding: 3rem 0; /* Adds vertical spacing */
+  padding: 1rem 1rem 1rem 1rem; /* Adds vertical spacing */
   background-color: #f8f9fa; /* Light background color (Bootstrap's `bg-light`) */
   margin-bottom: 100px;
   border-radius: 15px;
