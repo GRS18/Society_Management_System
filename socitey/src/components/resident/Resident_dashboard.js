@@ -216,6 +216,7 @@ export default function Resident_dashboard() {
         </div>
       </div>
       </div>
+      </div>
     </>
   );
 }
