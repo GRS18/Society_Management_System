@@ -72,7 +72,7 @@ export default function DashBoard() {
                       Login
                     </Link>
                   </li>
-                  <li className="nav-item ">
+                  {/* <li className="nav-item ">
                     <Link
                       className="nav-link active header-button d-sm-inline-block"
                       aria-current="page"
@@ -80,7 +80,7 @@ export default function DashBoard() {
                     >
                       Register
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

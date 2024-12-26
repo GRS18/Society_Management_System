@@ -375,13 +375,13 @@ const [visitors, setVisitors] = useState([
     </form>
   </div>
   
-  <div className="add-visitor-right">
+  {/* <div className="add-visitor-right">
     <img
       src="https://via.placeholder.com/300x200"
       alt="Add Visitor Illustration"
       className="add-visitor-image"
     />
-  </div>
+  </div> */}
 </div>
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-
+import { Link } from "react-router-dom";
+import backlogo from '../admin/assets/backlogo.png';
 export default function Security_Audit() {
 //   return (
 //     <>
@@ -139,6 +140,15 @@ const [activeTab, setActiveTab] = useState("activityLog");
 
   return (
     <div className="container mt-4">
+      <Link className="navbar-brand backbutton" to="/admin">
+          <img
+            src={backlogo}
+            alt="Logo"
+            height="50"
+            width="70"
+            className="d-inline-block align-text-top"
+          />
+        </Link>
       <h1 className="mb-4">Security and Audit</h1>
 
       {/* Tabs */}

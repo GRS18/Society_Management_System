@@ -104,9 +104,10 @@
   display: flex;
   justify-content: space-between; /* Align logo on the left and buttons on the right */
   align-items: center; /* Vertically align items */
-  padding: 10px 20px; /* Add padding for spacing */
+  padding: 10px 20px; 
   /* margin-top: 50px; */
   width: 100%;
+  height: 80px;
 }
 
 .navbar-nav {
@@ -122,6 +123,9 @@
   transition: color 0.3s ease-in-out;
 }
 
+.logo{
+  height: 70px;
+}
 .logo:hover {
   transform: scale(1.1); /* Enlarge the logo on hover */
   cursor: pointer; /* Change cursor to pointer on hover */

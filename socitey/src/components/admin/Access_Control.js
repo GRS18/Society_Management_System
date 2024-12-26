@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
+import backlogo from '../admin/assets/backlogo.png';
+import '../admin/css/access_control.css';
 export default function Access_Control() {
   // return (
   //   <>
@@ -197,20 +199,20 @@ export default function Access_Control() {
   // );
 
 
-  const [activeTab, setActiveTab] = useState("staff"); 
+  const [activeTab, setActiveTab] = useState("staff");
   const [staffList, setStaffList] = useState([
     { name: "John Doe", role: "Security", access: "Full Access" },
     { name: "Jane Smith", role: "Maintenance", access: "Limited Access" },
-  ]); 
+  ]);
   const [residentList, setResidentList] = useState([
     { apartment: "101", status: "Active" },
     { apartment: "102", status: "Restricted" },
-  ]); 
+  ]);
   const [visitorList, setVisitorList] = useState([
     { name: "Mark Johnson", reason: "Delivery", date: "2024-11-28" },
-  ]); 
+  ]);
 
-  
+
   const handleAddStaff = (e) => {
     e.preventDefault();
     const name = e.target.staffName.value;
@@ -222,7 +224,7 @@ export default function Access_Control() {
     }
   };
 
-  
+
   const handleAddVisitor = (e) => {
     e.preventDefault();
     const name = e.target.visitorName.value;
@@ -234,27 +236,39 @@ export default function Access_Control() {
     }
   };
 
- 
+
   const toggleResidentStatus = (index) => {
     const updatedList = residentList.map((resident, i) =>
       i === index
         ? {
-            ...resident,
-            status: resident.status === "Active" ? "Restricted" : "Active",
-          }
+          ...resident,
+          status: resident.status === "Active" ? "Restricted" : "Active",
+        }
         : resident
     );
     setResidentList(updatedList);
   };
 
- 
+
   const handleRevoke = (list, setList, index) => {
     const updatedList = list.filter((_, i) => i !== index);
     setList(updatedList);
   };
 
   return (
+
     <div className="container mt-4">
+      
+        <Link className="navbar-brand backbutton" to="/admin">
+          <img
+            src={backlogo}
+            alt="Logo"
+            height="50"
+            width="70"
+            className="d-inline-block align-text-top"
+          />
+        </Link>
+      
       <h1 className="mb-4">Access Control</h1>
 
       {/* Tabs */}
@@ -346,9 +360,8 @@ export default function Access_Control() {
                 <li key={index} className="list-group-item">
                   <strong>Apartment {resident.apartment}</strong> - Status: {resident.status}
                   <button
-                    className={`btn btn-sm float-right ${
-                      resident.status === "Active" ? "btn-warning" : "btn-success"
-                    }`}
+                    className={`btn btn-sm float-right ${resident.status === "Active" ? "btn-warning" : "btn-success"
+                      }`}
                     onClick={() => toggleResidentStatus(index)}
                   >
                     {resident.status === "Active" ? "Restrict" : "Reinstate"}

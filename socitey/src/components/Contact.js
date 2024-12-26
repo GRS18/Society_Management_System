@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="#">
+            <Link className="navbar-brand" to="/">
               <img
                 src={logo}
                 alt="Logo"
@@ -57,11 +57,11 @@ export default function Contact() {
                       Login
                       </Link>
                  </li>
-                 <li className="nav-item ">
+                 {/* <li className="nav-item ">
                     <Link className="nav-link active header-button d-sm-inline-block" aria-current="page" to="/register">
                      Register
                     </Link>
-                  </li>
+                  </li> */}
               </ul>
             </div>
           </div>

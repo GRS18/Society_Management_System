@@ -121,13 +121,13 @@ const [selectedStaff, setSelectedStaff] = useState('');
           </form>
         </div>
 
-        <div className="filter-right">
+        {/* <div className="filter-right">
           <img
             src="https://via.placeholder.com/300x200"
             alt="Filter Illustration"
             className="filter-image"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Schedule Overview Section */}

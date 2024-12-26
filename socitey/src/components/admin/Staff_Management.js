@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+import backlogo from '../admin/assets/backlogo.png';
 export default function Staff_Management() {
 //   return (
 //     <>
@@ -153,6 +155,15 @@ export default function Staff_Management() {
 
   return (
     <div className="container mt-4">
+      <Link className="navbar-brand backbutton" to="/admin">
+          <img
+            src={backlogo}
+            alt="Logo"
+            height="50"
+            width="70"
+            className="d-inline-block align-text-top"
+          />
+        </Link>
       <h1 className="mb-4">Staff Management</h1>
 
       <div className="d-flex justify-content-between mb-3">
@@ -164,7 +175,7 @@ export default function Staff_Management() {
           onChange={handleSearch}
         />
         <button
-          className="btn btn-primary"
+          className="btn btn-primary admin_button"
           data-toggle="modal"
           data-target="#addStaffModal"
           onClick={() => openModal(null)}

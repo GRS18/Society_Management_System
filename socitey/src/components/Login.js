@@ -59,7 +59,7 @@ export default function Login() {
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="#">
+            <Link className="navbar-brand" to="/">
               <img
                 src={logo}
                 alt="Logo"
@@ -99,11 +99,11 @@ export default function Login() {
                     Contact us
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link active header-button d-sm-inline-block" to="/register">
                     Register
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

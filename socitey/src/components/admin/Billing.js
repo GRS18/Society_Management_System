@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-
+import { Link } from "react-router-dom";
+import backlogo from '../admin/assets/backlogo.png';
 export default function Billing() {
 //   return (
 //     <>
@@ -189,6 +190,15 @@ const [billingData, setBillingData] = useState([
 
   return (
     <div className="container mt-4">
+      <Link className="navbar-brand backbutton" to="/admin">
+                <img
+                  src={backlogo}
+                  alt="Logo"
+                  height="50"
+                  width="70"
+                  className="d-inline-block align-text-top"
+                />
+              </Link>
       <h1 className="mb-4">Billing & Payments</h1>
 
       <div className="d-flex justify-content-between mb-3">
@@ -200,7 +210,7 @@ const [billingData, setBillingData] = useState([
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button
-          className="btn btn-primary"
+          className="btn btn-primary admin_button"
           data-toggle="modal"
           data-target="#addBillModal"
         >

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
+import backlogo from '../admin/assets/backlogo.png';
+import '../admin/css/vendor_list.css';
 
 export default function Vendor_List() 
 {
@@ -71,13 +73,22 @@ export default function Vendor_List()
     
       return (
         <div className="container mt-4">
+          <Link className="navbar-brand backbutton" to="/admin">
+          <img
+            src={backlogo}
+            alt="Logo"
+            height="50"
+            width="70"
+            className="d-inline-block align-text-top"
+          />
+        </Link>
           <h1 className="mb-4">Vendor Management</h1>
           <button
-            className="btn btn-primary mb-3"
+            className="btn btn-primary mb-3 admin_button"
             data-toggle="modal"
             data-target="#addVendorModal"
           >
-            <i className="fas fa-plus"></i> Add New Vendor
+            <i className="fas fa-plus "></i> Add New Vendor
           </button>
     
           {/* Vendor Table */}

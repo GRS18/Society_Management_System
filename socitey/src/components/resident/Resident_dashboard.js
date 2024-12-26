@@ -5,6 +5,7 @@ import './css/dashboard.css';
 export default function Resident_dashboard() {
   return (
     <>
+    <div className="residentback">
       {/* Header start */}
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -105,11 +106,11 @@ export default function Resident_dashboard() {
                     Contact us
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to="/register">
                     Register
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -213,6 +214,7 @@ export default function Resident_dashboard() {
             </Link>
           </div> */}
         </div>
+      </div>
       </div>
     </>
   );
