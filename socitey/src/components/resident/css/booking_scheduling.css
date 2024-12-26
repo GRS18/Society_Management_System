@@ -1,9 +1,9 @@
 .booking-card {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 15px auto;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(59, 220, 107, 0.795);
   padding: 20px;
 }
 
@@ -19,7 +19,7 @@
   border-radius: 8px;
   padding: 10px;
   margin-top: 20px;
-  background-color: #fff;
+  background-color: #eaf7ed;
 }
 
 .history-card {
@@ -27,6 +27,12 @@
   margin: 20px auto;
   background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(59, 220, 107, 0.795);
   padding: 20px;
+}
+
+.btn:hover{
+  transform: scale(0.9) ;
+  background-color: #33a824 !important;
+  border-color: #319124 !important;
 }
