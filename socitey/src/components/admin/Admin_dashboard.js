@@ -6,7 +6,7 @@ export default function Admin_dashboard() {
   return (
     <>
       {/* Header start */}
-      <div className="adminback">
+      <div className="admin_back">
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
