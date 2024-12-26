@@ -117,6 +117,7 @@ export default function Resident_dashboard() {
       </div>
       {/* Header End */}
 
+      <div className="resident-container">
       <div className="jumbotron text-center">
         <h1 className="display-4">Welcome to Your Dashboard</h1>
         <p className="lead">
@@ -213,6 +214,7 @@ export default function Resident_dashboard() {
             </Link>
           </div> */}
         </div>
+      </div>
       </div>
     </>
   );
