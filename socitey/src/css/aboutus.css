@@ -1,3 +1,10 @@
+.logo{
+  height: 70px;
+}
+.logo:hover {
+  transform: scale(1.1); /* Enlarge the logo on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
 /* General Reset */
 * {
   margin: 0;

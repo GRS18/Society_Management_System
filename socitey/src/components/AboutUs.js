@@ -17,7 +17,7 @@ export default function AboutUs() {
                 src={logo}
                 alt="Logo"
                 height="120"
-                className="d-inline-block align-text-top"
+                className="d-inline-block align-text-top logo"
               />
             </Link>
             <button

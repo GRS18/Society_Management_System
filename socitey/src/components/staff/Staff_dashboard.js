@@ -16,7 +16,7 @@ export default function Staff_dashboard() {
                 src={logo}
                 alt="Logo"
                 height="120"
-                className="d-inline-block align-text-top"
+                className="d-inline-block align-text-top logo-staff"
               />
             </Link>
             <button
@@ -142,6 +142,7 @@ export default function Staff_dashboard() {
       </div>
       {/* Header End */}
 
+      <div className="staff-page">
       <div className="jumbotron text-center">
         <h1 className="display-4">Welcome to the Staff Dashboard</h1>
         <p className="lead">
@@ -266,6 +267,7 @@ export default function Staff_dashboard() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
       </div>
     </>

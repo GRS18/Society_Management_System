@@ -1,3 +1,13 @@
+.logo-resident{
+    height: 100px !important;
+  }
+  .logo-resident:hover {
+    transform: scale(1.1); /* Enlarge the logo on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
 .residentback{
     background-color: white;
+}
+.resident-page{
+    margin-top: 70px;
 }
