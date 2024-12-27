@@ -14,7 +14,7 @@ export default function Contact() {
               <img
                 src={logo}
                 alt="Logo"
-                height="120"
+                height="100"
                 className="d-inline-block align-text-top logo"
               />
             </Link>
