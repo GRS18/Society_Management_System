@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import backlogo from '../admin/assets/backlogo.png';
+import "../admin/css/resident_management.css";
 
 export default function Resident_Management() {
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import backlogo from '../admin/assets/backlogo.png';
+import '../admin/css/manage_vendor.css';
 export default function Manage_Vendor() 
 {
     const [requests, setRequests] = useState([
@@ -102,7 +103,7 @@ export default function Manage_Vendor()
                   <td>{request.vendor || "Not Assigned"}</td>
                   <td>
                     <button
-                      className="btn btn-primary btn-sm"
+                      className="btn btn-primary btn-sm btn-vendor-assign"
                       onClick={() => handleAssignVendorClick(request.id)}
                     >
                       Assign Vendor
@@ -143,7 +144,7 @@ export default function Manage_Vendor()
                   </select>
                 </div>
     
-                <button type="submit" className="btn btn-success">
+                <button type="submit" className="btn btn-success btn-vendor-assign">
                   Assign Vendor
                 </button>
               </form>

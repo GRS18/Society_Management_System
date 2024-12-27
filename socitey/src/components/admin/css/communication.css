@@ -1,0 +1,12 @@
+.comm:hover{
+    background-color: rgba(59, 220, 107, 0.795) !important;
+}
+
+.nav-link{
+    color: #1d9408;;
+}
+
+#messageHistory{
+    background-color: #eaf7ed;
+    padding: 10px;
+}

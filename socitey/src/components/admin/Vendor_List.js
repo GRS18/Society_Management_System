@@ -125,19 +125,19 @@ export default function Vendor_List()
                   </td>
                   <td>
                     <button
-                      className="btn btn-info btn-sm"
+                      className="btn btn-info btn-sm ven"
                       onClick={() => setViewVendor(vendor)}
                     >
                       <i className="fas fa-eye"></i> View
                     </button>
                     <button
-                      className="btn btn-warning btn-sm"
+                      className="btn btn-warning btn-sm ven"
                       onClick={() => handleEditVendor(vendor)}
                     >
                       <i className="fas fa-edit"></i> Edit
                     </button>
                     <button
-                      className="btn btn-danger btn-sm"
+                      className="btn btn-danger btn-sm ven"
                       onClick={() => handleDeleteVendor(vendor.id)}
                     >
                       <i className="fas fa-trash"></i> Delete
