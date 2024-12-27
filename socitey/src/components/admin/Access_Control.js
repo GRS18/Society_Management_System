@@ -258,7 +258,6 @@ export default function Access_Control() {
   return (
 
     <div className="container mt-4">
-      
         <Link className="navbar-brand backbutton" to="/admin">
           <img
             src={backlogo}
