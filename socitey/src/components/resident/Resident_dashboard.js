@@ -15,7 +15,7 @@ export default function Resident_dashboard() {
                 src={logo}
                 alt="Logo"
                 height="120"
-                className="d-inline-block align-text-top"
+                className="d-inline-block align-text-top logo-resident"
               />
             </Link>
             <button
@@ -118,6 +118,7 @@ export default function Resident_dashboard() {
       </div>
       {/* Header End */}
 
+      <div className="resident-page">
       <div className="jumbotron text-center">
         <h1 className="display-4">Welcome to Your Dashboard</h1>
         <p className="lead">
@@ -214,6 +215,7 @@ export default function Resident_dashboard() {
             </Link>
           </div> */}
         </div>
+      </div>
       </div>
       </div>
     </>

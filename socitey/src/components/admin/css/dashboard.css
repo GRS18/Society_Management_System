@@ -1,3 +1,10 @@
+.logo-admin{
+    height: 100px !important;
+  }
+.logo-admin:hover {
+    transform: scale(1.1); /* Enlarge the logo on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
 .block:hover{
 background-color: rgb(69, 223, 69);
 color: white;
@@ -5,4 +12,7 @@ color: white;
 
 .admin_back{
     background-color: white;
+}
+.admin-page{
+    margin-top: 70px !important;
 }

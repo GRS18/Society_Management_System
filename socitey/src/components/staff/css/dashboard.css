@@ -1,6 +1,17 @@
+.logo-staff{
+    height: 100px !important;
+  }
+  .logo-staff:hover {
+    transform: scale(1.1); /* Enlarge the logo on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
 .block:hover{
     background-color: rgb(77, 223, 77);
 }
 .staffback{
     background-color: white;
+}
+
+.staff-page{
+    margin-top: 70px;
 }

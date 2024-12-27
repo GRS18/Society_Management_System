@@ -15,7 +15,7 @@ export default function Admin_dashboard() {
                 src={logo}
                 alt="Logo"
                 height="120"
-                className="d-inline-block align-text-top"
+                className="d-inline-block align-text-top logo-admin"
               />
             </Link>
             <button
@@ -134,6 +134,7 @@ export default function Admin_dashboard() {
       </div>
       {/* Header end */}
 
+      <div className="admin-page">
       <div className="jumbotron text-center">
         <h1 className="display-4">Admin Dashboard</h1>
         <p className="lead">
@@ -251,6 +252,7 @@ export default function Admin_dashboard() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
       </div>
     </>
