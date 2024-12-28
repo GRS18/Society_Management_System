@@ -1,6 +1,6 @@
 
 .background{
-  background-image: url("../assets/background.jpg");
+  /* background-image: url("../assets/background.jpg"); */
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position:center; /* Centers the image */
