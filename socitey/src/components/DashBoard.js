@@ -100,7 +100,7 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
-        
+
         <section className="slider">
           <div className="container">
             <div
@@ -150,7 +150,7 @@ export default function DashBoard() {
           </div>
         </section>
 
-        
+
 
         <div className="container text-center features-heading">
           <h1>All Exhaustive List of Amazing Features</h1>
@@ -160,39 +160,39 @@ export default function DashBoard() {
             accordance with all your needs.
           </h4>
           <div className="modules">
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Admin Dashboard</h3>
               <p>Overview of key metrics and system stats.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Resident Management</h3>
               <p>Manage resident profiles, add or update information.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Visitor and Attendance</h3>
               <p>Log visitor entries and schedule visits.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Billing and Payments</h3>
               <p>Track billing and payment history.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Staff Management</h3>
               <p>Manage staff roles, responsibilities, and performance.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Maintenance Management</h3>
               <p>Track maintenance requests and assign tasks.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Reports and Analytics</h3>
               <p>Generate reports and analyze data.</p>
             </Link>
-            <Link to="/" className="module-card">
+            <Link to="login" className="module-card">
               <h3>Communication</h3>
               <p>Send announcements and alerts to residents.</p>
             </Link>
-            <Link to="/ " className="module-card">
+            <Link to="login" className="module-card">
               <h3>Settings</h3>
               <p>Manage system configurations and preferences.</p>
             </Link>
@@ -297,7 +297,7 @@ export default function DashBoard() {
               <div className="col-xl-4">
                 <div className="card xl-3">
                   <div className="card-body">
-                    <h5 className="card-title">Diwali Celebrations</h5>
+                    <h5 className="card-title">Festival Celebrations</h5>
                     <p className="card-text">
                       Celebrate Diwali with us on 10th Nov with cultural
                       programs and fireworks.
@@ -317,7 +317,7 @@ export default function DashBoard() {
           <div class="container trial">
             <div class="trial-wrapper">
               <div class="trial-content">
-                <h3 class="title">Start Your 30-Day Free Trial Today!</h3>
+                <h3 class="title">Start Your Trial !</h3>
                 <p>
                   Dive into our 30-day trial – it’s free, and you can cancel
                   anytime.
@@ -341,41 +341,41 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
-      
 
 
 
-      {/* speed rule */}
-      <section class="rulesSection">
-    <h1 class="rulesHeading">Society Rules</h1>
-    <div class="rulesWrapper">
-      <div class="rulesCard">
-        <h3>Water</h3>
-        <p>Fresh and good quality water of dharoi and society bore is available for 24 x 7.</p>
+
+        {/* speed rule */}
+        <section class="rulesSection">
+          <h1 class="rulesHeading">Society Rules</h1>
+          <div class="rulesWrapper">
+            <div class="rulesCard">
+              <h3>Water</h3>
+              <p>Fresh and good quality water of dharoi and society bore is available for 24 x 7.</p>
+            </div>
+            <div class="rulesCard">
+              <h3>Nature</h3>
+              <p>Live with nature and do not harm the plants grown in the society premises; also water them accordingly.</p>
+            </div>
+            <div class="rulesCard">
+              <h3>Speed</h3>
+              <p>Do not drive vehicles with speed more than 10km/h in society premises.</p>
+            </div>
+            <div class="rulesCard">
+              <h3>Sticker</h3>
+              <p>Please apply society stickers to your vehicles; otherwise, entry is prohibited.</p>
+            </div>
+            <div class="rulesCard">
+              <h3>Chapman</h3>
+              <p>Do not enter without any valid identity proof. Verify your identity with the society admin.</p>
+            </div>
+            <div class="rulesCard">
+              <h3>Cleaning</h3>
+              <p>Maintain cleanliness in the society for our personal and public hygiene.</p>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="rulesCard">
-        <h3>Nature</h3>
-        <p>Live with nature and do not harm the plants grown in the society premises; also water them accordingly.</p>
-      </div>
-      <div class="rulesCard">
-        <h3>Speed</h3>
-        <p>Do not drive vehicles with speed more than 10km/h in society premises.</p>
-      </div>
-      <div class="rulesCard">
-        <h3>Sticker</h3>
-        <p>Please apply society stickers to your vehicles; otherwise, entry is prohibited.</p>
-      </div>
-      <div class="rulesCard">
-        <h3>Chapman</h3>
-        <p>Do not enter without any valid identity proof. Verify your identity with the society admin.</p>
-      </div>
-      <div class="rulesCard">
-        <h3>Cleaning</h3>
-        <p>Maintain cleanliness in the society for our personal and public hygiene.</p>
-      </div>
-    </div>
-  </section>
-  </div>
     </>
   );
 }

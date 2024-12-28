@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import Socitey from "../assets/Socitey.jpg";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile.png";
+import profile1 from "../assets/profile1.png";
 import "../css/aboutus.css";
 
 export default function AboutUs() {
@@ -85,12 +86,15 @@ export default function AboutUs() {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h2>Who We Are</h2>
-              <p>
-                Our society management system is designed to provide residents
-                with a seamless living experience. From managing maintenance
-                payments to organizing community events, we aim to bring
-                transparency, efficiency, and convenience to society operations.
+              <h2>Overview</h2>
+              <p className="overview_para">
+              Rohan Builders started in 1993, today has a team of over 2,000+ professionals
+              and landmarks sprawling over 1.5 crore square feet across the country. 
+               It is consistently rated DA2+ by CRISIL, signifying the Group’s ability to 
+               execute projects as per specified quality, within timelines. All Rohan projects, residential, 
+               commercial or infrastructure, are characterized by innovative design, attention to detail, and modern 
+               conveniences, catering to the evolving needs and preferences of homebuyers and businesses. As a participant at the UNGC, 
+               the Group stays dedicated in its sustainability efforts. It has also been certified as a Great Place to Work by the renowned GPTW organization.
               </p>
             </div>
             <div className="col-md-6">
@@ -108,17 +112,20 @@ export default function AboutUs() {
         <div className="container">
           <div className="row text-center">
             <div className="col-md-6">
-              <h3>Our Mission</h3>
-              <p>
-                To create a harmonious and well-managed community for all
-                residents by leveraging the power of technology.
+              <h3>Achievements</h3>
+              <p className="achievement">
+              Rohan Group’s excellence in design and innovation is weaved into the nation’s 
+              infrastructure – the Amritsar Wagah NH1 that connects India to Pakistan, and other roads, 
+              tunnels, bridges across Punjab, Rajasthan, Maharashtra. More than 50% of our clients are celebrated
+               brands and businesses and Multi-National Corporations.
               </p>
             </div>
             <div className="col-md-6">
-              <h3>Our Vision</h3>
-              <p>
-                To be a leading society management solution that transforms the
-                way communities function and grow together.
+              <h3>Best place to work</h3>
+              <p className="place_work">
+              Rohan Group encourages both innovation and accountability by giving freedom within boundaries, 
+              making it one of the finest places to work. With feet firmly on ground and vision far ahead in the 
+              future, Rohan Group continues to inspire and lead the industry.
               </p>
             </div>
           </div>
@@ -130,19 +137,19 @@ export default function AboutUs() {
           <h2 className="text-center">Meet Our Team</h2>
           <div className="row text-center mt-4">
             <div className="col-md-4 team-member">
-              <img src={profile} alt="Team Member" className="img-fluid mb-3" />
-              <h5>John Doe</h5>
-              <p>Society President</p>
+              <img src={profile1} alt="Team Member" className="img-fluid mb-3" />
+              <h5>MR. SUHAS LUNKAD</h5>
+              <p>CHAIRMAN & MANAGING DIRECTOR</p>
             </div>
             <div className="col-md-4 team-member">
               <img src={profile} alt="Team Member" className="img-fluid mb-3" />
-              <h5>Jane Smith</h5>
-              <p>Secretary</p>
+              <h5>Mr. Milind Lunkad</h5>
+              <p>DIRECTOR</p>
             </div>
             <div className="col-md-4 team-member">
               <img src={profile} alt="Team Member" className="img-fluid mb-3" />
-              <h5>Michael Brown</h5>
-              <p>Treasurer</p>
+              <h5>Mrs. Radha Tunge</h5>
+              <p>DIRECTOR</p>
             </div>
           </div>
         </div>
