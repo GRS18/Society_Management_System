@@ -142,11 +142,11 @@ export default function DashBoard() {
               <h3>Admin Dashboard</h3>
               <p>Overview of key metrics and system stats.</p>
             </Link>
-            <Link to="login" className="module-card">
+            <Link to="login" className="module-card management">
               <h3>Resident Management</h3>
               <p>Manage resident profiles, add or update information.</p>
             </Link>
-            <Link to="login" className="module-card">
+            <Link to="login" className="module-card management">
               <h3>Staff Management</h3>
               <p>Manage staff roles, responsibilities, and performance.</p>
             </Link>
@@ -180,7 +180,7 @@ export default function DashBoard() {
         <section class="help-section pt-5">
           <div class="container">
             <div class="section-header mw-100">
-              <h4 class="cate">Housing Society ERP</h4>
+              <h4 class="cate">Nest-Op's The Community Hub</h4>
               <h2 class="title">
                 Complete Society Billing & Accounting Solution
               </h2>
@@ -295,15 +295,14 @@ export default function DashBoard() {
           <div class="container trial">
             <div class="trial-wrapper">
               <div class="trial-content">
-                <h3 class="title">Start Your Trial !</h3>
-                <p>
+                <h2 class="title">Start Your Trial !</h2>
+                <h5>
                   Dive into our 30-day trial – it’s free, and you can cancel
                   anytime.
-                </p>
-                <p>
+                  <br/>
                   If you’re not thrilled with our product, no hard feelings!
                   We’ll part ways as friends.
-                </p>
+                  </h5>
                 <a href="#" class="button-cta">
                   Get Free Trial
                   <span>➔</span>

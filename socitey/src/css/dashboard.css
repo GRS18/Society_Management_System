@@ -281,10 +281,10 @@
 
 /* announcement section */
 .announcements {
-  margin-top: 100px;
-  padding: 1rem 1rem 1rem 1rem; /* Adds vertical spacing */
+ margin: 100px 0 100px 0;
+  padding: 1rem 2rem 1rem 1rem; /* Adds vertical spacing */
   background-color: #f8f9fa; /* Light background color (Bootstrap's `bg-light`) */
-  margin-bottom: 100px;
+ 
   border-radius: 15px;
 }
 
@@ -292,10 +292,12 @@
   font-size: 2rem; /* Larger font size for the heading */
   font-weight: bold; /* Makes the heading bold */
   margin-bottom: 2rem; /* Adds spacing below the heading */
-  color: #333; /* Dark gray color */
+  color: #27ae60; /* Dark gray color */
 }
 
 .card {
+  background-color: #e7ece6;
+  margin: 0rem 1.5rem 0rem 1.5rem;
   border: 1px solid #ddd; /* Subtle border for the card */
   border-radius: 10px; /* Rounds the corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
@@ -310,7 +312,7 @@
 .card-title {
   font-size: 1.25rem; /* Makes the title slightly larger */
   font-weight: bold; /* Emphasizes the title */
-  color: #007bff; /* Bootstrap primary blue */
+  color: black; /* Bootstrap primary blue */
 }
 
 .card-text {
@@ -320,7 +322,7 @@
 }
 
 .card-link {
-  color: #007bff; /* Bootstrap primary blue */
+  color: #0c3a1f; /* Bootstrap primary blue */
   font-weight: bold; /* Makes the link stand out */
   text-decoration: none; /* Removes underline */
 }
@@ -333,8 +335,16 @@
   margin-bottom: 2rem; /* Adds spacing between cards */
 }
 
+/* trial content */
+.trial-content {
+ margin-left: 15px;
+ font-size:xx-large;
+}
 
-
+.button-cta{
+ padding-left: 100px !important;
+ padding-right: 100px !important;
+}
 
 
 
@@ -515,4 +525,6 @@
   line-height: 1.5;
 }
 
-
+.management{
+  background-color: #a7ec9e;
+}
