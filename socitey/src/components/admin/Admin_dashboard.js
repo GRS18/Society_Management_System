@@ -5,7 +5,6 @@ import './css/dashboard.css';
 export default function Admin_dashboard() {
   return (
     <>
-    <div className="admin-dashboard-background">
       {/* Header start */}
       <div className="admin_back">
       <div className="container-fluid">
@@ -253,7 +252,6 @@ export default function Admin_dashboard() {
             </Link>
           </div>
         </div>
-      </div>
       </div>
       </div>
       </div>
