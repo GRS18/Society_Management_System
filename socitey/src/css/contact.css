@@ -14,7 +14,7 @@ body {
 }
 
 /* Form Section Styles */
-.container  {
+.contact {
   padding: 40px 0;
   /* color: black; */
 }
@@ -121,11 +121,13 @@ ul.list-unstyled li a:hover {
 
 
 
-
 .social-icons a {
   margin-right: 15px; /* Add spacing between icons */
   font-size: 1.5rem; /* Adjust size of the icons */
-  color: #007bff; /* Customize the icon color (Bootstrap Primary color) */
+  background-color: transparent; /* Remove background color */
+  padding: 0; /* Remove padding */
+  border-radius: 50%; /* Make the icons circular */
+  color: #59c04b !important; /* Customize the icon color (Bootstrap Primary color) */
   text-decoration: none; /* Remove underline from links */
   transition: color 0.3s ease; /* Smooth hover effect */
 }
@@ -135,5 +137,13 @@ ul.list-unstyled li a:hover {
 }
 
 .social-icons a:hover {
-  color: #0056b3; /* Change color on hover */
+  color: #c08b4b !important; /* Change color on hover */
+}
+
+.address{
+  color: #4f4e4e !important;
+}
+
+.address:hover{
+  color: #319124 !important;
 }

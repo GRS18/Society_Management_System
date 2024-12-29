@@ -148,8 +148,10 @@ export default function Contact() {
             </p>
             <ul className="list-unstyled">
               <li>
-                <i className="fas fa-map-marker-alt text-primary"></i>{" "}
+                <Link to={'https://maps.app.goo.gl/EtB4FiayYjpHgHc58'} className="address">
+                <i className="fas fa-map-marker-alt text-primary"></i>{""}
                 <strong>Address:</strong> Block 1-30, ROHAN SEHER, Samarth Colony, Baner, Pune, Maharashtra 411045
+                </Link>
               </li>
               <li>
                 <i className="fas fa-phone text-primary"></i>{" "}
