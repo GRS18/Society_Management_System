@@ -22,6 +22,32 @@ body {
   text-align: center;
 }
 
+/* Breadcrumb Styling */
+.about-header .breadcrumb {
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+  display: inline-flex; /* Aligns breadcrumb items in a row */
+  gap: 5px; /* Adds spacing between breadcrumb items */
+  font-size: 1rem; /* Standard font size */
+}
+
+/* Breadcrumb Links */
+.about-header .breadcrumb .list-inline-item a {
+  color: #59c04b !important; /* Secondary gray color for links */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold;
+}
+
+.about-header .breadcrumb .list-inline-item a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Last Item in Breadcrumb */
+.about-header .breadcrumb .list-inline-item.text-dark {
+  font-weight: bold; /* Highlights the active breadcrumb */
+  color: #59c04b !important;
+}
 .about-header h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -32,6 +58,22 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+/* for image */
+/* Container Styling */
+.image-container {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 25vh; /* Sets the height to the full viewport */
+}
+
+/* Image Styling (Optional) */
+.image-container img {
+  max-width: 100%; /* Ensures the image scales within the container */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: contain; /* Ensures the entire image fits without being cropped */
+}
+
 
 /* About Us Content Section */
 .about {
