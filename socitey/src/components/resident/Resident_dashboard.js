@@ -10,7 +10,7 @@ export default function Resident_dashboard() {
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/resident">
+            <Link className="navbar-brand" to="/">
               <img
                 src={logo}
                 alt="Logo"

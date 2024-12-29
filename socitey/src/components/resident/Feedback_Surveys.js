@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../resident/css/feedback_survey.css';
 
 
@@ -65,6 +66,19 @@ return (
   <div className="feedback-section">
     {/* Submit Feedback Form */}
     <div className="card-custom">
+    <div className='resident-back text-center'>
+          <ul class="breadcrumb list-inline mt-2">
+            <li class="list-inline-item">
+              <Link to="/resident" class="text-secondary text-decoration-none">Home</Link>
+            </li>
+            <li class="list-inline-item text-secondary">
+              &rarr;
+            </li>
+            <li class="list-inline-item text-dark">
+              Feedback survey
+            </li>
+          </ul>
+        </div>
       <h3 className="text-center">Submit Feedback</h3>
       <form onSubmit={handleFeedbackSubmit}>
         <div className="form-group">

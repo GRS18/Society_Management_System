@@ -63,13 +63,18 @@ export default function DashBoard() {
                       Contact us
                     </Link>
                   </li>
+                  {/* <li className="nav-item">
+                    <Link className="nav-link" to="/contact">
+                      Gallery
+                    </Link>
+                  </li> */}
                   <li className="nav-item">
                     <Link
                       className="nav-link active header-button d-sm-inline-block"
                       aria-current="page"
                       to="/login"
                     >
-                      Login
+                      Signin
                     </Link>
                   </li>
                   {/* <li className="nav-item ">
@@ -297,16 +302,16 @@ export default function DashBoard() {
               <div class="trial-content">
                 <h2 class="title">Start Your Trial !</h2>
                 <h5>
-                  Dive into our 30-day trial – it’s free, and you can cancel
+                  Dive into our trial – it’s free, and you can cancel
                   anytime.
                   <br/>
                   If you’re not thrilled with our product, no hard feelings!
                   We’ll part ways as friends.
                   </h5>
-                <a href="#" class="button-cta">
+                <Link to="login" class="button-cta">
                   Get Free Trial
                   <span>➔</span>
-                </a>
+                </Link>
               </div>
 
               <div class="trial-image">

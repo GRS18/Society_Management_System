@@ -1,10 +1,11 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import '../resident/css/profile_management.css';
 
 export default function Profile_Management() {
 
-const [profilePicture, setProfilePicture] = useState("https://via.placeholder.com/120");
+  const [profilePicture, setProfilePicture] = useState("https://via.placeholder.com/120");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -69,8 +70,21 @@ const [profilePicture, setProfilePicture] = useState("https://via.placeholder.co
   };
 
   return (
-    <div className="profile-card">
+    <div className="profile-card resident-back">
       <h3>Manage Your Profile</h3>
+      <div className='resident-back text-center'>
+        <ul class="breadcrumb list-inline mt-2">
+          <li class="list-inline-item">
+            <Link to="/resident" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Profile Management
+          </li>
+        </ul>
+      </div>
 
       {/* Profile Picture */}
       <div className="profile-picture">

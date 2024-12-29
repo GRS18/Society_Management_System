@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../resident/css/resident_billing.css';
 
 
@@ -59,7 +60,18 @@ const [billingData, setBillingData] = useState({
   return (
     <div className="billing-section">
       {/* Billing Summary */}
-      <div className="summary-card text-center">
+      <div className="summary-card text-center resident-back text-center">
+      <ul class="breadcrumb list-inline mt-2">
+          <li class="list-inline-item">
+            <Link to="/resident" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Billing Summary
+          </li>
+        </ul>
         <h3><strong>Billing Summary</strong></h3>
         <br/>
         <div className="row">
