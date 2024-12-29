@@ -167,16 +167,16 @@ export default function Contact() {
             </ul>
             <h3>Follow Us</h3>
             <div className="social-icons">
-              <Link to="#" className="text-primary mr-3">
+              <Link to="https://www.facebook.com/login/" className="text-primary mr-3">
               <i class="fab fa-facebook fa-2x"></i>
               </Link>
               <Link to="#" className="text-primary mr-3">
                 <i className="fab fa-twitter fa-2x"></i>
               </Link>
-              <Link to="#" className="text-primary mr-3">
+              <Link to="https://www.linkedin.com/login" className="text-primary mr-3">
                 <i className="fab fa-linkedin fa-2x"></i>
               </Link>
-              <Link to="#" className="text-primary">
+              <Link to="https://www.instagram.com/accounts/login/" className="text-primary">
                 <i className="fab fa-instagram fa-2x"></i>
               </Link>
             </div>
