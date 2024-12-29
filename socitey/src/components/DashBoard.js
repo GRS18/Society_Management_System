@@ -63,11 +63,11 @@ export default function DashBoard() {
                       Contact us
                     </Link>
                   </li>
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link className="nav-link" to="/contact">
                       Gallery
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item">
                     <Link
                       className="nav-link active header-button d-sm-inline-block"
