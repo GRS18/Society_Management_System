@@ -5,12 +5,13 @@ import './css/dashboard.css';
 export default function Admin_dashboard() {
   return (
     <>
+    <div className="admin-dashboard-background">
       {/* Header start */}
       <div className="admin_back">
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/admin">
+            <Link className="navbar-brand" to="/">
               <img
                 src={logo}
                 alt="Logo"
@@ -252,6 +253,7 @@ export default function Admin_dashboard() {
             </Link>
           </div>
         </div>
+      </div>
       </div>
       </div>
       </div>

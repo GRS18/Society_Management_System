@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import "../css/contact.css";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Contact() {
   return (
@@ -50,14 +51,14 @@ export default function Contact() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                    <Link
-                      className="nav-link active header-button d-sm-inline-block"
-                      aria-current="page"
-                      to="/login">
-                      Login
-                      </Link>
-                 </li>
-                 {/* <li className="nav-item ">
+                  <Link
+                    className="nav-link active header-button d-sm-inline-block"
+                    aria-current="page"
+                    to="/login">
+                    Login
+                  </Link>
+                </li>
+                {/* <li className="nav-item ">
                     <Link className="nav-link active header-button d-sm-inline-block" aria-current="page" to="/register">
                      Register
                     </Link>
@@ -75,6 +76,17 @@ export default function Contact() {
           We’d love to hear from you! Get in touch with us for any queries,
           support, or feedback.
         </p>
+        <ul class="breadcrumb list-inline mt-2">
+          <li class="list-inline-item">
+            <Link to="/" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Contact Us
+          </li>
+        </ul>
       </div>
 
       <div className="container contact">
@@ -137,27 +149,26 @@ export default function Contact() {
             <ul className="list-unstyled">
               <li>
                 <i className="fas fa-map-marker-alt text-primary"></i>{" "}
-                <strong>Address:</strong> 123 Society Lane, Urban City, State,
-                ZIP
+                <strong>Address:</strong> Block 1-30, ROHAN SEHER, Samarth Colony, Baner, Pune, Maharashtra 411045
               </li>
               <li>
                 <i className="fas fa-phone text-primary"></i>{" "}
-                <strong>Phone:</strong> +1 (555) 123-4567
+                <strong>Phone:</strong> 020-2721 6098
               </li>
               <li>
                 <i className="fas fa-envelope text-primary"></i>{" "}
-                <strong>Email:</strong> support@societymanagement.com
+                <strong>Email:</strong> manager@rohanseher.com
               </li>
-              <li>
+              {/* <li>
                 <i className="fas fa-globe text-primary"></i>{" "}
                 <strong>Website:</strong>{" "}
                 <Link to="index.html">www.societymanagement.com</Link>
-              </li>
+              </li> */}
             </ul>
             <h3>Follow Us</h3>
-            <div>
+            <div className="social-icons">
               <Link to="#" className="text-primary mr-3">
-                <i className="fab fa-facebook fa-2x"></i>
+              <i class="fab fa-facebook fa-2x"></i>
               </Link>
               <Link to="#" className="text-primary mr-3">
                 <i className="fab fa-twitter fa-2x"></i>

@@ -23,3 +23,17 @@ color: white;
 .visitor{
   background-color: #a7ec9e;
 }
+
+.admin-dashboard-background {
+  /* background-image: url("../assets/admin-dashboard-background.png"); */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Makes the image fixed in the background */
+  min-height: 100vh; /* Ensures the background spans the full viewport height */
+  display: flex; /* For aligning content if needed */
+  flex-direction: column; /* Adjust as per layout needs */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  width: 100%; /* Ensures the full width of the viewport is covered */
+}

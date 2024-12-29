@@ -63,19 +63,19 @@ export default function Access_Control() {
 
   return (
 
-    <div className="container mt-4">
-        <Link className="navbar-brand backbutton" to="/admin">
-          <img
-            src={backlogo}
-            alt="Logo"
-            height="50"
-            width="70"
-            className="d-inline-block align-text-top"
-          />
-        </Link>
-      
+    <div className="container mt-4 admin-back text-center">    
       <h1 className="mb-4">Access Control</h1>
-
+      <ul class="breadcrumb list-inline mt-2">
+        <li class="list-inline-item">
+          <Link to="/admin" class="text-secondary text-decoration-none">Home</Link>
+        </li>
+        <li class="list-inline-item text-secondary">
+          &rarr;
+        </li>
+        <li class="list-inline-item text-dark">
+          Access Control
+        </li>
+      </ul>
       {/* Tabs */}
       <ul className="nav nav-tabs" role="tablist">
         <li className="nav-item">
