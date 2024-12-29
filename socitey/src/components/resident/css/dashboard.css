@@ -1,5 +1,8 @@
 .logo-resident{
-    height: 100px !important;
+  margin-top: 30px !important;
+  width: auto !important; /* Adjust the size as needed */
+  height: 180px !important;
+  margin-bottom: 0% !important;
   }
   .logo-resident:hover {
     transform: scale(1.1); /* Enlarge the logo on hover */
@@ -10,4 +13,8 @@
 }
 .resident-page{
     margin-top: 70px;
+}
+
+.profiles{
+  background-color: #a7ec9e;
 }

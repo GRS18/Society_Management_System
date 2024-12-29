@@ -206,7 +206,7 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../css/register.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 export default function Register() {
   const [fullName, setFullName] = useState("");

@@ -1,40 +1,38 @@
-footer {
-  background-color:#eaf7ed;
-    color: white; /* White text */
+footer.custom-footer {
+  background-color: #eaf7ed;
+  color: white;
+  padding: 5px 0; /* Reduce vertical padding */
 }
+
+footer .container {
+  text-align: center;
+  margin: 3px; /* Reduce margin for the container */
   
-  footer .container {
-    text-align: center;
-  }
-  
-  footer p {
-    margin: 0 0 10px; /* Add space between text and links */
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  footer ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-    margin: 0;
-  }
-  
-  footer ul.list-inline {
-    display: inline-flex; /* Display items inline */
-    gap: 15px; /* Space between items */
-  }
-  
-  footer ul.list-inline li {
-    display: inline; /* Ensure items are inline */
-  }
-  
-  footer ul.list-inline a {
-    color: white; /* Text color for links */
-    text-decoration: none; /* Remove underline */
-    font-size: 14px; /* Adjust font size */
-    transition: color 0.3s; /* Smooth transition for hover effect */
-  }
-  
-  footer ul.list-inline a:hover {
-    color: #00bcd4; /* Change color on hover */
-  }
-  
+}
+
+footer p {
+  margin: 0 0 5px; /* Reduce space below the text */
+  font-size: 14px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0; /* Reduce vertical spacing */
+}
+
+footer ul.list-inline {
+  display: inline-flex;
+  gap: 10px; /* Reduce gap between items */
+}
+
+footer ul.list-inline a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+footer ul.list-inline a:hover {
+  color: #00bcd4;
+}
