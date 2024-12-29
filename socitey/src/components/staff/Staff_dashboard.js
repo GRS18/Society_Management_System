@@ -11,7 +11,7 @@ export default function Staff_dashboard() {
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/staff">
+            <Link className="navbar-brand" to="/">
               <img
                 src={logo}
                 alt="Logo"

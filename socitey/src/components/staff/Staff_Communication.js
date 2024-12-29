@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
+import { Link } from "react-router-dom";
 import '../staff/css/staff_communication.css';
 
 export default function Staff_Communication() {
@@ -174,13 +175,24 @@ const [messages, setMessages] = useState([]);
   };
 
   return (
-    <div className="communication-assistance">
+    <div className="communication-assistance staff-back text-center">
       {/* Header Section */}
       <div className="card-custom">
         <h3 className="text-center">Communication Assistance</h3>
         <p className="text-center">
           Manage communication threads between staff and residents.
         </p>
+        <ul class="breadcrumb list-inline mt-2">
+          <li class="list-inline-item">
+            <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Communication Assistance
+          </li>
+        </ul>
       </div>
 
       {/* Search and Filter Section
