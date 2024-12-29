@@ -2,15 +2,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../css/footer.css';
+import imgfooter from '../assets/about.png'
 
 export default function Footer() {
   return (
     <>
     <footer className="footer-section bg_img">
     <div className="container">
-        <div className="footer-top padding-bottom">
-            
+        <div className="footer-top">
+       
         </div>
+
+        <div className="container image-container">
+        <img src={imgfooter} alt="img" />
+      </div>
+
         <div className="footer-bottom">
             <div className="row">
               <div className="col-md-3">

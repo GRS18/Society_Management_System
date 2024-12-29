@@ -74,7 +74,7 @@ export default function DashBoard() {
                       aria-current="page"
                       to="/login"
                     >
-                      Signin
+                      Sign-In
                     </Link>
                   </li>
                   {/* <li className="nav-item ">

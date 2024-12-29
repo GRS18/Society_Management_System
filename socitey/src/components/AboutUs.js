@@ -4,7 +4,6 @@ import logo from "../assets/logo.svg";
 import Socitey from "../assets/Socitey.jpg";
 import profile from "../assets/profile.png";
 import profile1 from "../assets/profile1.png";
-import aboutus from "../assets/about.png";
 import "../css/aboutus.css";
 
 export default function AboutUs() {
@@ -170,9 +169,6 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      <div className="container image-container">
-        <img src={aboutus} alt="about us" />
-      </div>
 
     </>
   );
