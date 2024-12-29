@@ -1,89 +1,90 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../staff/css/staff_maintenance_assistance.css';
 
 export default function Staff_Maintenance_Assistance() {
-//   return (
-//    <>
-//     <div className="card-custom">
-//         <h3 className="text-center">Maintenance Assistance</h3>
-//         <p className="text-center">Manage and assist with maintenance requests submitted by residents.</p>
-//     </div>
+  //   return (
+  //    <>
+  //     <div className="card-custom">
+  //         <h3 className="text-center">Maintenance Assistance</h3>
+  //         <p className="text-center">Manage and assist with maintenance requests submitted by residents.</p>
+  //     </div>
 
-//     <div className="card-custom mt-4">
-//         <h4>Search and Filter</h4>
-//         <form className="form-inline justify-content-between">
-//             <input type="text" className="form-control mb-2 mr-sm-2" id="searchRequest" placeholder="Search by Request ID or Resident Name"/>
-//             <select className="form-control mb-2 mr-sm-2" id="requestStatus">
-//                 <option value="">All Status</option>
-//                 <option value="pending">Pending</option>
-//                 <option value="in-progress">In Progress</option>
-//                 <option value="completed">Completed</option>
-//             </select>
-//             <select className="form-control mb-2 mr-sm-2" id="requestType">
-//                 <option value="">All Request Types</option>
-//                 <option value="plumbing">Plumbing</option>
-//                 <option value="electrical">Electrical</option>
-//                 <option value="cleaning">Cleaning</option>
-//                 <option value="other">Other</option>
-//             </select>
-//             <button type="submit" className="btn btn-custom mb-2">Search</button>
-//         </form>
-//     </div>
+  //     <div className="card-custom mt-4">
+  //         <h4>Search and Filter</h4>
+  //         <form className="form-inline justify-content-between">
+  //             <input type="text" className="form-control mb-2 mr-sm-2" id="searchRequest" placeholder="Search by Request ID or Resident Name"/>
+  //             <select className="form-control mb-2 mr-sm-2" id="requestStatus">
+  //                 <option value="">All Status</option>
+  //                 <option value="pending">Pending</option>
+  //                 <option value="in-progress">In Progress</option>
+  //                 <option value="completed">Completed</option>
+  //             </select>
+  //             <select className="form-control mb-2 mr-sm-2" id="requestType">
+  //                 <option value="">All Request Types</option>
+  //                 <option value="plumbing">Plumbing</option>
+  //                 <option value="electrical">Electrical</option>
+  //                 <option value="cleaning">Cleaning</option>
+  //                 <option value="other">Other</option>
+  //             </select>
+  //             <button type="submit" className="btn btn-custom mb-2">Search</button>
+  //         </form>
+  //     </div>
 
-//     <div className="card-custom mt-4">
-//         <h4>Maintenance Request Overview</h4>
-//         <table className="table table-bordered table-hover">
-//             <thead>
-//                 <tr>
-//                     <th>#</th>
-//                     <th>Request ID</th>
-//                     <th>Resident Name</th>
-//                     <th>Request Type</th>
-//                     <th>Status</th>
-//                     <th>Actions</th>
-//                 </tr>
-//             </thead>
-//             <tbody>
-//                 <tr>
-//                     <td>1</td>
-//                     <td>REQ-001</td>
-//                     <td>John Doe</td>
-//                     <td>Plumbing</td>
-//                     <td><span className="badge badge-warning">Pending</span></td>
-//                     <td>
-//                         <button className="btn btn-success btn-sm">Start Maintenance</button>
-//                         <button className="btn btn-secondary btn-sm" disabled>Mark as Completed</button>
-//                     </td>
-//                 </tr>
-//                 <tr>
-//                     <td>2</td>
-//                     <td>REQ-002</td>
-//                     <td>Maria Smith</td>
-//                     <td>Electrical</td>
-//                     <td><span className="badge badge-warning">Pending</span></td>
-//                     <td>
-//                         <button className="btn btn-success btn-sm">Start Maintenance</button>
-//                         <button className="btn btn-secondary btn-sm" disabled>Mark as Completed</button>
-//                     </td>
-//                 </tr>
-//                 <tr>
-//                     <td>3</td>
-//                     <td>REQ-003</td>
-//                     <td>Alex Brown</td>
-//                     <td>Cleaning</td>
-//                     <td><span className="badge badge-success">Completed</span></td>
-//                     <td>
-//                         <button className="btn btn-secondary btn-sm" disabled>Completed</button>
-//                     </td>
-//                 </tr>
-//             </tbody>
-//         </table>
-//     </div>
-//    </>
-//   );
+  //     <div className="card-custom mt-4">
+  //         <h4>Maintenance Request Overview</h4>
+  //         <table className="table table-bordered table-hover">
+  //             <thead>
+  //                 <tr>
+  //                     <th>#</th>
+  //                     <th>Request ID</th>
+  //                     <th>Resident Name</th>
+  //                     <th>Request Type</th>
+  //                     <th>Status</th>
+  //                     <th>Actions</th>
+  //                 </tr>
+  //             </thead>
+  //             <tbody>
+  //                 <tr>
+  //                     <td>1</td>
+  //                     <td>REQ-001</td>
+  //                     <td>John Doe</td>
+  //                     <td>Plumbing</td>
+  //                     <td><span className="badge badge-warning">Pending</span></td>
+  //                     <td>
+  //                         <button className="btn btn-success btn-sm">Start Maintenance</button>
+  //                         <button className="btn btn-secondary btn-sm" disabled>Mark as Completed</button>
+  //                     </td>
+  //                 </tr>
+  //                 <tr>
+  //                     <td>2</td>
+  //                     <td>REQ-002</td>
+  //                     <td>Maria Smith</td>
+  //                     <td>Electrical</td>
+  //                     <td><span className="badge badge-warning">Pending</span></td>
+  //                     <td>
+  //                         <button className="btn btn-success btn-sm">Start Maintenance</button>
+  //                         <button className="btn btn-secondary btn-sm" disabled>Mark as Completed</button>
+  //                     </td>
+  //                 </tr>
+  //                 <tr>
+  //                     <td>3</td>
+  //                     <td>REQ-003</td>
+  //                     <td>Alex Brown</td>
+  //                     <td>Cleaning</td>
+  //                     <td><span className="badge badge-success">Completed</span></td>
+  //                     <td>
+  //                         <button className="btn btn-secondary btn-sm" disabled>Completed</button>
+  //                     </td>
+  //                 </tr>
+  //             </tbody>
+  //         </table>
+  //     </div>
+  //    </>
+  //   );
 
-const [requests, setRequests] = useState([
+  const [requests, setRequests] = useState([
     {
       id: 1,
       requestId: "REQ-001",
@@ -144,13 +145,24 @@ const [requests, setRequests] = useState([
   });
 
   return (
-    <div className="maintenance-assistance">
+    <div className="maintenance-assistance staff-back text-center">
       {/* Header */}
       <div className="card-custom">
         <h3 className="text-center">Maintenance Assistance</h3>
         <p className="text-center">
           Manage and assist with maintenance requests submitted by residents.
         </p>
+        <ul class="breadcrumb list-inline mt-2">
+          <li class="list-inline-item">
+            <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Maintenance Assistance
+          </li>
+        </ul>
       </div>
 
       {/* Search and Filter */}
@@ -193,51 +205,51 @@ const [requests, setRequests] = useState([
 
 
       {/* Search and Filter */}
-<div className="card-custom mt-4 search-filter-section">
-  <div className="search-filter-left">
-    <h4>Search and Filter</h4>
-    <form
-      className="form-inline justify-content-between"
-      onSubmit={(e) => e.preventDefault()}
-    >
-      <input
-        type="text"
-        className="form-control mb-2 mr-sm-2 maintain"
-        placeholder="Search by Request ID or Resident Name"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <select
-        className="form-control mb-2 mr-sm-2 maintain"
-        value={statusFilter}
-        onChange={(e) => setStatusFilter(e.target.value)}
-      >
-        <option value="">All Status</option>
-        <option value="pending">Pending</option>
-        <option value="in progress">In Progress</option>
-        <option value="completed">Completed</option>
-      </select>
-      <select
-        className="form-control mb-2 mr-sm-2 maintain"
-        value={typeFilter}
-        onChange={(e) => setTypeFilter(e.target.value)}
-      >
-        <option value="">All Request Types</option>
-        <option value="plumbing">Plumbing</option>
-        <option value="electrical">Electrical</option>
-        <option value="cleaning">Cleaning</option>
-        <option value="other">Other</option>
-      </select>
-    </form>
-  </div>
-  {/* <div className="search-filter-right">
+      <div className="card-custom mt-4 search-filter-section">
+        <div className="search-filter-left">
+          <h4>Search and Filter</h4>
+          <form
+            className="form-inline justify-content-between"
+            onSubmit={(e) => e.preventDefault()}
+          >
+            <input
+              type="text"
+              className="form-control mb-2 mr-sm-2 maintain"
+              placeholder="Search by Request ID or Resident Name"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <select
+              className="form-control mb-2 mr-sm-2 maintain"
+              value={statusFilter}
+              onChange={(e) => setStatusFilter(e.target.value)}
+            >
+              <option value="">All Status</option>
+              <option value="pending">Pending</option>
+              <option value="in progress">In Progress</option>
+              <option value="completed">Completed</option>
+            </select>
+            <select
+              className="form-control mb-2 mr-sm-2 maintain"
+              value={typeFilter}
+              onChange={(e) => setTypeFilter(e.target.value)}
+            >
+              <option value="">All Request Types</option>
+              <option value="plumbing">Plumbing</option>
+              <option value="electrical">Electrical</option>
+              <option value="cleaning">Cleaning</option>
+              <option value="other">Other</option>
+            </select>
+          </form>
+        </div>
+        {/* <div className="search-filter-right">
     <img
       src="https://via.placeholder.com/300x200"
       alt="Search Illustration"
       className="search-filter-image"
     />
   </div> */}
-</div>
+      </div>
 
       {/* Maintenance Request Table */}
       <div className="card-custom mt-4">
@@ -263,13 +275,12 @@ const [requests, setRequests] = useState([
                   <td>{request.requestType}</td>
                   <td>
                     <span
-                      className={`badge ${
-                        request.status === "Completed"
+                      className={`badge ${request.status === "Completed"
                           ? "badge-success"
                           : request.status === "In Progress"
-                          ? "badge-info"
-                          : "badge-warning"
-                      }`}
+                            ? "badge-info"
+                            : "badge-warning"
+                        }`}
                     >
                       {request.status}
                     </span>

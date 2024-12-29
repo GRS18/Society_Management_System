@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../staff/css/staff_billing_assistance.css';
 
 
@@ -74,13 +75,24 @@ export default function Staff_Billing_Assistance() {
   };
 
   return (
-    <div className="billing-assistance">
+    <div className="billing-assistance staff-back text-center">
       {/* Header */}
       <div className="card-custom">
         <h3 className="text-center">Billing Assistance</h3>
         <p className="text-center">
           Manage and assist with residents' billing and payment statuses.
         </p>
+        <ul class="breadcrumb list-inline mt-2">
+          <li class="list-inline-item">
+            <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Billing Assistance
+          </li>
+        </ul>
       </div>
 
       {/* Search and Filter */}

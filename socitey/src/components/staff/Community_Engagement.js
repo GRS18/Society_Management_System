@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../staff/css/community_engagement.css';
 
 export default function Community_Engagement() {
@@ -75,13 +76,24 @@ const [events, setEvents] = useState([
   };
 
   return (
-    <div className="community-engagement">
+    <div className="community-engagement staff-back text-center">
       {/* Header */}
       <div className="card-custom">
         <h3 className="text-center">Community Engagement</h3>
         <p className="text-center">
           Manage and promote community events and initiatives within the society.
         </p>
+        <ul class="breadcrumb list-inline mt-2">
+                  <li class="list-inline-item">
+                    <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
+                  </li>
+                  <li class="list-inline-item text-secondary">
+                    &rarr;
+                  </li>
+                  <li class="list-inline-item text-dark">
+                    Community Engagement
+                  </li>
+                </ul>
       </div>
 
       {/* Search and Filter */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
+import { Link } from "react-router-dom";
 import '../staff/css/staff_schedule.css';
 
 export default function Staff_Schedule() {
@@ -44,11 +45,22 @@ const [selectedStaff, setSelectedStaff] = useState('');
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 staff-back text-center">
       {/* Staff Schedule Title and Description */}
       <div className="card-custom">
         <h3 className="text-center">Staff Schedule</h3>
         <p className="text-center">Manage and view the schedules for staff members in the society.</p>
+        <ul class="breadcrumb list-inline mt-2">
+                  <li class="list-inline-item">
+                    <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
+                  </li>
+                  <li class="list-inline-item text-secondary">
+                    &rarr;
+                  </li>
+                  <li class="list-inline-item text-dark">
+                    Staff Schedule
+                  </li>
+                </ul>
       </div>
 
       {/* Filter Section
