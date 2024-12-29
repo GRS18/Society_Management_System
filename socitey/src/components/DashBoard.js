@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import erp from "../assets/erp.png";
 import erp1 from "../assets/erp1.png";
 import erp2 from "../assets/erp2.png";
@@ -169,16 +169,16 @@ export default function DashBoard() {
               <p>Manage resident profiles, add or update information.</p>
             </Link>
             <Link to="login" className="module-card">
+              <h3>Staff Management</h3>
+              <p>Manage staff roles, responsibilities, and performance.</p>
+            </Link>
+            <Link to="login" className="module-card">
               <h3>Visitor and Attendance</h3>
               <p>Log visitor entries and schedule visits.</p>
             </Link>
             <Link to="login" className="module-card">
               <h3>Billing and Payments</h3>
               <p>Track billing and payment history.</p>
-            </Link>
-            <Link to="login" className="module-card">
-              <h3>Staff Management</h3>
-              <p>Manage staff roles, responsibilities, and performance.</p>
             </Link>
             <Link to="login" className="module-card">
               <h3>Maintenance Management</h3>

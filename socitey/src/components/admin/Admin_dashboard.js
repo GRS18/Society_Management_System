@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./assets/logo.png";
+import logo from "./assets/logo.svg";
 import './css/dashboard.css';
 export default function Admin_dashboard() {
   return (
@@ -155,9 +155,9 @@ export default function Admin_dashboard() {
 
           <div className="col-md-4 mb-4">
             <Link to="/visitor_management" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4 block">
+              <div className="card dashboard-card text-center p-4 block visitor">
                 <i className="fas fa-user-check"></i>
-                <h5 className="mt-3">Visitor Management</h5>
+                <h5 className="mt-3"><strong>Visitor Management</strong></h5>
               </div>
             </Link>
           </div>

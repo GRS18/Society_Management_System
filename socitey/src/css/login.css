@@ -50,17 +50,13 @@
   transition: color 0.3s ease-in-out;
 }
 
-.logo:hover{
-  transform: scale(1.1); /* Enlarge the logo on hover */
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
 
 /* header end */
 
+/* Login Form Styles */
 .login{
   padding: 30px;
 }
-/* Login Form Styles */
 .login-card {
   background-color: #fff;
   border-radius: 8px;

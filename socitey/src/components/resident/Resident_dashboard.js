@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./assets/logo.png";
+import logo from "./assets/logo.svg";
 import './css/dashboard.css';
 export default function Resident_dashboard() {
   return (
@@ -130,9 +130,9 @@ export default function Resident_dashboard() {
         <div className="row">
           <div className="col-md-4 mb-4">
             <Link to="/profile_management" className="text-decoration-none">
-              <div className="card dashboard-card text-center p-4 block">
+              <div className="card dashboard-card text-center p-4 block profiles">
                 <i className="fas fa-user"></i>
-                <h5 className="mt-3">Profile</h5>
+                <h5 className="mt-3"><strong>Profile</strong></h5>
               </div>
             </Link>
           </div>
