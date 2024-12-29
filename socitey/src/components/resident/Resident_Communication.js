@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../resident/css/resident_communication.css';
 
 export default function Resident_Communication() {
@@ -75,6 +76,19 @@ const [formInputs, setFormInputs] = useState({
     <div className="communication-section">
       {/* Message Sending Form */}
       <div className="communication-card">
+      <div className='resident-back text-center'>
+          <ul class="breadcrumb list-inline mt-2">
+            <li class="list-inline-item">
+              <Link to="/resident" class="text-secondary text-decoration-none">Home</Link>
+            </li>
+            <li class="list-inline-item text-secondary">
+              &rarr;
+            </li>
+            <li class="list-inline-item text-dark">
+              Resident Communication
+            </li>
+          </ul>
+        </div>
         <h3 className="text-center">Send a Message</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">

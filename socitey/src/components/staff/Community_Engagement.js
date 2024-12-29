@@ -5,7 +5,7 @@ import '../staff/css/community_engagement.css';
 
 export default function Community_Engagement() {
 
-const [events, setEvents] = useState([
+  const [events, setEvents] = useState([
     {
       id: 1,
       name: "Community Football Match",
@@ -84,16 +84,16 @@ const [events, setEvents] = useState([
           Manage and promote community events and initiatives within the society.
         </p>
         <ul class="breadcrumb list-inline mt-2">
-                  <li class="list-inline-item">
-                    <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
-                  </li>
-                  <li class="list-inline-item text-secondary">
-                    &rarr;
-                  </li>
-                  <li class="list-inline-item text-dark">
-                    Community Engagement
-                  </li>
-                </ul>
+          <li class="list-inline-item">
+            <Link to="/staff" class="text-secondary text-decoration-none">Home</Link>
+          </li>
+          <li class="list-inline-item text-secondary">
+            &rarr;
+          </li>
+          <li class="list-inline-item text-dark">
+            Community Engagement
+          </li>
+        </ul>
       </div>
 
       {/* Search and Filter */}
@@ -163,13 +163,12 @@ const [events, setEvents] = useState([
                   <td>{event.category}</td>
                   <td>
                     <span
-                      className={`badge ${
-                        event.status === "Upcoming"
+                      className={`badge ${event.status === "Upcoming"
                           ? "badge-info"
                           : event.status === "Ongoing"
-                          ? "badge-success"
-                          : "badge-danger"
-                      }`}
+                            ? "badge-success"
+                            : "badge-danger"
+                        }`}
                     >
                       {event.status}
                     </span>

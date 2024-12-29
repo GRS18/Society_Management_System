@@ -1,16 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import "./css/booking_scheduling.css";
 export default function Booking_Scheduling() {
 
-const [facility, setFacility] = useState('');
+  const [facility, setFacility] = useState('');
   const [bookingDate, setBookingDate] = useState('');
   const [timeSlot, setTimeSlot] = useState('');
   const [bookingHistory, setBookingHistory] = useState([
     { id: 1, facility: 'Clubhouse', date: '2024-11-25', timeSlot: 'Morning (8:00 AM - 12:00 PM)', status: 'Confirmed' },
     { id: 2, facility: 'Tennis Court', date: '2024-11-20', timeSlot: 'Evening (4:00 PM - 8:00 PM)', status: 'Cancelled' },
   ]);
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -32,12 +33,23 @@ const [facility, setFacility] = useState('');
   };
 
   return (
-    <div className="container booking">
+    <div className="container booking ">
       {/* Booking Form */}
       <div className="booking-card">
-        <div className="booking-header">
+        <div className="booking-header resident-back text-center">
           <h3>Book a Facility</h3>
           <p>Select a facility, date, and time to make your booking</p>
+          <ul class="breadcrumb list-inline mt-2">
+            <li class="list-inline-item">
+              <Link to="/resident" class="text-secondary text-decoration-none">Home</Link>
+            </li>
+            <li class="list-inline-item text-secondary">
+              &rarr;
+            </li>
+            <li class="list-inline-item text-dark">
+              Booking Facility
+            </li>
+          </ul>
         </div>
 
         <form onSubmit={handleSubmit}>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../resident/css/maintenance_request.css';
 
 export default function Maintenance_Requests() {
 
-const [formInputs, setFormInputs] = useState({
+  const [formInputs, setFormInputs] = useState({
     issueCategory: "",
     issueDescription: "",
     attachment: null,
@@ -87,6 +88,19 @@ const [formInputs, setFormInputs] = useState({
     <div className="maintenance-section">
       {/* Maintenance Request Form */}
       <div className="maintenance-card">
+        <div className='resident-back text-center'>
+          <ul class="breadcrumb list-inline mt-2">
+            <li class="list-inline-item">
+              <Link to="/resident" class="text-secondary text-decoration-none">Home</Link>
+            </li>
+            <li class="list-inline-item text-secondary">
+              &rarr;
+            </li>
+            <li class="list-inline-item text-dark">
+              Maintenance Request
+            </li>
+          </ul>
+        </div>
         <h3 className="text-center">Submit a Maintenance Request</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -163,8 +177,8 @@ const [formInputs, setFormInputs] = useState({
                       request.status === "Pending"
                         ? "badge badge-pending"
                         : request.status === "In Progress"
-                        ? "badge badge-in-progress"
-                        : "badge badge-completed"
+                          ? "badge badge-in-progress"
+                          : "badge badge-completed"
                     }
                   >
                     {request.status}

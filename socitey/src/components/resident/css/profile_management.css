@@ -141,3 +141,31 @@
     background-color: #59c04b;
   }
   
+
+   /* Breadcrumb Styling */
+.resident-back .breadcrumb {
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+  display: inline-flex; /* Aligns breadcrumb items in a row */
+  gap: 5px; /* Adds spacing between breadcrumb items */
+  font-size: 1rem; /* Standard font size */
+  margin-bottom: 50px;
+}
+
+/* Breadcrumb Links */
+.resident-back .breadcrumb .list-inline-item a {
+  color: #59c04b !important; /* Secondary gray color for links */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold;
+}
+
+.resident-back .breadcrumb .list-inline-item a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Last Item in Breadcrumb */
+.resident-back .breadcrumb .list-inline-item.text-dark {
+  font-weight: bold; /* Highlights the active breadcrumb */
+  color: #59c04b !important;
+}
