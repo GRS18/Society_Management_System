@@ -105,50 +105,28 @@ export default function DashBoard() {
           <div className="container">
             <div
               id="carouselExampleAutoplaying"
-              class="carousel slide"
+              className="carousel slide"
               data-bs-ride="carousel"
+              data-bs-interval="1000"
             >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src={photo1} class="d-block w-100" alt="slider1" />
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img src={photo1} className="d-block w-100" alt="slider1" />
                 </div>
-                <div class="carousel-item">
-                  <img src={photo2} class="d-block w-100" alt="slider2" />
+                <div className="carousel-item">
+                  <img src={photo2} className="d-block w-100" alt="slider2" />
                 </div>
-                <div class="carousel-item">
-                  <img src={photo3} class="d-block w-100" alt="slider3" />
+                <div className="carousel-item">
+                  <img src={photo3} className="d-block w-100" alt="slider3" />
                 </div>
-                <div class="carousel-item">
-                  <img src={photo4} class="d-block w-100" alt="slider3" />
+                <div className="carousel-item">
+                  <img src={photo4} className="d-block w-100" alt="slider4" />
                 </div>
               </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
         </section>
+
 
 
 
