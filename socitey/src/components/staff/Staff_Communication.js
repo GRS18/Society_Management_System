@@ -96,25 +96,25 @@ const [messages, setMessages] = useState([]);
       const mockMessages = [
         {
           id: 1,
-          residentName: "John Doe",
+          residentName: "Nikita Chaudhari",
           subject: "Water Supply Issue",
           status: "unread",
         },
         {
           id: 2,
-          residentName: "Maria Smith",
+          residentName: "Girirsh Shinde",
           subject: "Electrical Maintenance Request",
           status: "read",
         },
         {
           id: 3,
-          residentName: "Alex Brown",
+          residentName: "Sagar Rupnar",
           subject: "Request for Cleaning Services",
           status: "read",
         },
         {
           id: 4,
-          residentName: "Emma Wilson",
+          residentName: "Radha Tunge",
           subject: "Parking Slot Query",
           status: "archived",
         },

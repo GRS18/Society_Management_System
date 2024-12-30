@@ -88,7 +88,7 @@ export default function Staff_Visitor_Management() {
   const [visitors, setVisitors] = useState([
     {
       id: 1,
-      name: "Alex Johnson",
+      name: "Sagar Rupnar",
       flatNumber: "A-101",
       purpose: "Delivery",
       timeIn: "10:00 AM",
@@ -97,7 +97,7 @@ export default function Staff_Visitor_Management() {
     },
     {
       id: 2,
-      name: "Maria Garcia",
+      name: "Girirsh Shinde",
       flatNumber: "B-202",
       purpose: "Guest",
       timeIn: "11:15 AM",

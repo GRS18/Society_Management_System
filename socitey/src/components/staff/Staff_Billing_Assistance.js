@@ -10,7 +10,7 @@ export default function Staff_Billing_Assistance() {
   const [billingData, setBillingData] = useState([
     {
       id: 1,
-      name: "John Doe",
+      name: "Nikita Chaudhari",
       flatNumber: "A-101",
       billingPeriod: "Oct 2024",
       amountDue: "$200",
@@ -18,7 +18,7 @@ export default function Staff_Billing_Assistance() {
     },
     {
       id: 2,
-      name: "Maria Smith",
+      name: "Sagar Rupnar",
       flatNumber: "B-202",
       billingPeriod: "Sep 2024",
       amountDue: "$180",
@@ -26,7 +26,7 @@ export default function Staff_Billing_Assistance() {
     },
     {
       id: 3,
-      name: "Robert Brown",
+      name: "Girish Shinde",
       flatNumber: "C-303",
       billingPeriod: "Oct 2024",
       amountDue: "$250",
