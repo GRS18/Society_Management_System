@@ -484,14 +484,14 @@ export default function Login() {
 
     // Successful validation
     if (role === "admin") {
-      setPopupMessage("✅Login successful! Redirecting to Admin Dashboard...");
+      setPopupMessage("✅Sign-In successful! Redirecting to Admin Dashboard...");
       setShowPopup(true);
       setTimeout(() => {
         setShowPopup(false);
         navigate("/admin");
       }, 3000);
     } else if (role === "staff") {
-      setPopupMessage("✅Login successful! Redirecting to Staff Dashboard...");
+      setPopupMessage("✅Sign-In successful! Redirecting to Staff Dashboard...");
       setShowPopup(true);
       setTimeout(() => {
         setShowPopup(false);
@@ -499,7 +499,7 @@ export default function Login() {
       }, 3000);
     } else if (role === "resident") {
       setPopupMessage(
-        "✅Login successful! Redirecting to Resident Dashboard..."
+        "✅Sign-In successful! Redirecting to Resident Dashboard..."
       );
       setShowPopup(true);
       setTimeout(() => {
@@ -581,7 +581,7 @@ export default function Login() {
 
       <div className="login">
         <div className="login-card">
-          <h3 className="text-center">Login</h3>
+          <h3 className="text-center">Sign-In</h3>
           <form onSubmit={handleLogin}>
             <div className="form-group">
               <label htmlFor="role">User Role</label>
@@ -639,7 +639,7 @@ export default function Login() {
             </div>
 
             <button type="submit" className="btn btn-primary btn-block mt-3 lbtn">
-              Login
+              Sign-In
             </button>
 
             <a

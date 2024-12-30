@@ -122,6 +122,11 @@ export default function Admin_dashboard() {
                     Contact us
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    Sign-Out
+                  </Link>
+                </li>
                 {/* <li className="nav-item">
                   <Link className="nav-link" to="/register">
                     Register

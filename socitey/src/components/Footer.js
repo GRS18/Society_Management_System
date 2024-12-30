@@ -29,7 +29,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="col-md-3">
-                <h6 className="mb-10 mt-10">SocietyRun ERP</h6>
+                <h6 className="mb-10 mt-10">ERP</h6>
                 <ul>
                   <li><Link to="/">Maintenance Billing</Link></li>
                   <li><Link to="/">Collection Automation</Link></li>
