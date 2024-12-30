@@ -8,21 +8,21 @@ export default function Staff_Resident_Assistance() {
   const [requests, setRequests] = useState([
     {
       id: 1,
-      residentName: "John Doe",
+      residentName: "Nikita Chaudhari",
       flatNumber: "Flat A-101",
       type: "Plumbing Issue",
       status: "Pending",
     },
     {
       id: 2,
-      residentName: "Jane Smith",
+      residentName: "Girirsh Shinde",
       flatNumber: "Flat B-202",
       type: "Electrical Problem",
       status: "Pending",
     },
     {
       id: 3,
-      residentName: "Robert Brown",
+      residentName: "Sagar Rupnar",
       flatNumber: "Flat C-303",
       type: "Cleaning Request",
       status: "Completed",

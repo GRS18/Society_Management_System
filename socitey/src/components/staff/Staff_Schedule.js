@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import { Link } from "react-router-dom";
 import '../staff/css/staff_schedule.css';
 
@@ -10,19 +10,19 @@ const [selectedStaff, setSelectedStaff] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('');
   const [scheduleData, setScheduleData] = useState([
     {
-      name: 'John Doe',
+      name: 'Nikita Chaudhari',
       schedule: ['9 AM - 5 PM', 'Off', '9 AM - 5 PM', '9 AM - 1 PM', 'Off', '9 AM - 5 PM', 'Off'],
     },
     {
-      name: 'Jane Smith',
+      name: 'Sagar Rupnar',
       schedule: ['Off', '9 AM - 5 PM', '9 AM - 5 PM', 'Off', '9 AM - 5 PM', '9 AM - 5 PM', 'Off'],
     },
     {
-      name: 'Michael Lee',
+      name: 'Girish Shinde',
       schedule: ['9 AM - 1 PM', '9 AM - 5 PM', 'Off', '9 AM - 5 PM', 'Off', '9 AM - 5 PM', '9 AM - 1 PM'],
     },
     {
-      name: 'Mary Adams',
+      name: 'Radha Tunge',
       schedule: ['Off', '9 AM - 5 PM', '9 AM - 5 PM', '9 AM - 1 PM', '9 AM - 5 PM', 'Off', 'Off'],
     },
   ]);
