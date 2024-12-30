@@ -1,21 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 import '../admin/css/access_control.css';
 export default function Access_Control() {
 
   const [activeTab, setActiveTab] = useState("staff");
   const [staffList, setStaffList] = useState([
-    { name: "John Doe", role: "Security", access: "Full Access" },
-    { name: "Jane Smith", role: "Maintenance", access: "Limited Access" },
+    { name: "Girish Shinde", role: "Security", access: "Full Access" },
+    { name: "Nikita Chaudhari", role: "Maintenance", access: "Limited Access" },
   ]);
   const [residentList, setResidentList] = useState([
     { apartment: "101", status: "Active" },
     { apartment: "102", status: "Restricted" },
   ]);
   const [visitorList, setVisitorList] = useState([
-    { name: "Mark Johnson", reason: "Delivery", date: "2024-11-28" },
+    { name: "Sagar Rupnar", reason: "Delivery", date: "2024-11-28" },
   ]);
 
 

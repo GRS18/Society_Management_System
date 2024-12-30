@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 import "../admin/css/resident_management.css";
 
 export default function Resident_Management() {
@@ -9,9 +8,9 @@ export default function Resident_Management() {
   const [residents, setResidents] = useState([
     {
       id: 1,
-      name: "John Doe",
+      name: "Nikita Chaudhari",
       flatNumber: "A-101",
-      email: "johndoe@example.com",
+      email: "Nikita@123.com",
       phone: "+1234567890",
       status: "Active",
     },

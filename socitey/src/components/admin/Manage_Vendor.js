@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 import '../admin/css/manage_vendor.css';
 export default function Manage_Vendor() {
   const [requests, setRequests] = useState([
     {
       id: 1,
-      residentName: "John Doe",
+      residentName: "Krish Pawar",
       requestType: "Plumbing",
       description: "Leaking pipe in the kitchen",
       preferredDate: "2024-12-01",
@@ -14,7 +13,7 @@ export default function Manage_Vendor() {
     },
     {
       id: 2,
-      residentName: "Jane Smith",
+      residentName: "Rajesh Kumar",
       requestType: "Electrical",
       description: "Faulty power socket in the living room",
       preferredDate: "2024-12-02",
