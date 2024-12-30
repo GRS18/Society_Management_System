@@ -110,9 +110,9 @@ const [selectedStaff, setSelectedStaff] = useState('');
               onChange={handleStaffChange}
             >
               <option value="">Select Staff</option>
-              <option value="john">John Doe</option>
-              <option value="mary">Mary Smith</option>
-              <option value="alex">Alex Brown</option>
+              <option value="john">Nikita Chaudhari</option>
+              <option value="mary">Girish Shinde</option>
+              <option value="alex">Sagar Rupnar</option>
             </select>
 
             <select
