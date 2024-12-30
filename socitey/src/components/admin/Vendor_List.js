@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 import '../admin/css/vendor_list.css';
 
 export default function Vendor_List() {

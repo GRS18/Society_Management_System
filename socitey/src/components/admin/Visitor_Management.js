@@ -1,14 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 export default function Visitor_Management() {
 
   // State to manage visitors list
   const [visitors, setVisitors] = useState([
     {
       id: 1,
-      name: "Jane Doe",
+      name: "Girish Shinde",
       contact: "+1234567890",
       flatVisiting: "A-102",
       entryTime: "10:30 AM",
@@ -17,7 +16,7 @@ export default function Visitor_Management() {
     },
     {
       id: 2,
-      name: "Mike Smith",
+      name: "Sagar Rupnar",
       contact: "+9876543210",
       flatVisiting: "B-201",
       entryTime: "09:00 AM",

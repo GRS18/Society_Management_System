@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 import '../admin/css/security_audit.css';
 export default function Security_Audit() {
 
@@ -10,7 +9,7 @@ const [activeTab, setActiveTab] = useState("activityLog");
   // Sample data for Activity Log
   const [activityLog, setActivityLog] = useState([
     { date: "2024-11-28 10:15 AM", activity: "Added new resident", user: "Admin", status: "Success" },
-    { date: "2024-11-28 09:45 AM", activity: "Attempted login", user: "JohnDoe", status: "Failed" },
+    { date: "2024-11-28 09:45 AM", activity: "Attempted login", user: "GRS", status: "Failed" },
   ]);
 
   // Sample data for Access Log

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Chart }  from "chart.js/auto";
 import { Link } from "react-router-dom";
-import backlogo from '../admin/assets/backlogo.png';
 import '../admin/css/reportanalytics.css';
 export default function Reports_Analytics() {
 
