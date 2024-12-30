@@ -37,6 +37,7 @@ import Vendor_Request_Form from "./components/resident/Vendor_Request_Form";
 import Manage_Vendor from "./components/admin/Manage_Vendor";
 import Vendor_List from "./components/admin/Vendor_List";
 import Daily_Tasks from "./components/staff/Daily_Tasks";
+import FAQ from "./components/FAQ";
 
 const projectRoute = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const projectRoute = createBrowserRouter([
       {
         path: "register",
         element: <Register />,
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
       },
 
       //Admin Routes
