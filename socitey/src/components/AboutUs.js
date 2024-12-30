@@ -4,6 +4,7 @@ import logo from "../assets/logo.svg";
 import Socitey from "../assets/Socitey.jpg";
 import profile from "../assets/profile.png";
 import profile1 from "../assets/profile1.png";
+import profile3 from "../assets/profile3.png";
 import "../css/aboutus.css";
 
 export default function AboutUs() {
@@ -53,6 +54,7 @@ export default function AboutUs() {
                     Contact us
                   </Link>
                 </li>
+                
                 <li className="nav-item">
                   <Link
                     className="nav-link active header-button d-sm-inline-block"
@@ -162,8 +164,8 @@ export default function AboutUs() {
               <p>DIRECTOR</p>
             </div>
             <div className="col-md-4 team-member">
-              <img src={profile} alt="Team Member" className="img-fluid mb-3" />
-              <h5>Mrs. Radha Tunge</h5>
+              <img src={profile3} alt="Team Member" className="img-fluid mb-3" />
+              <h5>Mr. Sunil Tunge</h5>
               <p>DIRECTOR</p>
             </div>
           </div>

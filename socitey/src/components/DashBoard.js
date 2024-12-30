@@ -45,15 +45,6 @@ export default function DashBoard() {
               >
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <Link
-                      className="nav-link active"
-                      aria-current="page"
-                      to="/"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li className="nav-item">
                     <Link className="nav-link" to="/aboutus">
                       About us
                     </Link>
@@ -257,9 +248,9 @@ export default function DashBoard() {
                       There will be Link temporary disruption in water supply on
                       25th Nov due to maintenance work.
                     </p>
-                    <Link to="#" className="card-link">
+                    {/* <Link to="#" className="card-link">
                       Read More
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -271,9 +262,9 @@ export default function DashBoard() {
                       Join us for the AGM on 30th Nov at 5 PM in the community
                       hall.
                     </p>
-                    <Link to="#" className="card-link">
+                    {/* <Link to="#" className="card-link">
                       Read More
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -285,9 +276,9 @@ export default function DashBoard() {
                       Celebrate Diwali with us on 10th Nov with cultural
                       programs and fireworks.
                     </p>
-                    <Link to="#" className="card-link">
+                    {/* <Link to="#" className="card-link">
                       Read More
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

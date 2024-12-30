@@ -38,7 +38,7 @@
   
   /* Question */
   .faq-question {
-    background: linear-gradient(120deg, #e9eee8, #e3e7e2);
+    background: linear-gradient(120deg, white, white);
     color: black;
     padding: 15px 20px;
     font-size: 1.2rem;
