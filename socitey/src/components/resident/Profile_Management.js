@@ -20,8 +20,8 @@ export default function Profile_Management() {
     const fetchUserProfile = async () => {
       // Simulated API call
       const data = {
-        fullName: "John Doe",
-        email: "johndoe@example.com",
+        fullName: "Nikita Chadudhari",
+        email: "nikitachaudhari45800@gmail.com",
         phone: "123-456-7890",
         address: "123 Main Street, City, Country",
         profilePicture: "https://via.placeholder.com/120",

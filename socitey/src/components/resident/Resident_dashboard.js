@@ -135,7 +135,7 @@ export default function Resident_dashboard() {
 
         <div className="resident-page">
           <div className="jumbotron text-center">
-            <h1 className="display-4">Welcome to Your Dashboard</h1>
+            <h1 className="display-4">Welcome to Resident Dashboard</h1>
             <p className="lead">
               Access your resident services and manage your activities with
               ease.

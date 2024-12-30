@@ -21,7 +21,7 @@ const [formInputs, setFormInputs] = useState({
     },
     {
       id: 2,
-      sender: "John Doe (Resident)",
+      sender: "Girish Shinde (Resident)",
       content: "Is the clubhouse open for bookings this weekend?",
       postedOn: "2024-11-24",
     },
