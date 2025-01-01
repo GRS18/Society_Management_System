@@ -767,7 +767,7 @@ export default function Login() {
       setTimeout(() => {
         setShowPopup(false);
         navigate(`/${role}`);
-      }, 3000);
+      }, 1000);
     } else {
       setPopupMessage("❌Invalid email or password!");
       setShowPopup(true);
