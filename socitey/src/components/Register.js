@@ -548,7 +548,7 @@ export default function Register() {
     setTimeout(() => {
       setShowPopup(false);
       navigate("/login");
-    }, 4000);
+    }, 1000);
   };
 
   return (
