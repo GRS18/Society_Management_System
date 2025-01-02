@@ -48,7 +48,7 @@ export default function Footer() {
                   <li><Link to="/">Refund and Cancellation Policy</Link></li>
                 </ul>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-4">
                 <h6 className="mb-10 mt-10">Our Location</h6>
                 <div className="map-embed">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.425118049436!2d73.7738516!3d18.5548633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf007dc31015%3A0x24b1592ff354ac6b!2sRohan%20Seher%20Open%20Homes%20(RS1)!5e0!3m2!1sen!2sin!4v1735494034284!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
