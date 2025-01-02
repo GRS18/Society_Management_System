@@ -100,7 +100,7 @@ export default function Vendor_List() {
             <th>#</th>
             <th>Vendor Name</th>
             <th>Service Type</th>
-            <th>Contact</th>
+            <th>Contact No</th>
             <th>Performance</th>
             <th>Actions</th>
           </tr>
@@ -199,7 +199,7 @@ export default function Vendor_List() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="contact">Contact Information</label>
+                  <label htmlFor="contact">Contact No</label>
                   <input
                     type="text"
                     className="form-control"
@@ -285,7 +285,7 @@ export default function Vendor_List() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="contact">Contact Information</label>
+                    <label htmlFor="contact">Contact No</label>
                     <input
                       type="text"
                       className="form-control"

@@ -9,7 +9,7 @@ export default function Booking_Scheduling() {
   const [timeSlot, setTimeSlot] = useState('');
   const [bookingHistory, setBookingHistory] = useState([
     { id: 1, facility: 'Clubhouse', date: '2024-11-25', timeSlot: 'Morning (8:00 AM - 12:00 PM)', status: 'Confirmed' },
-    { id: 2, facility: 'Tennis Court', date: '2024-11-20', timeSlot: 'Evening (4:00 PM - 8:00 PM)', status: 'Cancelled' },
+    { id: 2, facility: 'Car Parking', date: '2024-11-20', timeSlot: 'Evening (4:00 PM - 8:00 PM)', status: 'Cancelled' },
   ]);
 
   const handleSubmit = (e) => {
@@ -64,7 +64,7 @@ export default function Booking_Scheduling() {
             >
               <option value="">Choose...</option>
               <option value="clubhouse">Clubhouse</option>
-              <option value="tennis-court">Tennis Court</option>
+              <option value="car-parking">Car Parking</option>
               <option value="gym">Gym</option>
               <option value="swimming-pool">Swimming Pool</option>
             </select>

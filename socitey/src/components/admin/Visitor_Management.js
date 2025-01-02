@@ -125,7 +125,7 @@ export default function Visitor_Management() {
             <th>#</th>
             <th>Visitor Name</th>
             <th>Contact Number</th>
-            <th>Flat Visiting</th>
+            <th>Resource</th>
             <th>Entry Time</th>
             <th>Exit Time</th>
             <th>Status</th>
