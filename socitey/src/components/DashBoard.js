@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import erp from "../assets/erp.png";
@@ -13,78 +13,84 @@ import "../css/index.css";
 import "../css/dashboard.css";
 
 export default function DashBoard() {
+  const [showLogo, setShowLogo] = useState(true);
+  const [showDashboard, setShowDashboard] = useState(false);
+
+  useEffect(() => {
+    // Hide the logo after 3 seconds
+    const logoTimeout = setTimeout(() => {
+      setShowLogo(false);
+      setShowDashboard(true);
+    }, 3000);
+
+    return () => clearTimeout(logoTimeout);
+  }, []);
+
   return (
     <>
-      <div className="background">
-        {/* Header start */}
-        <div className="container-fluid">
-          <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-              <Link className="navbar-brand" to="#">
-                <img
-                  src={logo}
-                  alt="Logo"
-                  height="120px"
-                  className="d-inline-block align-text-top logo"
-                />
-              </Link>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div
-                className="collapse navbar-collapse"
-                id="navbarSupportedContent"
-              >
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/aboutus">
-                      About us
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/contact">
-                      Contact us
-                    </Link>
-                  </li>
-                  {/* <li className="nav-item">
-                    <Link className="nav-link" to="/contact">
-                      Gallery
-                    </Link>
-                  </li> */}
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link active header-button d-sm-inline-block"
-                      aria-current="page"
-                      to="/login"
-                    >
-                      Sign-In
-                    </Link>
-                  </li>
-                  {/* <li className="nav-item ">
-                    <Link
-                      className="nav-link active header-button d-sm-inline-block"
-                      aria-current="page"
-                      to="/register"
-                    >
-                      Register
-                    </Link>
-                  </li> */}
-                </ul>
-              </div>
-            </div>
-          </nav>
+      {showLogo && (
+        <div className="logo-animation">
+          <img src={logo} alt="Logo" className="animated-logo" />
         </div>
-        {/* Header end */}
+      )}
 
-        <section className="hero">
+      {showDashboard && (
+        <div className="background">
+          {/* Header start */}
+          <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+              <div className="container-fluid">
+                <Link className="navbar-brand" to="#">
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    height="120px"
+                    className="d-inline-block align-text-top logo"
+                  />
+                </Link>
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  className="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/aboutus">
+                        About us
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/contact">
+                        Contact us
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link active header-button d-sm-inline-block"
+                        aria-current="page"
+                        to="/login"
+                      >
+                        Sign-In
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          {/* Header end */}
+
+          <section className="hero">
           <div className="container text-center heading">
             <div className="row">
               {/* <marquee behavior="slide" direction="left"> */}
@@ -122,9 +128,6 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
-
-
-
 
         <div className="container text-center features-heading">
           <h1>All Exhaustive List of Amazing Features</h1>
@@ -304,7 +307,6 @@ export default function DashBoard() {
                   <span>➔</span>
                 </Link>
               </div>
-
               <div class="trial-image">
                 <img
                   src="https://societyrun.com/asset/website_assets/image/home/Mobile-login-cuate.png"
@@ -314,9 +316,6 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
-
-
-
 
         {/* speed rule */}
         <section class="rulesSection">
@@ -348,7 +347,8 @@ export default function DashBoard() {
             </div>
           </div>
         </section>
-      </div>
+        </div>
+      )}
     </>
   );
 }
