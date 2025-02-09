@@ -151,7 +151,7 @@ export default function Profile_Management() {
           />
         </div>
 
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="password">Password</label>
           <input
             type="password"
@@ -160,7 +160,7 @@ export default function Profile_Management() {
             onChange={handleInputChange}
           />
           <small>Leave blank if you don't want to change the password.</small>
-        </div>
+        </div> */}
 
         <button type="submit" className="btn-save save">
           Save Changes
