@@ -5,12 +5,12 @@ import "../css/register.css"; // Assuming you have a separate stylesheet for reg
 
 // Register Component
 export default function Register() {
-  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [role, setRole] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const navigate = useNavigate();
@@ -20,9 +20,67 @@ export default function Register() {
   const phoneRegex = /^[0-9]{10,15}$/;
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-  const handleRegister = (e) => {
-    e.preventDefault();
+  // const handleRegister = (e) => {
+  //   e.preventDefault();
 
+    
+  //   if (!fullName.trim()) {
+  //     setPopupMessage("❗Please enter your full name!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+
+  //   if (!email || !emailRegex.test(email)) {
+  //     setPopupMessage("❗Please enter a valid email address!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+
+  //   if (!phone || !phoneRegex.test(phone)) {
+  //     setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+
+  //   if (!role) {
+  //     setPopupMessage("❗Please select a user role!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+
+  //   if (!password || !passwordRegex.test(password)) {
+  //     setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 4000);
+  //     return;
+  //   }
+
+  //   if (password !== confirmPassword) {
+  //     setPopupMessage("❗Passwords do not match!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+
+   
+  //   const userData = { fullName, email, phone, password, role };
+  //   localStorage.setItem("userData", JSON.stringify(userData));
+
+  //   setPopupMessage("✅Registration Successful! Redirecting to Login...");
+  //   setShowPopup(true);
+
+  //   setTimeout(() => {
+  //     setShowPopup(false);
+  //     navigate("/login");
+  //   }, 1000);
+  // };
+  const handleRegister = async (e) => {
+    e.preventDefault();
+  
     // Validation checks
     if (!fullName.trim()) {
       setPopupMessage("❗Please enter your full name!");
@@ -30,55 +88,77 @@ export default function Register() {
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-
+  
     if (!email || !emailRegex.test(email)) {
       setPopupMessage("❗Please enter a valid email address!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-
+  
     if (!phone || !phoneRegex.test(phone)) {
       setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-
+  
     if (!role) {
       setPopupMessage("❗Please select a user role!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-
+  
     if (!password || !passwordRegex.test(password)) {
       setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 4000);
       return;
     }
-
-    if (password !== confirmPassword) {
-      setPopupMessage("❗Passwords do not match!");
+  
+    // if (password !== confirmPassword) {
+    //   setPopupMessage("❗Passwords do not match!");
+    //   setShowPopup(true);
+    //   setTimeout(() => setShowPopup(false), 3000);
+    //   return;
+    // }
+  
+    // API Request
+    try {
+      const response = await fetch("http://localhost:8085/api/users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          fullName,
+          phone,
+          role,
+          password,
+        }),
+      });
+  
+      const result = await response.text();
+  
+      if (!response.ok) {
+        throw new Error(result);
+      }
+  
+      setPopupMessage("✅ Registration Successful! Redirecting to Login...");
+      setShowPopup(true);
+      setTimeout(() => {
+        setShowPopup(false);
+        navigate("/login");
+      }, 1000);
+    } catch (error) {
+      setPopupMessage(`❌ ${error.message}`);
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
-      return;
     }
-
-    // Save user data to localStorage
-    const userData = { fullName, email, phone, password, role };
-    localStorage.setItem("userData", JSON.stringify(userData));
-
-    setPopupMessage("✅Registration Successful! Redirecting to Login...");
-    setShowPopup(true);
-
-    setTimeout(() => {
-      setShowPopup(false);
-      navigate("/login");
-    }, 1000);
   };
-
+  
   return (
     <>
       {/* Header */}
@@ -102,6 +182,20 @@ export default function Register() {
         <div className="register-card">
           <h3 className="text-center">Create an Account</h3>
           <form onSubmit={handleRegister}>
+
+          <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
               <input
@@ -115,18 +209,7 @@ export default function Register() {
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
+            
 
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
@@ -170,7 +253,7 @@ export default function Register() {
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label htmlFor="confirm-password">Confirm Password</label>
               <input
                 type="password"
@@ -181,7 +264,7 @@ export default function Register() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
-            </div>
+            </div> */}
 
             <button type="submit" className="btn btn-primary btn-block rbtn">
               Register

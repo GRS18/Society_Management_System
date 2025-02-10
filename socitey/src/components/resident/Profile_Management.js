@@ -87,7 +87,7 @@ export default function Profile_Management() {
       </div>
 
       {/* Profile Picture */}
-      <div className="profile-picture">
+      {/* <div className="profile-picture">
         <label htmlFor="profilePictureInput">
           <img src={profilePicture} alt="Profile" className="profile-picture-preview" />
         </label>
@@ -104,7 +104,7 @@ export default function Profile_Management() {
         >
           Change Profile Picture
         </p>
-      </div>
+      </div> */}
 
       {/* Profile Form */}
       <form onSubmit={handleSubmit}>
