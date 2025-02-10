@@ -492,144 +492,147 @@ export default function Register() {
   const phoneRegex = /^[0-9]{10,15}$/;
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-  // const handleRegister = (e) => {
-  //   e.preventDefault();
+  const handleRegister = (e) => {
+    e.preventDefault();
 
     
-  //   if (!fullName.trim()) {
-  //     setPopupMessage("❗Please enter your full name!");
-  //     setShowPopup(true);
-  //     setTimeout(() => setShowPopup(false), 3000);
-  //     return;
-  //   }
-
-  //   if (!email || !emailRegex.test(email)) {
-  //     setPopupMessage("❗Please enter a valid email address!");
-  //     setShowPopup(true);
-  //     setTimeout(() => setShowPopup(false), 3000);
-  //     return;
-  //   }
-
-  //   if (!phone || !phoneRegex.test(phone)) {
-  //     setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
-  //     setShowPopup(true);
-  //     setTimeout(() => setShowPopup(false), 3000);
-  //     return;
-  //   }
-
-  //   if (!role) {
-  //     setPopupMessage("❗Please select a user role!");
-  //     setShowPopup(true);
-  //     setTimeout(() => setShowPopup(false), 3000);
-  //     return;
-  //   }
-
-  //   if (!password || !passwordRegex.test(password)) {
-  //     setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
-  //     setShowPopup(true);
-  //     setTimeout(() => setShowPopup(false), 4000);
-  //     return;
-  //   }
-
-  //   if (password !== confirmPassword) {
-  //     setPopupMessage("❗Passwords do not match!");
-  //     setShowPopup(true);
-  //     setTimeout(() => setShowPopup(false), 3000);
-  //     return;
-  //   }
-
-   
-  //   const userData = { fullName, email, phone, password, role };
-  //   localStorage.setItem("userData", JSON.stringify(userData));
-
-  //   setPopupMessage("✅Registration Successful! Redirecting to Login...");
-  //   setShowPopup(true);
-
-  //   setTimeout(() => {
-  //     setShowPopup(false);
-  //     navigate("/login");
-  //   }, 1000);
-  // };
-  const handleRegister = async (e) => {
-    e.preventDefault();
-  
-    // Validation checks
     if (!fullName.trim()) {
       setPopupMessage("❗Please enter your full name!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-  
+
     if (!email || !emailRegex.test(email)) {
       setPopupMessage("❗Please enter a valid email address!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-  
+
     if (!phone || !phoneRegex.test(phone)) {
       setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-  
+
     if (!role) {
       setPopupMessage("❗Please select a user role!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
       return;
     }
-  
+
     if (!password || !passwordRegex.test(password)) {
       setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 4000);
       return;
     }
-  
+
     // if (password !== confirmPassword) {
     //   setPopupMessage("❗Passwords do not match!");
     //   setShowPopup(true);
     //   setTimeout(() => setShowPopup(false), 3000);
     //   return;
     // }
-  
-    // API Request
-    try {
-      const response = await fetch("http://localhost:8085/api/users/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          fullName,
-          phone,
-          role,
-          password,
-        }),
-      });
-  
-      const result = await response.text();
-  
-      if (!response.ok) {
-        throw new Error(result);
-      }
-  
-      setPopupMessage("✅ Registration Successful! Redirecting to Login...");
-      setShowPopup(true);
-      setTimeout(() => {
-        setShowPopup(false);
-        navigate("/login");
-      }, 1000);
-    } catch (error) {
-      setPopupMessage(`❌ ${error.message}`);
-      setShowPopup(true);
-      setTimeout(() => setShowPopup(false), 3000);
-    }
+
+   
+    const userData = { fullName, email, phone, password, role };
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    setPopupMessage("✅Registration Successful! Redirecting to Login...");
+    setShowPopup(true);
+
+    setTimeout(() => {
+      setShowPopup(false);
+      navigate("/login");
+    }, 1000);
   };
+
+
+
+  // const handleRegister = async (e) => {
+  //   e.preventDefault();
+  
+  //   // Validation checks
+  //   if (!fullName.trim()) {
+  //     setPopupMessage("❗Please enter your full name!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+  
+  //   if (!email || !emailRegex.test(email)) {
+  //     setPopupMessage("❗Please enter a valid email address!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+  
+  //   if (!phone || !phoneRegex.test(phone)) {
+  //     setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+  
+  //   if (!role) {
+  //     setPopupMessage("❗Please select a user role!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //     return;
+  //   }
+  
+  //   if (!password || !passwordRegex.test(password)) {
+  //     setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 4000);
+  //     return;
+  //   }
+  
+  //   // if (password !== confirmPassword) {
+  //   //   setPopupMessage("❗Passwords do not match!");
+  //   //   setShowPopup(true);
+  //   //   setTimeout(() => setShowPopup(false), 3000);
+  //   //   return;
+  //   // }
+  
+  //   // API Request
+  //   try {
+  //     const response = await fetch("http://localhost:8085/api/users/register", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         email,
+  //         fullName,
+  //         phone,
+  //         role,
+  //         password,
+  //       }),
+  //     });
+  
+  //     const result = await response.text();
+  
+  //     if (!response.ok) {
+  //       throw new Error(result);
+  //     }
+  
+  //     setPopupMessage("✅ Registration Successful! Redirecting to Login...");
+  //     setShowPopup(true);
+  //     setTimeout(() => {
+  //       setShowPopup(false);
+  //       navigate("/login");
+  //     }, 1000);
+  //   } catch (error) {
+  //     setPopupMessage(`❌ ${error.message}`);
+  //     setShowPopup(true);
+  //     setTimeout(() => setShowPopup(false), 3000);
+  //   }
+  // };
   
   return (
     <>
