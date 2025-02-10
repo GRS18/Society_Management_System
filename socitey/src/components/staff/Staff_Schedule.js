@@ -63,41 +63,6 @@ const [selectedStaff, setSelectedStaff] = useState('');
                 </ul>
       </div>
 
-      {/* Filter Section
-      <div className="card-custom mt-4">
-        <h4>Filter Schedule</h4>
-        <form className="form-inline justify-content-between" onSubmit={handleFilterSubmit}>
-          <select
-            className="form-control mb-2 mr-sm-2 filter-dropdown shedule"
-            id="staffSelect"
-            value={selectedStaff}
-            onChange={handleStaffChange}
-          >
-            <option value="">Select Staff</option>
-            <option value="john">John Doe</option>
-            <option value="mary">Mary Smith</option>
-            <option value="alex">Alex Brown</option>
-          </select>
-
-          <select
-            className="form-control mb-2 mr-sm-2 filter-dropdown shedule"
-            id="departmentSelect"
-            value={selectedDepartment}
-            onChange={handleDepartmentChange}
-          >
-            <option value="">Select Department</option>
-            <option value="maintenance">Maintenance</option>
-            <option value="security">Security</option>
-            <option value="cleaning">Cleaning</option>
-          </select>
-
-          <button type="submit" className="btn btn-custom mb-2 shedule">
-            Filter
-          </button>
-        </form>
-      </div> */}
-
-
        {/* Filter Section with Image */}
        <div className="card-custom mt-4 filter-schedule-section">
         <div className="filter-left">

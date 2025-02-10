@@ -94,40 +94,7 @@ export default function Staff_Billing_Assistance() {
           </li>
         </ul>
       </div>
-
-      {/* Search and Filter */}
-      {/* <div className="card-custom mt-4">
-        <h4>Search and Filter</h4>
-        <form
-          className="form-inline justify-content-between"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <input
-            type="text"
-            className="form-control mb-2 mr-sm-2 bill"
-            id="searchQuery"
-            placeholder="Search by Resident Name or Flat Number"
-            value={filters.searchQuery}
-            onChange={handleFilterChange}
-          />
-          <select
-            className="form-control mb-2 mr-sm-2 bill"
-            id="paymentStatus"
-            value={filters.paymentStatus}
-            onChange={handleFilterChange}
-          >
-            <option value="">All Payment Status</option>
-            <option value="paid">Paid</option>
-            <option value="unpaid">Unpaid</option>
-            <option value="overdue">Overdue</option>
-          </select>
-          <button type="submit" className="btn btn-custom mb-2 bill">
-            Search
-          </button>
-        </form>
-      </div> */}
-
-
+      
       {/* Search and Filter */}
 <div className="card-custom mt-4 search-filter-section">
   <div className="search-filter-left">
@@ -160,13 +127,6 @@ export default function Staff_Billing_Assistance() {
       </button>
     </form>
   </div>
-  {/* <div className="search-filter-right">
-    <img
-      src="https://via.placeholder.com/300x200"
-      alt="Search Illustration"
-      className="search-filter-image"
-    />
-  </div> */}
 </div>
 
 

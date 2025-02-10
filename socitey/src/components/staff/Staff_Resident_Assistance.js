@@ -140,38 +140,6 @@ export default function Staff_Resident_Assistance() {
       </div>
 
       {/* Add New Request Form */}
-      {/* <div className="card-custom mt-4">
-        <h4>Add New Request</h4>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Resident Name"
-            className="form-control mb-2 assist"
-            value={newResidentName}
-            onChange={(e) => setNewResidentName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Flat Number"
-            className="form-control mb-2 assist"
-            value={newFlatNumber}
-            onChange={(e) => setNewFlatNumber(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Type of Request"
-            className="form-control mb-2 assist"
-            value={newRequestType}
-            onChange={(e) => setNewRequestType(e.target.value)}
-          />
-          <button className="btn btn-add assist" onClick={addNewRequest}>
-            Add Request
-          </button>
-        </div>
-      </div> */}
-
-
-      {/* Add New Request Form */}
       <div className="card-custom mt-4 add-request-section">
         <div className="add-request-left">
           <h4>Add New Request</h4>
