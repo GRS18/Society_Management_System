@@ -477,8 +477,8 @@ import "../css/register.css"; // Assuming you have a separate stylesheet for reg
 
 // Register Component
 export default function Register() {
-  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [role, setRole] = useState("");
   const [password, setPassword] = useState("");
@@ -604,8 +604,8 @@ export default function Register() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          fullName,
           email,
+          fullName,
           phone,
           role,
           password,
@@ -654,6 +654,20 @@ export default function Register() {
         <div className="register-card">
           <h3 className="text-center">Create an Account</h3>
           <form onSubmit={handleRegister}>
+
+          <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
             <div className="form-group">
               <label htmlFor="name">Full Name</label>
               <input
@@ -667,18 +681,7 @@ export default function Register() {
               />
             </div>
 
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
+            
 
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
