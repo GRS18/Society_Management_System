@@ -133,7 +133,7 @@ export default function Maintenance_Requests() {
             ></textarea>
           </div>
 
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="attachment">Attachment (Optional)</label>
             <input
               type="file"
@@ -144,7 +144,7 @@ export default function Maintenance_Requests() {
             <small className="form-text text-muted">
               You can attach an image or document for better clarity (Max: 2MB).
             </small>
-          </div>
+          </div> */}
 
           <button type="submit" className="btn btn-primary btn-block">
             Submit Request
