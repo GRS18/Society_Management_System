@@ -105,11 +105,11 @@ export default function Admin_dashboard() {
                         Vendor List
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="dropdown-item" to="/setting">
                         Settings
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li className="nav-item">
@@ -248,14 +248,14 @@ export default function Admin_dashboard() {
             </Link>
           </div>
 
-          <div className="col-md-4 mb-4">
+          {/* <div className="col-md-4 mb-4">
             <Link to="/setting" className="text-decoration-none">
               <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-cogs"></i>
                 <h5 className="mt-3">Settings</h5>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       </div>

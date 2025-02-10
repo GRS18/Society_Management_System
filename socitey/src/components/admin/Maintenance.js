@@ -110,7 +110,7 @@ export default function Maintenance() {
                     Maintenance Management
                 </li>
             </ul>
-            <div className="d-flex justify-content-between mb-3">
+            {/* <div className="d-flex justify-content-between mb-3">
                 <input
                     type="text"
                     className="form-control w-50"
@@ -126,7 +126,7 @@ export default function Maintenance() {
                 >
                     Add Maintenance Request
                 </button>
-            </div>
+            </div> */}
 
             <table className="table table-bordered table-hover">
                 <thead className="thead-dark">
