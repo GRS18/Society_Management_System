@@ -203,7 +203,7 @@ export default function Profile_Management() {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await fetch("http://localhost:8085/resident", {
+        const response = await fetch("http://localhost:9085/resident", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -253,7 +253,7 @@ export default function Profile_Management() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8085/resident/add", {
+      const response = await fetch("http://localhost:9085/resident/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
