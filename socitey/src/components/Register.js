@@ -187,7 +187,8 @@ import "../css/register.css"; // Assuming you have a separate stylesheet for reg
 
 // Register Component
 export default function Register() {
-  const [fullName, setFullName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lasttName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [role, setRole] = useState("");
@@ -206,7 +207,14 @@ export default function Register() {
     e.preventDefault();
 
     // Validation checks
-    if (!fullName.trim()) {
+    if (!firstName.trim()) {
+      setPopupMessage("❗Please enter your full name!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
+    }
+
+    if (!lasttName.trim()) {
       setPopupMessage("❗Please enter your full name!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000);
@@ -249,7 +257,7 @@ export default function Register() {
     }
 
     // Save user data to localStorage
-    const userData = { fullName, email, phone, password, role };
+    const userData = { firstName, lasttName, email, phone, password, role };
     localStorage.setItem("userData", JSON.stringify(userData));
 
     setPopupMessage("✅Registration Successful! Redirecting to Login...");
@@ -285,14 +293,27 @@ export default function Register() {
           <h3 className="text-center">Create an Account</h3>
           <form onSubmit={handleRegister}>
             <div className="form-group">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">First Name</label>
               <input
                 type="text"
                 className="form-control"
                 id="name"
-                placeholder="Enter your full name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
+                placeholder="Enter your first name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="name">Last Name</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Enter your last name"
+                value={lasttName}
+                onChange={(e) => setLastName(e.target.value)}
                 required
               />
             </div>
