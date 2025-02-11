@@ -155,11 +155,11 @@ export default function Staff_dashboard() {
           <div className="container">
             <div className="row">
               <div className="col-md-4 mb-4">
-                <Link to="/daily_tasks" className="text-decoration-none">
+                <Link to="/profile" className="text-decoration-none">
                   <div className="card dashboard-card text-center p-4 block daily-task">
-                    <i className="fas fa-tasks"></i>
+                    <i className="fas fa-user"></i>
                     <h5 className="mt-3">
-                      <strong>Daily Tasks</strong>
+                      <strong>Profile</strong>
                     </h5>
                   </div>
                 </Link>

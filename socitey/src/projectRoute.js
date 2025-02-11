@@ -38,6 +38,7 @@ import Manage_Vendor from "./components/admin/Manage_Vendor";
 import Vendor_List from "./components/admin/Vendor_List";
 import Daily_Tasks from "./components/staff/Daily_Tasks";
 import FAQ from "./components/FAQ";
+import Profile from "./components/staff/Profile";
 
 const projectRoute = createBrowserRouter([
   {
@@ -202,6 +203,10 @@ const projectRoute = createBrowserRouter([
       {
         path: "staff_visitor_management",
         element: <Staff_Visitor_Management />,
+      },
+      {
+        path: "profile",
+        element: < Profile />,
       },
     ],
   },
