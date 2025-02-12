@@ -253,7 +253,7 @@ export default function Profile_Management() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:9085/resident/add", {
+      const response = await fetch("http://localhost:8089/resident/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

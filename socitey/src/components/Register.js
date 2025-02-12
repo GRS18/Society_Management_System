@@ -1,250 +1,12 @@
-// import React, { useState} from "react";
-// import { Link, useNavigate } from "react-router-dom";
-// import logo from "../assets/logo.svg";
-// import "../css/register.css"; // Assuming you have a separate stylesheet for register
-
-// // Register Component
-// export default function Register() {
-//   const [firstName, setFirstName] = useState("");
-//   const [lasttName, setLastName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [phone, setPhone] = useState("");
-//   const [role, setRole] = useState("");
-//   const [password, setPassword] = useState("");
-//   // const [confirmPassword, setConfirmPassword] = useState("");
-//   const [showPopup, setShowPopup] = useState(false);
-//   const [popupMessage, setPopupMessage] = useState("");
-//   const navigate = useNavigate();
-
-//   // Validation regex patterns
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   const phoneRegex = /^[0-9]{10,15}$/;
-//   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-//   const handleRegister = (e) => {
-//     e.preventDefault();
-
-//     // Validation checks
-//     if (!firstName.trim()) {
-//       setPopupMessage("❗Please enter your full name!");
-//       setShowPopup(true);
-//       setTimeout(() => setShowPopup(false), 3000);
-//       return;
-//     }
-
-//     if (!lasttName.trim()) {
-//       setPopupMessage("❗Please enter your full name!");
-//       setShowPopup(true);
-//       setTimeout(() => setShowPopup(false), 3000);
-//       return;
-//     }
-
-//     if (!email || !emailRegex.test(email)) {
-//       setPopupMessage("❗Please enter a valid email address!");
-//       setShowPopup(true);
-//       setTimeout(() => setShowPopup(false), 3000);
-//       return;
-//     }
-
-//     if (!phone || !phoneRegex.test(phone)) {
-//       setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
-//       setShowPopup(true);
-//       setTimeout(() => setShowPopup(false), 3000);
-//       return;
-//     }
-
-//     if (!role) {
-//       setPopupMessage("❗Please select a user role!");
-//       setShowPopup(true);
-//       setTimeout(() => setShowPopup(false), 3000);
-//       return;
-//     }
-
-//     if (!password || !passwordRegex.test(password)) {
-//       setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
-//       setShowPopup(true);
-//       setTimeout(() => setShowPopup(false), 4000);
-//       return;
-//     }
-
-//     // if (password !== confirmPassword) {
-//     //   setPopupMessage("❗Passwords do not match!");
-//     //   setShowPopup(true);
-//     //   setTimeout(() => setShowPopup(false), 3000);
-//     //   return;
-//     // }
-
-//     // Save user data to localStorage
-//     const userData = { firstName, lasttName, email, phone, password, role };
-//     localStorage.setItem("userData", JSON.stringify(userData));
-
-//     setPopupMessage("✅Registration Successful! Redirecting to Login...");
-//     setShowPopup(true);
-
-//     setTimeout(() => {
-//       setShowPopup(false);
-//       navigate("/login");
-//     }, 1000);
-//   };
-
-//   return (
-//     <>
-//       {/* Header */}
-//       <div className="container-fluid">
-//         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-//           <div className="container-fluid">
-//             <Link className="navbar-brand" to="/">
-//               <img
-//                 src={logo}
-//                 alt="Logo"
-//                 height="120"
-//                 className="d-inline-block align-text-top logo"
-//               />
-//             </Link>
-//           </div>
-//         </nav>
-//       </div>
-
-//       {/* Register Form */}
-//       <div className="register">
-//         <div className="register-card">
-//           <h3 className="text-center">Create an Account</h3>
-//           <form onSubmit={handleRegister}>
-//             <div className="form-group">
-//               <label htmlFor="name">First Name</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 id="name"
-//                 placeholder="Enter your first name"
-//                 value={firstName}
-//                 onChange={(e) => setFirstName(e.target.value)}
-//                 required
-//               />
-//             </div>
-
-//             <div className="form-group">
-//               <label htmlFor="name">Last Name</label>
-//               <input
-//                 type="text"
-//                 className="form-control"
-//                 id="name"
-//                 placeholder="Enter your last name"
-//                 value={lasttName}
-//                 onChange={(e) => setLastName(e.target.value)}
-//                 required
-//               />
-//             </div>
-
-//             <div className="form-group">
-//               <label htmlFor="email">Email Address</label>
-//               <input
-//                 type="email"
-//                 className="form-control"
-//                 id="email"
-//                 placeholder="Enter your email"
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//                 required
-//               />
-//             </div>
-
-//             <div className="form-group">
-//               <label htmlFor="phone">Phone Number</label>
-//               <input
-//                 type="tel"
-//                 className="form-control"
-//                 id="phone"
-//                 placeholder="Enter your phone number"
-//                 value={phone}
-//                 onChange={(e) => setPhone(e.target.value)}
-//                 required
-//               />
-//             </div>
-
-//             <div className="form-group">
-//               <label htmlFor="role">User Role</label>
-//               <select
-//                 className="form-control"
-//                 id="role"
-//                 value={role}
-//                 onChange={(e) => setRole(e.target.value)}
-//                 required
-//               >
-//                 <option value="">Select Role</option>
-//                 <option value="admin">Admin</option>
-//                 <option value="staff">Staff</option>
-//                 <option value="resident">Resident</option>
-//               </select>
-//             </div>
-
-//             <div className="form-group">
-//               <label htmlFor="password">Password</label>
-//               <input
-//                 type="password"
-//                 className="form-control"
-//                 id="password"
-//                 placeholder="Create a password"
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//                 required
-//               />
-//             </div>
-
-//             {/* <div className="form-group">
-//               <label htmlFor="confirm-password">Confirm Password</label>
-//               <input
-//                 type="password"
-//                 className="form-control"
-//                 id="confirm-password"
-//                 placeholder="Confirm your password"
-//                 value={confirmPassword}
-//                 onChange={(e) => setConfirmPassword(e.target.value)}
-//                 required
-//               />
-//             </div> */}
-
-//             <button type="submit" className="btn btn-primary btn-block rbtn">
-//               Register
-//             </button>
-
-//             <p className="text-center mt-3">
-//               Already have an account?{" "}
-//               <a href="/login" className="login-link">
-//                 Login Here
-//               </a>
-//             </p>
-//           </form>
-//         </div>
-
-//         {/* Popup Message */}
-//         {showPopup && (
-//           <div className="popup-overlay">
-//             <div className="popup-card">
-//               <h4>{popupMessage}</h4>
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     </>
-//   );
-// }
-
-
-
-
-
-
-
-
-import React, { useState } from "react";
+import React, { useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.svg";
-import "../css/register.css";
+import "../css/register.css"; // Assuming you have a separate stylesheet for register
 
+// Register Component
 export default function Register() {
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [lasttName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [role, setRole] = useState("");
@@ -253,72 +15,187 @@ export default function Register() {
   const [popupMessage, setPopupMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleRegister = async (e) => {
+  // Validation regex patterns
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9]{10,15}$/;
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  const handleRegister = (e) => {
     e.preventDefault();
 
-    const userData = { firstName, lastName, email, phone, password, role };
-    try {
-      const response = await fetch("http://localhost:7887/api/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
-
-      if (response.ok) {
-        setPopupMessage("✅ Registration Successful! Redirecting to Login...");
-        setShowPopup(true);
-        setTimeout(() => {
-          setShowPopup(false);
-          navigate("/login");
-        }, 1000);
-      } else {
-        const errorData = await response.json();
-        setPopupMessage(`❗ Registration Failed: ${errorData.message}`);
-        setShowPopup(true);
-      }
-    } catch (error) {
-      console.error("Registration error:", error);
-      setPopupMessage("❗ Something went wrong. Please try again.");
+    // Validation checks
+    if (!firstName.trim()) {
+      setPopupMessage("❗Please enter your full name!");
       setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
     }
+
+    if (!lasttName.trim()) {
+      setPopupMessage("❗Please enter your full name!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
+    }
+
+    if (!email || !emailRegex.test(email)) {
+      setPopupMessage("❗Please enter a valid email address!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
+    }
+
+    if (!phone || !phoneRegex.test(phone)) {
+      setPopupMessage("❗Please enter a valid phone number (10-15 digits only)!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
+    }
+
+    if (!role) {
+      setPopupMessage("❗Please select a user role!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000);
+      return;
+    }
+
+    if (!password || !passwordRegex.test(password)) {
+      setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 4000);
+      return;
+    }
+
+    // Save user data to localStorage
+    const userData = { firstName, lasttName, email, phone, password, role };
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    setPopupMessage("✅Registration Successful! Redirecting to Login...");
+    setShowPopup(true);
+
+    setTimeout(() => {
+      setShowPopup(false);
+      navigate("/login");
+    }, 1000);
   };
 
   return (
     <>
+      {/* Header */}
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">
-              <img src={logo} alt="Logo" height="120" className="logo" />
+              <img
+                src={logo}
+                alt="Logo"
+                height="120"
+                className="d-inline-block align-text-top logo"
+              />
             </Link>
           </div>
         </nav>
       </div>
 
+      {/* Register Form */}
       <div className="register">
         <div className="register-card">
           <h3 className="text-center">Create an Account</h3>
           <form onSubmit={handleRegister}>
-            <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
-            <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
-            <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            <input type="tel" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-            <select value={role} onChange={(e) => setRole(e.target.value)} required>
-              <option value="">Select Role</option>
-              <option value="admin">Admin</option>
-              <option value="staff">Staff</option>
-              <option value="resident">Resident</option>
-            </select>
-            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-            <button type="submit">Register</button>
+            <div className="form-group">
+              <label htmlFor="name">First Name</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Enter your first name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="name">Last Name</label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Enter your last name"
+                value={lasttName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="tel"
+                className="form-control"
+                id="phone"
+                placeholder="Enter your phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="role">User Role</label>
+              <select
+                className="form-control"
+                id="role"
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                required
+              >
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="staff">Staff</option>
+                <option value="resident">Resident</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                className="form-control"
+                id="password"
+                placeholder="Create a password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit" className="btn btn-primary btn-block rbtn">
+              Register
+            </button>
+
+            <p className="text-center mt-3">
+              Already have an account?{" "}
+              <a href="/login" className="login-link">
+                Login Here
+              </a>
+            </p>
           </form>
-          <p className="text-center mt-3">
-            Already have an account? <Link to="/login">Login Here</Link>
-          </p>
         </div>
 
+        {/* Popup Message */}
         {showPopup && (
           <div className="popup-overlay">
             <div className="popup-card">
@@ -330,3 +207,11 @@ export default function Register() {
     </>
   );
 }
+
+
+
+
+
+
+
+
