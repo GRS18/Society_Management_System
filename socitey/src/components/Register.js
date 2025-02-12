@@ -11,7 +11,6 @@ export default function Register() {
   const [phone, setPhone] = useState("");
   const [role, setRole] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
   const navigate = useNavigate();
@@ -64,13 +63,6 @@ export default function Register() {
       setPopupMessage("❗Password must include uppercase, lowercase, number, and special character!");
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 4000);
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setPopupMessage("❗Passwords do not match!");
-      setShowPopup(true);
-      setTimeout(() => setShowPopup(false), 3000);
       return;
     }
 
@@ -190,20 +182,6 @@ export default function Register() {
                 required
               />
             </div>
-
-            <div className="form-group">
-              <label htmlFor="confirm-password">Confirm Password</label>
-              <input
-                type="password"
-                className="form-control"
-                id="confirm-password"
-                placeholder="Confirm your password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required
-              />
-            </div>
-
             <button type="submit" className="btn btn-primary btn-block rbtn">
               Register
             </button>
@@ -229,3 +207,11 @@ export default function Register() {
     </>
   );
 }
+
+
+
+
+
+
+
+
