@@ -39,6 +39,7 @@ import Vendor_List from "./components/admin/Vendor_List";
 import Daily_Tasks from "./components/staff/Daily_Tasks";
 import FAQ from "./components/FAQ";
 import Profile from "./components/staff/Profile";
+import Shedules_Staff from "./components/admin/Shedules_Staff";
 
 const projectRoute = createBrowserRouter([
   {
@@ -122,6 +123,10 @@ const projectRoute = createBrowserRouter([
       {
         path: "staff_management",
         element: <Staff_Management />,
+      },
+      {
+        path: "shedules_staff",
+        element: <Shedules_Staff />,
       },
       {
         path: "visitor_management",
