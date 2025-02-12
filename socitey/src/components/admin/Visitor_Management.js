@@ -104,7 +104,7 @@ export default function Visitor_Management() {
           Visitor Management
         </li>
       </ul>
-      {/* <div className="d-flex justify-content-between mb-3">
+      <div className="d-flex justify-content-between mb-3">
         <input
           type="text"
           className="form-control w-50"
@@ -117,7 +117,7 @@ export default function Visitor_Management() {
         >
           Add Visitor
         </button>
-      </div> */}
+      </div>
 
       <table className="table table-bordered table-hover">
         <thead className="thead-dark">
@@ -241,9 +241,9 @@ export default function Visitor_Management() {
                 >
                   Close
                 </button>
-                {/* <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Add Visitor
-                </button> */}
+                </button>
               </div>
             </form>
           </div>
@@ -252,4 +252,3 @@ export default function Visitor_Management() {
     </div>
   );
 }
-
