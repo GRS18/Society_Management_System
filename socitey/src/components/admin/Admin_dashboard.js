@@ -163,19 +163,19 @@ export default function Admin_dashboard() {
           </div>
 
           <div className="col-md-4 mb-4">
-            <Link to="/Billing" className="text-decoration-none">
+            <Link to="/staff_management" className="text-decoration-none">
               <div className="card dashboard-card text-center p-4 block">
-                <i className="fas fa-file-invoice-dollar"></i>
-                <h5 className="mt-3">Billing & Payments</h5>
+                <i className="fas fa-user-tie"></i>
+                <h5 className="mt-3">Staff Management</h5>
               </div>
             </Link>
           </div>
 
           <div className="col-md-4 mb-4">
-            <Link to="/staff_management" className="text-decoration-none">
+            <Link to="/Billing" className="text-decoration-none">
               <div className="card dashboard-card text-center p-4 block">
-                <i className="fas fa-user-tie"></i>
-                <h5 className="mt-3">Staff Management</h5>
+                <i className="fas fa-file-invoice-dollar"></i>
+                <h5 className="mt-3">Billing & Payments</h5>
               </div>
             </Link>
           </div>

@@ -434,17 +434,31 @@ export default function Visitor_Management() {
   };
 
   return (
-    <div className="container mt-4 text-center">
+    <div className="container mt-4 admin-back text-center">
       <h1 className="mb-4">Visitor Management</h1>
       <ul className="breadcrumb list-inline mt-2">
         <li className="list-inline-item"><Link to="/admin" className="text-secondary text-decoration-none">Home</Link></li>
         <li className="list-inline-item text-secondary">&rarr;</li>
         <li className="list-inline-item text-dark">Visitor Management</li>
       </ul>
-      <div className="d-flex justify-content-between mb-3">
+      {/* <div className="d-flex justify-content-between mb-3">
         <input type="text" className="form-control w-50" placeholder="Search visitors..." />
         <button className="btn btn-primary" data-toggle="modal" data-target="#addVisitorModal">Add Visitor</button>
-      </div>
+      </div> */}
+      
+      <input
+          type="text"
+          className="form-control w-50"
+          placeholder="Search visitors..."
+        />
+        <button
+          className="btn btn-primary admin_button"
+          data-toggle="modal"
+          data-target="#addVisitorModal"
+        >
+          Add Visitor
+        </button>
+
       <table className="table table-bordered table-hover">
         <thead className="thead-dark">
           <tr>
@@ -472,6 +486,9 @@ export default function Visitor_Management() {
               <h5 className="modal-title">Add Visitor</h5>
               <button type="button" className="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
+
+
+
             <form onSubmit={handleSubmit}>
               <div className="modal-body">
                 <div className="form-group">
