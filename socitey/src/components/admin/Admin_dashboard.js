@@ -71,6 +71,11 @@ export default function Admin_dashboard() {
                       </Link>
                     </li>
                     <li>
+                      <Link className="dropdown-item" to="/shedules_staff">
+                        Staff Shedule
+                      </Link>
+                    </li>
+                    <li>
                       <Link className="dropdown-item" to="/maintenance">
                         Maintenance Management
                       </Link>
@@ -181,6 +186,15 @@ export default function Admin_dashboard() {
               <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-user-tie"></i>
                 <h5 className="mt-3">Staff Management</h5>
+              </div>
+            </Link>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <Link to="/shedules_staff" className="text-decoration-none">
+              <div className="card dashboard-card text-center p-4 block">
+                <i className="fas fa-user-tie"></i>
+                <h5 className="mt-3">Staff Shedules</h5>
               </div>
             </Link>
           </div>
