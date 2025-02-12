@@ -443,23 +443,10 @@ export default function Vendor_List() {
   };
 
   return (
-    <div className="container mt-4 text-center">
+    <div className="container mt-4 admin-back text-center">
       <h1 className="mb-4">Vendor Management</h1>
 
       {error && <div className="alert alert-danger">{error}</div>}
-
-      {/* <ul className="breadcrumb list-inline mt-2">
-        <li className="list-inline-item">
-          <Link to="/admin" className="text-secondary text-decoration-none">Home</Link>
-        </li>
-        <li className="list-inline-item text-secondary">→</li>
-        <li className="list-inline-item text-dark">Vendor List</li>
-      </ul>
-
-      <button className="btn btn-primary mb-3" data-toggle="modal" data-target="#addVendorModal">
-        <i className="fas fa-plus"></i> Add New Vendor
-      </button> */}
-
 
       <ul class="breadcrumb list-inline mt-2 center ">
          <li class="list-inline-item">
