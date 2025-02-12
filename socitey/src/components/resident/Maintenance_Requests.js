@@ -133,18 +133,7 @@
 //             ></textarea>
 //           </div>
 
-//           {/* <div className="form-group">
-//             <label htmlFor="attachment">Attachment (Optional)</label>
-//             <input
-//               type="file"
-//               className="form-control-file"
-//               id="attachment"
-//               onChange={handleFileChange}
-//             />
-//             <small className="form-text text-muted">
-//               You can attach an image or document for better clarity (Max: 2MB).
-//             </small>
-//           </div> */}
+          
 
 //           <button type="submit" className="btn btn-primary btn-block">
 //             Submit Request
@@ -213,16 +202,20 @@ export default function Maintenance_Requests() {
   // State to store maintenance requests
   const [maintenanceRequests, setMaintenanceRequests] = useState([]);
 
+  // Fetch maintenance requests from backend API
   useEffect(() => {
-    // Fetch existing maintenance requests from the backend API
-    axios.get('http://localhost:8089/maintenancerequest/all') // Adjust URL based on your backend route
-      .then(response => {
-        setMaintenanceRequests(response.data);
-      })
-      .catch(error => {
-        console.error("There was an error fetching the maintenance requests!", error);
-      });
+    fetchMaintenanceRequests();
   }, []);
+
+  const fetchMaintenanceRequests = async () => {
+    try {
+      const response = await axios.get('http://localhost:8089/maintenancerequest/all');
+      setMaintenanceRequests(response.data);
+    } catch (error) {
+      console.error("Error fetching maintenance requests:", error);
+      alert("Failed to load maintenance requests. Please try again later.");
+    }
+  };
 
   // Handle form inputs change
   const handleInputChange = (event) => {
@@ -242,10 +235,9 @@ export default function Maintenance_Requests() {
   };
 
   // Handle form submission
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Validation check
     if (!formInputs.issueCategory || !formInputs.issueDescription) {
       alert("Please fill out all required fields.");
       return;
@@ -254,28 +246,28 @@ export default function Maintenance_Requests() {
     const newRequest = {
       category: formInputs.issueCategory,
       description: formInputs.issueDescription,
-      // Do not include status here, backend will assign it
     };
 
-    // Send the new maintenance request to the backend API
-    axios.post('http://localhost:8089/maintenancerequest/add', newRequest)
-      .then(response => {
-        // Add the new request to the state after successful submission
-        setMaintenanceRequests((prevRequests) => [...prevRequests, response.data]);
+    try {
+      // Send the POST request
+      await axios.post('http://localhost:8089/maintenancerequest/add', newRequest);
 
-        // Clear form inputs
-        setFormInputs({
-          issueCategory: "",
-          issueDescription: "",
-          attachment: null,
-        });
+      // Fetch updated maintenance requests after successful submission
+      await fetchMaintenanceRequests();
 
-        alert("Your maintenance request has been submitted!");
-      })
-      .catch(error => {
-        console.error("There was an error submitting the maintenance request!", error);
-        alert("Failed to submit your request. Please try again.");
+      // Clear form inputs
+      setFormInputs({
+        issueCategory: "",
+        issueDescription: "",
+        attachment: null,
       });
+
+      alert("Your maintenance request has been submitted!");
+
+    } catch (error) {
+      console.error("Error submitting maintenance request:", error);
+      alert("Failed to submit your request. Please try again.");
+    }
   };
 
   return (
@@ -287,12 +279,8 @@ export default function Maintenance_Requests() {
             <li className="list-inline-item">
               <Link to="/resident" className="text-secondary text-decoration-none">Home</Link>
             </li>
-            <li className="list-inline-item text-secondary">
-              &rarr;
-            </li>
-            <li className="list-inline-item text-dark">
-              Maintenance Request
-            </li>
+            <li className="list-inline-item text-secondary">&rarr;</li>
+            <li className="list-inline-item text-dark">Maintenance Request</li>
           </ul>
         </div>
         <h3 className="text-center">Submit a Maintenance Request</h3>
@@ -327,6 +315,7 @@ export default function Maintenance_Requests() {
             ></textarea>
           </div>
 
+          {/* Optional File Upload (Commented Out for Now) */}
           {/* <div className="form-group">
             <label htmlFor="attachment">Attachment (Optional)</label>
             <input
@@ -360,27 +349,35 @@ export default function Maintenance_Requests() {
             </tr>
           </thead>
           <tbody>
-            {maintenanceRequests.map((request) => (
-              <tr key={request.id}>
-                <td>{request.id}</td>
-                <td>{request.category}</td>
-                <td>{request.description}</td>
-                <td>
-                  <span
-                    className={
-                      request.status === "PENDING"
-                        ? "badge badge-pending"
-                        : request.status === "IN_PROGRESS"
-                        ? "badge badge-in-progress"
-                        : "badge badge-completed"
-                    }
-                  >
-                    {request.status}
-                  </span>
+            {maintenanceRequests.length > 0 ? (
+              maintenanceRequests.map((request) => (
+                <tr key={request.id}>
+                  <td>{request.id}</td>
+                  <td>{request.category}</td>
+                  <td>{request.description}</td>
+                  <td>
+                    <span
+                      className={
+                        request.status === "PENDING"
+                          ? "badge badge-pending"
+                          : request.status === "IN_PROGRESS"
+                          ? "badge badge-in-progress"
+                          : "badge badge-completed"
+                      }
+                    >
+                      {request.status}
+                    </span>
+                  </td>
+                  <td>{request.submittedOn}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5" className="text-center">
+                  No maintenance requests found.
                 </td>
-                <td>{request.submittedOn}</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

@@ -213,6 +213,230 @@ export default function Register() {
 
 
 
+// import React, { useState } from "react";
+// import { Link, useNavigate } from "react-router-dom";
+// import logo from "../assets/logo.svg";
+// import "../css/register.css";
+
+// export default function Register() {
+//   const [firstName, setFirstName] = useState("");
+//   const [lastName, setLastName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [mobile, setMobile] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [roles, setRoles] = useState([{ id: 2, name: "User" }]);
+//   const [showPopup, setShowPopup] = useState(false);
+//   const [popupMessage, setPopupMessage] = useState("");
+//   const navigate = useNavigate();
+
+//   const handleRegister = async (e) => {
+//     e.preventDefault();
+    
+//     const userData = { firstName, lastName, email, password, mobile, roles };
+//     try {
+//       const response = await fetch("http://localhost:7887/api/auth/register", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(userData),
+//       });
+
+//       if (response.ok) {
+//         setPopupMessage("✅ Registration Successful! Redirecting to Login...");
+//         setShowPopup(true);
+//         setTimeout(() => {
+//           setShowPopup(false);
+//           navigate("/login");
+//         }, 1000);
+//       } else {
+//         setPopupMessage("❗ Registration Failed. Please try again.");
+//         setShowPopup(true);
+//         setTimeout(() => setShowPopup(false), 3000);
+//       }
+//     } catch (error) {
+//       setPopupMessage("❗ An error occurred. Please try again later.");
+//       setShowPopup(true);
+//       setTimeout(() => setShowPopup(false), 3000);
+//     }
+//   };
+
+//   return (
+//     <>
+//       <div className="container-fluid">
+//         <nav className="navbar navbar-expand-lg bg-body-tertiary">
+//           <div className="container-fluid">
+//             <Link className="navbar-brand" to="/">
+//               <img src={logo} alt="Logo" height="120" className="d-inline-block align-text-top logo" />
+//             </Link>
+//           </div>
+//         </nav>
+//       </div>
+
+//       <div className="register">
+//         <div className="register-card">
+//           <h3 className="text-center">Create an Account</h3>
+//           <form onSubmit={handleRegister}>
+//             <input type="text" placeholder="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+//             <input type="text" placeholder="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+//             <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+//             <input type="tel" placeholder="Mobile" value={mobile} onChange={(e) => setMobile(e.target.value)} required />
+//             <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+//             <button type="submit">Register</button>
+//           </form>
+//         </div>
+//         {showPopup && (
+//           <div className="popup-overlay">
+//             <div className="popup-card">
+//               <h4>{popupMessage}</h4>
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { User, Mail, Lock, Phone } from "lucide-react";
+
+
+// const Register = () => {
+//   const navigate = useNavigate();
+//   const [roles, setRoles] = useState([]);
+//   const [role, setRole] = useState(null);
+//   const [dropdownOpen, setDropdownOpen] = useState(false);
+//   const [formData, setFormData] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     phone: "",
+//     password: "",
+//     confirmPassword: "",
+//   });
+
+//   useEffect(() => {
+//     fetch("http://localhost:7887/api/auth/getRoles")
+//       .then((response) => response.json())
+//       .then((data) => setRoles(data))
+//       .catch((error) => console.error("Error fetching roles:", error));
+//   }, []);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     if (!role || !role.id) {
+//       alert("Please select a valid role before registering.");
+//       return;
+//     }
+//     if (formData.password !== formData.confirmPassword) {
+//       alert("Passwords do not match.");
+//       return;
+//     }
+//     const userDto = {
+//       ...formData,
+//       mobileNo: formData.phone,
+//       roles: [{ id: role.id, name: role.name }],
+//     };
+//     try {
+//       const response = await fetch("http://localhost:7887/api/auth/register", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(userDto),
+//       });
+//       if (response.ok) {
+//         alert("Registration successful! Redirecting to login page...");
+//         navigate("/Login");
+//       } else {
+//         const errorData = await response.json();
+//         alert(`Registration failed: ${errorData.message}`);
+//       }
+//     } catch (error) {
+//       console.error("Registration error:", error);
+//       alert("Something went wrong. Please try again.");
+//     }
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit} className="space-y-4">
+//       <div>
+//         <label className="block text-sm font-medium text-gray-700 mb-1">Role</label>
+//         <div className="relative">
+//           <button
+//             type="button"
+//             onClick={() => setDropdownOpen(!dropdownOpen)}
+//             className="block w-full pl-3 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500 text-left"
+//           >
+//             {role ? role.name : "Select Role"}
+//           </button>
+//           {dropdownOpen && (
+//             <div className="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
+//               {roles.map((r) => (
+//                 <div
+//                   key={r.id}
+//                   onClick={() => {
+//                     setRole(r);
+//                     setDropdownOpen(false);
+//                   }}
+//                   className="px-3 py-2 cursor-pointer hover:bg-gray-100"
+//                 >
+//                   {r.name}
+//                 </div>
+//               ))}
+//             </div>
+//           )}
+//         </div>
+//       </div>
+//       {["firstName", "lastName", "email", "phone", "password", "confirmPassword"].map((field, index) => (
+//         <div key={index}>
+//           <label className="block text-sm font-medium text-gray-700 mb-1">
+//             {field === "phone" ? "Mobile Number" : field.charAt(0).toUpperCase() + field.slice(1)}
+//           </label>
+//           <div className="relative">
+//             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+//               {field === "email" ? <Mail className="h-5 w-5 text-gray-400" /> :
+//                field.includes("password") ? <Lock className="h-5 w-5 text-gray-400" /> :
+//                field === "phone" ? <Phone className="h-5 w-5 text-gray-400" /> :
+//                <User className="h-5 w-5 text-gray-400" />}
+//             </div>
+//             <input
+//               type={field.includes("password") ? "password" : field === "email" ? "email" : field === "phone" ? "tel" : "text"}
+//               name={field}
+//               value={formData[field]}
+//               onChange={(e) => setFormData({ ...formData, [field]: e.target.value })}
+//               required
+//               className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-yellow-500 focus:border-yellow-500"
+//               placeholder={field.includes("password") ? `Enter ${field}` : `Enter your ${field}`}
+//             />
+//           </div>
+//         </div>
+//       ))}
+//       <button type="submit" className="w-full bg-yellow-500 text-white py-2 px-4 rounded-md hover:bg-yellow-600">
+//         Create Account
+//       </button>
+//     </form>
+//   );
+// };
+
+// export default Register;
+
+
+
+
+
 
 
 
