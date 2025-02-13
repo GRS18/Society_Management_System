@@ -350,15 +350,16 @@ export default function Profile_Management() {
           />
         </div>
 
-        {/* <div className="form-group">
-          <label htmlFor="address">Address</label>
-          <textarea
-            id="address"
+        <div className="form-group">
+          <label htmlFor="address">Flat Number</label>
+          <input 
+            type="text"
+            id="FlatNumber"
             rows="3"
-            value={formData.address}
+            value={formData.flatNumber}
             onChange={handleInputChange}
           />
-        </div> */}
+        </div> 
 
         {/* <div className="form-group">
           <label htmlFor="password">Password</label>
