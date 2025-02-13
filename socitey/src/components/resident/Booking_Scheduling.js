@@ -379,10 +379,10 @@ export default function Booking_Scheduling() {
               required
             >
               <option value="">Choose...</option>
-              <option value="CAR_PARKING">Car Parking</option>
-              <option value="CLUBHOUSE">Clubhouse</option>
-              <option value="GYM">Gym</option>
-              <option value="SWIMMING_POOL">Swimming Pool</option>
+              <option value="CAR_PARKING">Guest Parking Slot </option>
+              <option value="CLUBHOUSE">Community Hall</option>
+              {/* <option value="GYM">Gym</option>
+              <option value="SWIMMING_POOL">Swimming Pool</option> */}
             </select>
           </div>
 
@@ -430,7 +430,7 @@ export default function Booking_Scheduling() {
               <th>Facility</th>
               <th>Date</th>
               <th>Time Slot</th>
-              <th>Status</th>
+              {/* <th>Status</th> */}
             </tr>
           </thead>
           <tbody>
@@ -440,11 +440,11 @@ export default function Booking_Scheduling() {
                 <td>{booking.facility}</td>
                 <td>{booking.bookingDate}</td> {/* ✅ Use correct backend field name */}
                 <td>{booking.timeSlot}</td>     {/* ✅ Use correct backend field name */}
-                <td>
+                {/* <td>
                   <span className={`badge badge-${booking.status === 'CONFIRMED' ? 'success' : 'danger'}`}>
                     {booking.status}
                   </span>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

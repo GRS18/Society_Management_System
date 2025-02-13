@@ -5,11 +5,9 @@ import "../resident/css/profile_management.css";
 export default function Profile_Management() {
   // const [profilePicture, setProfilePicture] = useState("https://via.placeholder.com/120");
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     phone: "",
-    address: "",
-    password: "",
   });
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
@@ -17,7 +15,7 @@ export default function Profile_Management() {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await fetch("http://localhost:8085/resident", {
+        const response = await fetch("http://localhost:8089/staff/all", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -25,14 +23,6 @@ export default function Profile_Management() {
           },
         });
 
-        // const data = await response.json();
-
-        // if (response.ok) {
-        //   setFormData(data);
-        //   setProfilePicture(data.profilePicture || "https://via.placeholder.com/120");
-        // } else {
-        //   alert(`Error: ${data.message || "Failed to load profile data!"}`);
-        // }
       } catch (error) {
         console.error("Error fetching profile:", error);
       }
@@ -40,18 +30,6 @@ export default function Profile_Management() {
 
     fetchUserProfile();
   }, []);
-
-  // Handle profile picture change
-  // const handleProfilePictureChange = (event) => {
-  //   const file = event.target.files[0];
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     reader.onload = () => {
-  //       // setProfilePicture(reader.result);
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // };
 
   // Handle input changes
   const handleInputChange = (event) => {
@@ -67,7 +45,7 @@ export default function Profile_Management() {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8085/resident/add", {
+      const response = await fetch("http://localhost:8089/staff/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +78,7 @@ export default function Profile_Management() {
       <div className="resident-back text-center">
         <ul className="breadcrumb list-inline mt-2">
           <li className="list-inline-item">
-            <Link to="/resident" className="text-secondary text-decoration-none">
+            <Link to="/staff" className="text-secondary text-decoration-none">
               Home
             </Link>
           </li>
@@ -109,34 +87,14 @@ export default function Profile_Management() {
         </ul>
       </div>
 
-      {/* Profile Picture
-      <div className="profile-picture">
-        <label htmlFor="profilePictureInput">
-          <img src={profilePicture} alt="Profile" className="profile-picture-preview" />
-        </label>
-        <input
-          type="file"
-          id="profilePictureInput"
-          accept="image/*"
-          onChange={handleProfilePictureChange}
-          className="profile-picture-input"
-        />
-        <p
-          className="profile-picture-label"
-          onClick={() => document.getElementById("profilePictureInput").click()}
-        >
-          Change Profile Picture
-        </p>
-      </div> */}
-
       {/* Profile Form */}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="fullName">Full Name</label>
+          <label htmlFor="name">Full Name</label>
           <input
             type="text"
-            id="fullName"
-            value={formData.fullName}
+            id="name"
+            value={formData.name}
             onChange={handleInputChange}
             required
           />
@@ -164,27 +122,7 @@ export default function Profile_Management() {
           />
         </div>
 
-        {/* <div className="form-group">
-          <label htmlFor="address">Address</label>
-          <textarea
-            id="address"
-            rows="3"
-            value={formData.address}
-            onChange={handleInputChange}
-          />
-        </div> */}
-
-        {/* <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={formData.password}
-            onChange={handleInputChange}
-          />
-          <small>Leave blank if you don't want to change the password.</small>
-        </div> */}
-
+        
         <button type="submit" className="btn-save save">
           Save Changes
         </button>

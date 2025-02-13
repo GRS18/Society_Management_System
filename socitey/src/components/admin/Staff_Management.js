@@ -1,8 +1,9 @@
-// import React from 'react';
-// import { useState } from 'react';
+
+// import React from "react";
+// import { useState } from "react";
 // import { Link } from "react-router-dom";
+
 // export default function Staff_Management() {
-  
 //   const [staffList, setStaffList] = useState([
 //     {
 //       id: 1,
@@ -62,10 +63,6 @@
 //     setIsEdit(false);
 //   };
 
-//   const handleRemove = (id) => {
-//     setStaffList(staffList.filter((staff) => staff.id !== id));
-//   };
-
 //   const filteredStaff = staffList.filter(
 //     (staff) =>
 //       staff.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -75,34 +72,17 @@
 //   return (
 //     <div className="container mt-4 admin-back text-center">
 //       <h1 className="mb-4">Staff Management</h1>
-//       <ul class="breadcrumb list-inline mt-2">
-//         <li class="list-inline-item">
-//           <Link to="/admin" class="text-secondary text-decoration-none">Home</Link>
+//       <ul className="breadcrumb list-inline mt-2">
+//         <li className="list-inline-item">
+//           <Link to="/admin" className="text-secondary text-decoration-none">Home</Link>
 //         </li>
-//         <li class="list-inline-item text-secondary">
+//         <li className="list-inline-item text-secondary">
 //           &rarr;
 //         </li>
-//         <li class="list-inline-item text-dark">
+//         <li className="list-inline-item text-dark">
 //           Staff Management
 //         </li>
 //       </ul>
-//       <div className="d-flex justify-content-between mb-3">
-//         <input
-//           type="text"
-//           className="form-control w-50"
-//           placeholder="Search by staff name or role..."
-//           value={searchTerm}
-//           onChange={handleSearch}
-//         />
-//         <button
-//           className="btn btn-primary admin_button"
-//           data-toggle="modal"
-//           data-target="#addStaffModal"
-//           onClick={() => openModal(null)}
-//         >
-//           Add Staff
-//         </button>
-//       </div>
 
 //       <table className="table table-bordered table-hover">
 //         <thead className="thead-dark">
@@ -131,12 +111,6 @@
 //                   onClick={() => openModal(staff)}
 //                 >
 //                   Edit
-//                 </button>
-//                 <button
-//                   className="btn btn-sm btn-danger ml-2"
-//                   onClick={() => handleRemove(staff.id)}
-//                 >
-//                   Remove
 //                 </button>
 //               </td>
 //             </tr>
@@ -240,80 +214,120 @@
 //       </div>
 //     </div>
 //   );
-// };
+// }
 
 
-
-
-
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Staff_Management() {
-  const [staffList, setStaffList] = useState([
-    {
-      id: 1,
-      name: "SP",
-      role: "Security Guard",
-      contact: "123-456-7890",
-      status: "Active",
-    },
-  ]);
-
+  const [staffList, setStaffList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [modalData, setModalData] = useState({
-    id: null,
+    staffid: null,
     name: "",
-    role: "",
-    contact: "",
-    status: "Active",
+    email: "",
+    phone: "",
   });
   const [isEdit, setIsEdit] = useState(false);
+  const token = localStorage.getItem("token");
 
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
+  // **Fetch Staff Data from API**
+  useEffect(() => {
+    const fetchStaffData = async () => {
+      try {
+        const response = await fetch("http://localhost:8089/staff/all", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
+        if (response.ok) {
+          const data = await response.json();
+          setStaffList(data);
+        } else {
+          console.error("Failed to fetch staff data");
+        }
+      } catch (error) {
+        console.error("Error fetching staff:", error);
+      }
+    };
+
+    fetchStaffData();
+  }, [token]);
+
+  // **Handle Input Changes in Modal**
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setModalData({ ...modalData, [name]: value });
   };
 
+  // **Open Modal for Add/Edit**
   const openModal = (staff) => {
     if (staff) {
       setModalData(staff);
       setIsEdit(true);
     } else {
-      setModalData({ id: null, name: "", role: "", contact: "", status: "Active" });
+      setModalData({ staffid: null, name: "", email: "", phone: "", status: "Active" });
       setIsEdit(false);
     }
   };
 
-  const handleSave = (e) => {
+  // **Handle Save (Add or Update Staff)**
+  const handleSave = async (e) => {
     e.preventDefault();
+    const apiUrl = isEdit
+      ? `http://localhost:8089/staff/update/${modalData.staffid}`
+      : "http://localhost:8089/staff/add";
 
-    if (isEdit) {
-      setStaffList(
-        staffList.map((staff) =>
-          staff.id === modalData.id ? modalData : staff
-        )
-      );
-    } else {
-      setStaffList([
-        ...staffList,
-        { ...modalData, id: staffList.length + 1 },
-      ]);
+    const method = isEdit ? "PUT" : "POST";
+
+    try {
+      const response = await fetch(apiUrl, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          name: modalData.name,
+          email: modalData.email,
+          phone: modalData.phone,
+        }),
+      });
+
+      if (response.ok) {
+        const updatedStaff = await response.json();
+
+        if (isEdit) {
+          // **Update staff list in frontend without reload**
+          setStaffList((prevList) =>
+            prevList.map((staff) =>
+              staff.staffid === updatedStaff.staffid ? updatedStaff : staff
+            )
+          );
+        } else {
+          // **Add new staff to list**
+          setStaffList([...staffList, updatedStaff]);
+        }
+
+        alert(`Staff ${isEdit ? "updated" : "added"} successfully`);
+        document.getElementById("closeModalButton").click(); // Close modal
+      } else {
+        alert("Error: Could not save staff details");
+      }
+    } catch (error) {
+      console.error("Error saving staff:", error);
     }
-
-    setModalData({ id: null, name: "", role: "", contact: "", status: "Active" });
-    setIsEdit(false);
   };
 
+  // **Filter Staff List for Search**
   const filteredStaff = staffList.filter(
     (staff) =>
       staff.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      staff.role.toLowerCase().includes(searchTerm.toLowerCase())
+      staff.email.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -323,20 +337,16 @@ export default function Staff_Management() {
         <li className="list-inline-item">
           <Link to="/admin" className="text-secondary text-decoration-none">Home</Link>
         </li>
-        <li className="list-inline-item text-secondary">
-          &rarr;
-        </li>
-        <li className="list-inline-item text-dark">
-          Staff Management
-        </li>
+        <li className="list-inline-item text-secondary">&rarr;</li>
+        <li className="list-inline-item text-dark">Staff Management</li>
       </ul>
       <div className="d-flex justify-content-between mb-3">
         <input
           type="text"
           className="form-control w-50"
-          placeholder="Search by staff name or role..."
+          placeholder="Search by staff name or email..."
           value={searchTerm}
-          onChange={handleSearch}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button
           className="btn btn-primary admin_button"
@@ -353,20 +363,20 @@ export default function Staff_Management() {
           <tr>
             <th>#</th>
             <th>Staff Name</th>
-            <th>Role</th>
-            <th>Contact</th>
-            <th>Status</th>
+            <th>Email</th>
+            <th>Phone</th>
+            {/* <th>Status</th> */}
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {filteredStaff.map((staff) => (
-            <tr key={staff.id}>
-              <td>{staff.id}</td>
+          {filteredStaff.map((staff, index) => (
+            <tr key={staff.staffid}>
+              <td>{index + 1}</td>
               <td>{staff.name}</td>
-              <td>{staff.role}</td>
-              <td>{staff.contact}</td>
-              <td>{staff.status}</td>
+              <td>{staff.email}</td>
+              <td>{staff.phone}</td>
+              {/* <td>{staff.status}</td> */}
               <td>
                 <button
                   className="btn btn-sm btn-info"
@@ -382,6 +392,7 @@ export default function Staff_Management() {
         </tbody>
       </table>
 
+      {/* Modal for Adding/Editing Staff */}
       <div
         className="modal fade"
         id="addStaffModal"
@@ -400,6 +411,7 @@ export default function Staff_Management() {
                 className="close"
                 data-dismiss="modal"
                 aria-label="Close"
+                id="closeModalButton"
               >
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -411,7 +423,6 @@ export default function Staff_Management() {
                   <input
                     type="text"
                     className="form-control"
-                    id="staffName"
                     name="name"
                     placeholder="Enter staff name"
                     value={modalData.name}
@@ -420,36 +431,33 @@ export default function Staff_Management() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="staffRole">Role</label>
+                  <label htmlFor="staffEmail">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control"
-                    id="staffRole"
-                    name="role"
-                    placeholder="Enter staff role (e.g., Cleaner, Guard)"
-                    value={modalData.role}
+                    name="email"
+                    placeholder="Enter staff email"
+                    value={modalData.email}
                     onChange={handleInputChange}
                     required
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="staffContact">Contact</label>
+                  <label htmlFor="staffPhone">Phone</label>
                   <input
                     type="text"
                     className="form-control"
-                    id="staffContact"
-                    name="contact"
-                    placeholder="Enter staff contact number"
-                    value={modalData.contact}
+                    name="phone"
+                    placeholder="Enter staff phone number"
+                    value={modalData.phone}
                     onChange={handleInputChange}
                     required
                   />
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label htmlFor="staffStatus">Status</label>
                   <select
                     className="form-control"
-                    id="staffStatus"
                     name="status"
                     value={modalData.status}
                     onChange={handleInputChange}
@@ -458,14 +466,10 @@ export default function Staff_Management() {
                     <option value="Active">Active</option>
                     <option value="Inactive">Inactive</option>
                   </select>
-                </div>
+                </div> */}
               </div>
               <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-dismiss="modal"
-                >
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">
                   Close
                 </button>
                 <button type="submit" className="btn btn-primary">
@@ -479,4 +483,3 @@ export default function Staff_Management() {
     </div>
   );
 }
-
