@@ -366,7 +366,7 @@ export default function Staff_Management() {
             <th>Email</th>
             <th>Phone</th>
             {/* <th>Status</th> */}
-            <th>Actions</th>
+            {/* <th>Actions</th> */}
           </tr>
         </thead>
         <tbody>
@@ -377,7 +377,7 @@ export default function Staff_Management() {
               <td>{staff.email}</td>
               <td>{staff.phone}</td>
               {/* <td>{staff.status}</td> */}
-              <td>
+              {/* <td>
                 <button
                   className="btn btn-sm btn-info"
                   data-toggle="modal"
@@ -386,7 +386,7 @@ export default function Staff_Management() {
                 >
                   Edit
                 </button>
-              </td>
+              </td> */}
             </tr>
           ))}
         </tbody>
