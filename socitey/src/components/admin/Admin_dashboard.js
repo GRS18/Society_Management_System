@@ -247,7 +247,7 @@ export default function Admin_dashboard() {
             <Link to="/manage_vendor" className="text-decoration-none">
               <div className="card dashboard-card text-center p-4 block">
                 <i className="fas fa-shield-alt"></i>
-                <h5 className="mt-3">Manage Vendor for Resident</h5>
+                <h5 className="mt-3">Manage Vendor for Maintenance</h5>
               </div>
             </Link>
           </div>

@@ -206,7 +206,7 @@ export default function Resident_dashboard() {
                 </Link>
               </div>
 
-              <div className="col-md-4 mb-4">
+              {/* <div className="col-md-4 mb-4">
                 <Link
                   to="/vendor_request_form"
                   className="text-decoration-none"
@@ -216,7 +216,7 @@ export default function Resident_dashboard() {
                     <h5 className="mt-3">Vendor Request Form</h5>
                   </div>
                 </Link>
-              </div>
+              </div> */}
 
               {/* <div className="col-md-4 mb-4">
             <Link
