@@ -197,6 +197,7 @@ export default function Maintenance_Requests() {
     issueCategory: "",
     issueDescription: "",
     attachment: null,
+    createdAt:"",
   });
 
   // State to store maintenance requests
@@ -246,6 +247,7 @@ export default function Maintenance_Requests() {
     const newRequest = {
       category: formInputs.issueCategory,
       description: formInputs.issueDescription,
+      createdAt: formInputs.createdAt
     };
 
     try {
@@ -260,6 +262,7 @@ export default function Maintenance_Requests() {
         issueCategory: "",
         issueDescription: "",
         attachment: null,
+        createdAt:""
       });
 
       alert("Your maintenance request has been submitted!");
@@ -314,21 +317,7 @@ export default function Maintenance_Requests() {
               required
             ></textarea>
           </div>
-
-          {/* Optional File Upload (Commented Out for Now) */}
-          {/* <div className="form-group">
-            <label htmlFor="attachment">Attachment (Optional)</label>
-            <input
-              type="file"
-              className="form-control-file"
-              id="attachment"
-              onChange={handleFileChange}
-            />
-            <small className="form-text text-muted">
-              You can attach an image or document for better clarity (Max: 2MB).
-            </small>
-          </div> */}
-
+          
           <button type="submit" className="btn btn-primary btn-block">
             Submit Request
           </button>
@@ -341,18 +330,17 @@ export default function Maintenance_Requests() {
         <table className="table table-bordered table-hover">
           <thead>
             <tr>
-              <th>#</th>
+              {/* <th>#</th> */}
               <th>Category</th>
               <th>Description</th>
               <th>Status</th>
-              <th>Submitted On</th>
+              {/* <th>Submitted On</th> */}
             </tr>
           </thead>
           <tbody>
             {maintenanceRequests.length > 0 ? (
               maintenanceRequests.map((request) => (
                 <tr key={request.id}>
-                  <td>{request.id}</td>
                   <td>{request.category}</td>
                   <td>{request.description}</td>
                   <td>
@@ -368,7 +356,7 @@ export default function Maintenance_Requests() {
                       {request.status}
                     </span>
                   </td>
-                  <td>{request.submittedOn}</td>
+                  {/* <td>{request.submittedOn}</td> */}
                 </tr>
               ))
             ) : (
