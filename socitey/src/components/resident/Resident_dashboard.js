@@ -187,18 +187,6 @@ export default function Resident_dashboard() {
 
               <div className="col-md-4 mb-4">
                 <Link
-                  to="/contactmessages"
-                  className="text-decoration-none"
-                >
-                  <div className="card dashboard-card text-center p-4 block">
-                    <i className="fas fa-tools"></i>
-                    <h5 className="mt-3">Customer Response</h5>
-                  </div>
-                </Link>
-              </div>
-
-              <div className="col-md-4 mb-4">
-                <Link
                   to="/resident_communication"
                   className="text-decoration-none"
                 >
