@@ -102,7 +102,7 @@ export default function Admin_dashboard() {
                     </li>
                     <li>
                       <Link className="dropdown-item" to="/manage_vendor">
-                        Manage Vendor For Resident
+                        Manage Vendor For Maintenance
                       </Link>
                     </li>
                     <li>
