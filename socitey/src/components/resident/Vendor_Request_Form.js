@@ -113,12 +113,18 @@
 
 
 
+
+
+
+
 // import React, { useState } from 'react';
 // import { Link } from "react-router-dom";
 // import axios from 'axios';
 // import '../resident/css/vendor_request_form.css';
+// import { v4 as uuidv4 } from 'uuid'; // Generate UUID for requestid
 
 // export default function Vendor_Request_Form() {
+//   const [residentID, setResidentID] = useState(""); // Resident ID input field
 //   const [requestType, setRequestType] = useState("");
 //   const [description, setDescription] = useState("");
 //   const [preferredDate, setPreferredDate] = useState("");
@@ -128,34 +134,29 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 
-//     if (!requestType || !description || !preferredDate) {
+//     if (!residentID || !requestType || !description || !preferredDate) {
 //       alert("All fields are required.");
 //       return;
 //     }
 
 //     setIsSubmitting(true);
 
-//     // Assuming residentID is stored in local storage after login
-//     const residentID = localStorage.getItem("residentID");
-//     // if (!residentID) {
-//     //   alert("Resident ID is missing. Please log in again.");
-//     //   setIsSubmitting(false);
-//     //   return;
-//     // }
-
 //     const requestData = {
-//       residentID,    // ✅ Send resident ID
-//       requestType,
+//       requestid: uuidv4(), // Generate a new UUID for requestid
 //       description,
-//       preferredDate
+//       preferred_date: preferredDate,
+//       request_type: requestType.toUpperCase(), // Ensure ENUM consistency
+//       residentid: residentID, // Taken from user input
+//       status: "PENDING", // Default status
 //     };
 
 //     try {
 //       const response = await axios.post("http://localhost:8089/vendorrequest/add", requestData);
 
-//       alert(`Service request submitted successfully!\n\nDetails:\n- Request Type: ${response.data.requestType}\n- Description: ${response.data.description}\n- Preferred Date: ${response.data.preferredDate}`);
+//       alert(`Service request submitted successfully!\n\nDetails:\n- Request ID: ${response.data.requestid}\n- Request Type: ${response.data.request_type}\n- Description: ${response.data.description}\n- Preferred Date: ${response.data.preferred_date}\n- Status: ${response.data.status}`);
 
 //       // Reset form fields
+//       setResidentID("");
 //       setRequestType("");
 //       setDescription("");
 //       setPreferredDate("");
@@ -187,6 +188,20 @@
 //       </div>
 
 //       <form onSubmit={handleSubmit}>
+//         {/* Resident ID */}
+//         <div className="form-group">
+//           <label htmlFor="residentID">Resident ID</label>
+//           <input
+//             type="text"
+//             className="form-control"
+//             id="residentID"
+//             placeholder="Enter your Resident ID"
+//             value={residentID}
+//             onChange={(e) => setResidentID(e.target.value)}
+//             required
+//           />
+//         </div>
+
 //         {/* Request Type */}
 //         <div className="form-group">
 //           <label htmlFor="requestType">Request Type</label>
@@ -198,10 +213,10 @@
 //             required
 //           >
 //             <option value="">Select Request Type</option>
-//             <option value="Plumbing">Plumbing</option>
-//             <option value="Electrical">Electrical</option>
-//             <option value="Cleaning">Cleaning</option>
-//             <option value="Other">Other</option>
+//             <option value="CLEANING">Cleaning</option>
+//             <option value="ELECTRICAL">Electrical</option>
+//             <option value="PLUMBING">Plumbing</option>
+//             <option value="OTHER">Other</option>
 //           </select>
 //         </div>
 
@@ -244,14 +259,14 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from 'axios';
-import '../resident/css/vendor_request_form.css';
-import { v4 as uuidv4 } from 'uuid'; // Generate UUID for requestid
+import axios from "axios";
+import "../resident/css/vendor_request_form.css";
+import { v4 as uuidv4 } from "uuid"; // Generate UUID for requestid
 
 export default function Vendor_Request_Form() {
-  const [residentID, setResidentID] = useState(""); // Resident ID input field
+  const [residentID, setResidentID] = useState("");
   const [requestType, setRequestType] = useState("");
   const [description, setDescription] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
@@ -268,19 +283,36 @@ export default function Vendor_Request_Form() {
 
     setIsSubmitting(true);
 
+    const formattedRequestType = requestType.trim().toUpperCase(); // Ensure ENUM consistency
+
+    if (!["CLEANING", "ELECTRICAL", "OTHER", "PLUMBING"].includes(formattedRequestType)) {
+      alert("Invalid Request Type. Please select a valid option.");
+      setIsSubmitting(false);
+      return;
+    }
+
     const requestData = {
       requestid: uuidv4(), // Generate a new UUID for requestid
-      description,
+      description: description.trim(),
       preferred_date: preferredDate,
-      request_type: requestType.toUpperCase(), // Ensure ENUM consistency
-      residentid: residentID, // Taken from user input
+      requesttype: formattedRequestType, // ✅ Matches DB field name
+      residentid: residentID.trim(),
       status: "PENDING", // Default status
+      submitted_on: new Date().toISOString().slice(0, 19).replace("T", " "), // Optional if not auto-generated in DB
     };
 
-    try {
-      const response = await axios.post("http://localhost:8089/vendorrequest/add", requestData);
+    console.log("Submitting Data:", requestData); // Debugging
 
-      alert(`Service request submitted successfully!\n\nDetails:\n- Request ID: ${response.data.requestid}\n- Request Type: ${response.data.request_type}\n- Description: ${response.data.description}\n- Preferred Date: ${response.data.preferred_date}\n- Status: ${response.data.status}`);
+    try {
+      const response = await axios.post("http://localhost:8089/vendorrequest/add", requestData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      alert(
+        `Service request submitted successfully!\n\nRequest ID: ${response.data.requestid}`
+      );
 
       // Reset form fields
       setResidentID("");
@@ -289,7 +321,7 @@ export default function Vendor_Request_Form() {
       setPreferredDate("");
     } catch (error) {
       console.error("Error submitting request:", error);
-      alert("Failed to submit the request. Please try again.");
+      alert(`Failed to submit the request. Error: ${error.response?.data || error.message}`);
     }
 
     setIsSubmitting(false);
@@ -300,17 +332,15 @@ export default function Vendor_Request_Form() {
       <h1>Submit a Service Request</h1>
       <p>Use the form below to request a service or report an issue.</p>
 
-      <div className='resident-back text-center'>
+      <div className="resident-back text-center">
         <ul className="breadcrumb list-inline mt-2">
           <li className="list-inline-item">
-            <Link to="/resident" className="text-secondary text-decoration-none">Home</Link>
+            <Link to="/resident" className="text-secondary text-decoration-none">
+              Home
+            </Link>
           </li>
-          <li className="list-inline-item text-secondary">
-            &rarr;
-          </li>
-          <li className="list-inline-item text-dark">
-            Maintenance Request
-          </li>
+          <li className="list-inline-item text-secondary">→</li>
+          <li className="list-inline-item text-dark">Maintenance Request</li>
         </ul>
       </div>
 
