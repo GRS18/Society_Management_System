@@ -184,219 +184,27 @@
 // }
 
 
-// import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-// import "../resident/css/profile_management.css";
-
-// export default function Profile_Management() {
-//   const [formData, setFormData] = useState({
-//     fullName: "",
-//     email: "",
-//     phone: "",
-//     address: "",
-//     flatnumber: "",
-//   });
-//   const [isPopupVisible, setIsPopupVisible] = useState(false);
-
-//   // Fetch user data from API
-//   useEffect(() => {
-//     const fetchUserProfile = async () => {
-//       try {
-//         const response = await fetch("http://localhost:9085/resident", {
-//           method: "GET",
-//           headers: {
-//             "Content-Type": "application/json",
-//             Authorization: `Bearer ${localStorage.getItem("token")}`, // JWT token if needed
-//           },
-//         });
-
-//       } catch (error) {
-//         console.error("Error fetching profile:", error);
-//       }
-//     };
-
-//     fetchUserProfile();
-//   }, []);
-
- 
-
-//   // Handle input changes
-//   const handleInputChange = (event) => {
-//     const { id, value } = event.target;
-//     setFormData((prevData) => ({
-//       ...prevData,
-//       [id]: value,
-//     }));
-//   };
-
-//   // Handle form submission with API call
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-
-//     try {
-//       const response = await fetch("http://localhost:8089/resident/add", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//           Authorization: `Bearer ${localStorage.getItem("token")}`, // Include token if required
-//         },
-//         body: JSON.stringify(formData),
-//       });
-
-//       const result = await response.json();
-
-//       if (response.ok) {
-//         setIsPopupVisible(true); // Show success message
-//       } else {
-//         alert(`Error: ${result.message || "Something went wrong!"}`);
-//       }
-//     } catch (error) {
-//       console.error("Error updating profile:", error);
-//       alert("Failed to update profile. Please try again.");
-//     }
-//   };
-
-//   // Close popup
-//   const closePopup = () => {
-//     setIsPopupVisible(false);
-//   };
-
-//   return (
-//     <div className="profile-card resident-back">
-//       <h3>Manage Your Profile</h3>
-//       <div className="resident-back text-center">
-//         <ul className="breadcrumb list-inline mt-2">
-//           <li className="list-inline-item">
-//             <Link to="/resident" className="text-secondary text-decoration-none">
-//               Home
-//             </Link>
-//           </li>
-//           <li className="list-inline-item text-secondary">→</li>
-//           <li className="list-inline-item text-dark">Profile Management</li>
-//         </ul>
-//       </div>
-
-      
-//       {/* Profile Form */}
-//       <form onSubmit={handleSubmit}>
-//         <div className="form-group">
-//           <label htmlFor="fullName">Full Name</label>
-//           <input
-//             type="text"
-//             id="fullName"
-//             value={formData.fullName}
-//             onChange={handleInputChange}
-//             required
-//           />
-//         </div>
-
-//         <div className="form-group">
-//           <label htmlFor="email">Email Address</label>
-//           <input
-//             type="email"
-//             id="email"
-//             value={formData.email}
-//             onChange={handleInputChange}
-//             required
-//           />
-//         </div>
-
-//         <div className="form-group">
-//           <label htmlFor="phone">Phone Number</label>
-//           <input
-//             type="tel"
-//             id="phone"
-//             value={formData.phone}
-//             onChange={handleInputChange}
-//             required
-//           />
-//         </div>
-
-//         <div className="form-group">
-//           <label htmlFor="address">Flat Number</label>
-//           <input 
-//             type="text"
-//             id="Flatnumber"
-//             value={formData.flatnumber}
-//             onChange={handleInputChange}
-//             required
-//           />
-//         </div>
-
-//         <button type="submit" className="btn-save save">
-//           Save Changes
-//         </button>
-//       </form>
-
-//       {/* Popup Modal */}
-//       {isPopupVisible && (
-//         <div className="popup-overlay">
-//           <div className="popup">
-//             <h4>Profile Updated!</h4>
-//             <p>Your changes have been saved successfully.</p>
-//             <button onClick={closePopup} className="popup-close-btn">
-//               OK
-//             </button>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
 
 
 
 
 
 
-
-
-
-
-
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../resident/css/profile_management.css";
 
-export default function Profile_Management() {
+export default function AddResident() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    
-    flatNumber: "", // Corrected field name
+    flatNumber: "",
   });
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-  // Fetch user data from API
-  useEffect(() => {
-    const fetchUserProfile = async () => {
-      try {
-        const response = await fetch("http://localhost:9085/resident", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
-
-        if (response.ok) {
-          const data = await response.json();
-          setFormData(data); // Populate form with fetched data
-        } else {
-          console.error("Failed to load profile data.");
-        }
-      } catch (error) {
-        console.error("Error fetching profile:", error);
-      }
-    };
-
-    fetchUserProfile();
-  }, []);
-
-  // Handle input changes
+  // Handle Input Changes
   const handleInputChange = (event) => {
     const { id, value } = event.target;
     setFormData((prevData) => ({
@@ -405,7 +213,7 @@ export default function Profile_Management() {
     }));
   };
 
-  // Handle form submission with API call
+  // Handle Form Submission (POST Request)
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -414,7 +222,7 @@ export default function Profile_Management() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // JWT if needed
         },
         body: JSON.stringify(formData),
       });
@@ -423,23 +231,29 @@ export default function Profile_Management() {
 
       if (response.ok) {
         setIsPopupVisible(true);
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          flatNumber: "",
+        });
       } else {
-        alert(`Error: ${result.message || "Something went wrong!"}`);
+        alert(`Error: ${result.message || "Failed to add resident!"}`);
       }
     } catch (error) {
-      console.error("Error updating profile:", error);
-      alert("Failed to update profile. Please try again.");
+      console.error("Error adding resident:", error);
+      alert("Failed to add resident. Please try again.");
     }
   };
 
-  // Close popup
+  // Close Popup
   const closePopup = () => {
     setIsPopupVisible(false);
   };
 
   return (
     <div className="profile-card resident-back">
-      <h3>Manage Your Profile</h3>
+      <h3>Add New Resident</h3>
       <div className="resident-back text-center">
         <ul className="breadcrumb list-inline mt-2">
           <li className="list-inline-item">
@@ -448,11 +262,11 @@ export default function Profile_Management() {
             </Link>
           </li>
           <li className="list-inline-item text-secondary">→</li>
-          <li className="list-inline-item text-dark">Profile Management</li>
+          <li className="list-inline-item text-dark">Add Resident</li>
         </ul>
       </div>
 
-      {/* Profile Form */}
+      {/* Resident Form */}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="fullName">Full Name</label>
@@ -488,18 +302,18 @@ export default function Profile_Management() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="flatNumber">Flat Number</label> {/* Corrected label */}
+          <label htmlFor="flatNumber">Flat Number</label>
           <input
             type="text"
-            id="flatNumber" // Corrected id
-            value={formData.flatNumber} // Corrected value reference
+            id="flatNumber"
+            value={formData.flatNumber}
             onChange={handleInputChange}
             required
           />
         </div>
 
         <button type="submit" className="btn-save save">
-          Save Changes
+          Add Resident
         </button>
       </form>
 
@@ -507,8 +321,8 @@ export default function Profile_Management() {
       {isPopupVisible && (
         <div className="popup-overlay">
           <div className="popup">
-            <h4>Profile Updated!</h4>
-            <p>Your changes have been saved successfully.</p>
+            <h4>Resident Added!</h4>
+            <p>The new resident has been added successfully.</p>
             <button onClick={closePopup} className="popup-close-btn">
               OK
             </button>
