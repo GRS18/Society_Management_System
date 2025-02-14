@@ -40,6 +40,7 @@ import Daily_Tasks from "./components/staff/Daily_Tasks";
 import FAQ from "./components/FAQ";
 import Profile from "./components/staff/Profile";
 import Shedules_Staff from "./components/admin/Shedules_Staff";
+import ContactMessages from "./components/resident/ContactMessages";
 
 const projectRoute = createBrowserRouter([
   {
@@ -173,6 +174,10 @@ const projectRoute = createBrowserRouter([
       {
         path: "vendor_request_form",
         element: <Vendor_Request_Form />,
+      },
+      {
+        path: "contactmessages",
+        element: <ContactMessages />,
       },
      
 
