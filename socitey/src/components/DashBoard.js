@@ -94,7 +94,7 @@ export default function DashBoard() {
           <div className="container text-center heading">
             <div className="row">
               {/* <marquee behavior="slide" direction="left"> */}
-              <h1>Welcome to NestOp's: The Community Hub</h1>
+              <h1>Welcome to NestOps : Streamlined Operations for Society Management </h1>
               {/* </marquee> */}
               <p>Efficient and Transparent Management for Link Better Living</p>
               {/* <Link to="login" className="btn btn-primary">Login</Link>
